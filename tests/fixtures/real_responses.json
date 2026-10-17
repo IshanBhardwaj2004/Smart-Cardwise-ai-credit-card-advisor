@@ -1,0 +1,1798 @@
+{
+  "note": "Real responses from https://bk-api.bankkaro.com/mcp captured on 2026-10-16 with evals/explore_mcp.py export_samples: card details from 'python -m evals.explore_mcp export' (17 Oct 2026).",
+  "card_names_by_alias": {
+    "sbi-cashback-credit-card": "SBI Cashback Credit Card",
+    "axis-flipkart-credit-card": "Axis Flipkart Credit Card",
+    "hsbc-cashback-credit-card": "HSBC Cashback Credit Card",
+    "kiwi-klick-credit-card": "Kiwi Klick Credit Card",
+    "sbi-simply-click-credit-card": "SBI Simply Click Credit Card",
+    "hdfc-regalia-gold": "HDFC Regalia Gold Credit Card",
+    "flipkart-sbi-credit-card": "Flipkart SBI Credit Card",
+    "swiggy-blck-hdfc-credit-card": "Swiggy BLCK HDFC Credit Card",
+    "idfc-first-millennia-credit-card": "IDFC FIRST Millennia Credit Card",
+    "tata-neu-hdfc-bank-credit-card": "Tata Neu Infinity HDFC Bank Credit Card",
+    "axis-bank-myzone-credit-card": "Axis MyZone Credit Card",
+    "hdfc-millenia-credit-card": "HDFC Millennia Credit Card",
+    "stanc-smart-credit-card": "Standard Chartered Smart Credit Card",
+    "hsbc-travel-one": "HSBC Travel One Credit Card",
+    "indian-oil-rbl-bank-xtra-credit-card": "Indian Oil RBL Bank XTRA Credit Card",
+    "idfc-first-wealth-credit-card": "IDFC FIRST Wealth Credit Card",
+    "icici-emeralde-credit-card": "ICICI Emeralde Credit Card",
+    "hsbc-taj-credit-card": "HSBC Taj Credit Card",
+    "idfc-power-plus-credit-card": "IDFC FIRST Power Plus Credit Card",
+    "scapia-credit-card": "Scapia Credit Card",
+    "axis-airtel-credit-card": "Axis Airtel Rupay Credit Card",
+    "idfc-first-select-credit-card": "IDFC FIRST Select Credit Card",
+    "axis-bank-magnus-credit-card": "Axis Magnus Credit Card",
+    "swiggy-ornge-hdfc-credit-card": "Swiggy Ornge HDFC Bank Credit Card ",
+    "yes-bank-marquee-credit-card": "YES BANK MARQUÉE Credit Card",
+    "hsbc-live-plus-credit-card": "HSBC Live Plus Credit Card",
+    "myntra-kotak-credit-card": "Myntra Kotak Credit Card",
+    "axis-bank-privilege-credit-card": "Axis Privilege Credit Card",
+    "icici-sapphiro-credit-card": "ICICI Sapphiro Credit Card",
+    "hdfc-biz-black-metal-edition-credit-card": "HDFC BizBlack Metal Edition Credit Card",
+    "axis-cashback-credit-card": "Axis Cashback Credit Card",
+    "yes-bank-ace-credit-card": "YES BANK ACE Credit Card",
+    "axis-bank-horizon-credit-card": "Axis Horizon Credit Card",
+    "magnus-burgundy-credit-card": "Axis Burgundy Magnus Credit Card",
+    "hdfc-biz-grow-credit-card": "HDFC Biz Grow Credit Card",
+    "hdfc-phonepe-ultimo-credit-card": "PhonePe HDFC Bank Ultimo Credit Card",
+    "icici-emeralde-private-metal-credit-card": "ICICI Emeralde Private Metal Credit Card",
+    "indusind-bank-avios-infinite-credit-card": "IndusInd Bank Avios Infinite Credit Card",
+    "hdfc-pixel-play-credit-card": "HDFC PIXEL Play Credit Card",
+    "indianoil-axis-premium-credit-card": "IndianOil Axis Premium Credit Card",
+    "icici-emirates-skywards-rubyx-credit-card": "ICICI Emirates Skywards Rubyx Credit Card",
+    "zagg-rupay-credit-card": "Zagg Credit Card",
+    "bob-eterna-credit-card": "BOB Eterna Credit Card",
+    "indusind-indulge-credit-card": "IndusInd Indulge Credit Card",
+    "pop-club-credit-card": "Pop Club Credit Card",
+    "idfc-first-hello-cashback-credit-card": "IDFC FIRST HELLO Cashback Credit Card",
+    "rbl-shoprite-credit-card": "RBL Shoprite Credit Card",
+    "sbi-aurum-credit-card": "SBI AURUM Credit Card",
+    "hdfc-diners-club-black": "HDFC Diners Club Black Credit Card",
+    "indusind-eazydiner-signature-credit-card": "EazyDiner IndusInd Bank Signature Credit Card ",
+    "hdfc-marriott-bonvoy-credit-card": "HDFC Marriott Bonvoy Credit Card",
+    "cred-indusind-bank-credit-card": "CRED IndusInd Bank Credit Card",
+    "yes-bank-select-credit-card": "YES BANK SELECT Credit Card",
+    "indusind-epay-amex-credit-card": "IndusInd epay Amex credit Card ",
+    "pnb-zaggle-twin-credit-card": "PNB Zaggle Twin Credit Card ",
+    "axis-indian-oil-rupay-credit-card": "Axis IOCL Credit Card",
+    "tata-neu-plus-sbi-card": "Tata Neu Plus SBI Card",
+    "sbi-bpcl-octane-credit-card": "SBI BPCL Octane Credit Card",
+    "bob-select-credit-card": "BOB SELECT Credit Card",
+    "hdfc-tata-neu-plus-credit-card": "HDFC Tata Neu Plus Credit Card",
+    "idfc-first-classic-credit-card": "IDFC FIRST Classic Credit Card",
+    "yes-bank-reserv-credit-card": "YES BANK RESERV Credit Card",
+    "sbi-titan-credit-card": "SBI Titan Credit Card",
+    "rbl-platinum-maxima-credit-card": "RBL Platinum Maxima Credit Card",
+    "idfc-swyp-credit-card": "IDFC FIRST SWYP Credit Card",
+    "yes-bank-elite-plus-credit-card": "YES BANK ELITE PLUS Credit Card",
+    "bob-hpcl-energie-credit-card": "BOB HPCL ENERGIE Credit Card ",
+    "hsbc-rupay-platinum-credit-card": "HSBC Rupay Platinum Credit Card",
+    "onecard-credit-card": "OneCard Credit Card",
+    "rbl-bank-nova-credit-card": "RBL Bank NOVA Credit Card",
+    "rbl-bank-icon-credit-card": "RBL Bank Icon Credit Card",
+    "salaryse-level-up-credit-card": "SalarySe Level UP Credit Card",
+    "hdfc-pixel-go-credit-card": "HDFC Pixel Go Credit Card",
+    "sbi-miles-prime-credit-card": "SBI MILES PRIME Credit Card",
+    "pnb-luxura-metal-credit-card": "PNB LUXURA Metal Credit Card",
+    "indianoil-axis-rupay-credit-card": "IndianOil Axis Rupay Credit Card",
+    "phonepe-sbi-card-select-black": "PhonePe SBI Card SELECT BLACK ",
+    "axis-reserve-credit-card": "Axis Reserve Credit Card",
+    "air-india-sbi-platinum-credit-card": "Air India SBI Platinum Credit Card ",
+    "au-vetta-credit-card": "AU Vetta Credit Card",
+    "kotak-air-plus-credit-card": "Kotak Air Plus Credit Card ",
+    "bob-uni-goldx-credit-card": "BOB Uni GoldX Credit Card",
+    "bob-tiara-credit-card": "BOB Tiara Credit Card",
+    "indusind-solitarie-credit-card": "IndusInd Solitaire Credit Card",
+    "kotak-white-reserve-credit-card": "Kotak White Reserve Credit Card",
+    "sbm-kreditpe-credit-card": "SBM Kredit.Pe Credit Card",
+    "idfc-first-quantum-plus-credit-card": "IDFC FIRST Quantum Plus Credit Card",
+    "tata-neu-infinity-sbi-card": "Tata Neu Infinity SBI Card",
+    "hdfc-diners-club-black-metal-credit-card": "HDFC Diners Club Black Metal Credit Card",
+    "hdfc-moneyback-credit-card": "HDFC Moneyback Credit Card",
+    "icici-hpcl-super-saver-credit-card": "ICICI HPCL Super Saver Credit Card",
+    "bob-etihad-guest-credit-card": "BOB Etihad Guest Credit Card",
+    "equitas-power-miles-credit-card": "Equitas PowerMiles Credit Card",
+    "idfc-first-wow-black-credit-card": "IDFC FIRST WOW! Black Credit Card",
+    "indigo-axis-premium-credit-card": "IndiGo Axis Premium Credit Card",
+    "sbi-irctc-premier-crerdit-card": "SBI IRCTC Premier Credit Card",
+    "kotak-white-credit-card": "Kotak White Credit Card",
+    "canara-rupay-select-credit-card": "Canara Rupay Select Credit Card",
+    "axis-samsung-signature-credit-card": "Axis Samsung Signature Credit Card",
+    "bob-etihad-guest-premium-credit-card": "BOB Etihad Guest Premium Credit Card",
+    "axis-flipkart-super-elite-credit-card": "Axis Flipkart Super Elite Credit Card",
+    "icici-amazon-pay-credit-card": "Amazon Pay ICICI Bank Credit Card",
+    "eazydiner-indusind-bank-platinum": "EazyDiner IndusInd Bank Platinum Credit Card",
+    "icici-emirates-skywards-sapphiro-credit-card": "ICICI Emirates Skywards Sapphiro Credit Card",
+    "au-tejas-credit-card": "AU Tejas Credit Card",
+    "sbi-miles-elite-credit-card": "SBI MILES ELITE Credit Card ",
+    "indianoil-rbl-bank-credit-card": "IndianOil RBL Bank Credit Card",
+    "au-ananta-credit-card": "AU Ananta Credit Card",
+    "au-prathama-credit-card": "AU Prathama Credit Card",
+    "hsbc-platinum-credit-card": "HSBC Platinum Rewards Credit Card",
+    "indusind-platinum-rupay-credit-card": "IndusInd Platinum RuPay Credit Card",
+    "amexmetal": "American Express Platinum Card",
+    "au-laksya-credit-card": "AU Laksya Credit Card",
+    "sbi-krisflyer-credit-card": "SBI KrisFlyer Credit Card",
+    "standard-chartered-rewards-credit-card": "Standard Chartered Rewards Credit Card ",
+    "hdfc-infinia-credit-card": "HDFC Infinia Credit Card",
+    "air-india-sbi-signature-credit-card": "Air India SBI Signature Credit Card",
+    "hdfc-biz-power-credit-card": "HDFC Biz Power Credit Card",
+    "fibe-axis-credit-card": "Fibe Axis Credit Card",
+    "au-xcite-ace-credit-card": "AU Xcite ACE Credit Card",
+    "indigo-axis-credit-card": "IndiGo Axis Credit Card",
+    "rbl-super-binge-credit-card": "RBL Super Binge Credit Card",
+    "hsbc-premier-credit-card": "HSBC Premier Credit Card",
+    "equitas-selfe-credit-card": "Equitas Selfe Credit Card",
+    "kotak-air-credit-card": "Kotak Air Credit Card ",
+    "rbl-world-safari-credit-card": "RBL World Safari Credit Card",
+    "krisflyer-sbi-apex-credit-card": "KrisFlyer SBI Apex Credit Card ",
+    "idfc-mayura-credit-card": "IDFC FIRST Mayura Credit Card",
+    "yes-bank-prosperity-reward-plus-credit-card": "YES Bank Prosperity Reward Plus Credit Card",
+    "Axis-Neo-Credit": "Axis Neo Credit Card",
+    "idfc-ashva-credit-card": "IDFC FIRST Ashva Credit Card",
+    "indusind-bank-pinnacle-credit-card": "IndusInd Bank Pinnacle Credit Card",
+    "ixigo-au-credit-card": "ixigo AU Credit Card",
+    "jupiter-edge-credit-card": "Jupiter Edge Credit Card",
+    "kotak-cashback-plus-credit-card": "Kotak Cashback+ Credit Card",
+    "reliance-sbi-card-prime": "Reliance SBI Card PRIME  ",
+    "apollo-sbi-select-credit-card": "Apollo SBI Select Credit Card ",
+    "bob-premier-credit-card": "BOB PREMIER Credit Card",
+    "idfc-first-earn-credit-card": "IDFC FIRST EA₹N Credit Card",
+    "au-instapay-rupay-credit-card": "AU InstaPay Rupay Credit Card",
+    "sbi-unnati-credit-card": "SBI Unnati Credit Card",
+    "indusind-jio-bp-mobility-credit-card": "IndusInd Jio-bp Mobility+ Credit Card ",
+    "sbi-card-pulse-credit-card": "SBI Card Pulse Credit Card",
+    "standard-chartered-manhattan-credit-card": "Standard Chartered Manhattan Platinum Credit Card",
+    "idfc-first-gaj-credit-card": "IDFC FIRST GAJ Credit Card",
+    "celesta-credit-card": "Celesta Credit Card",
+    "hsbc-rupay-cashback-credit-card": "HSBC RuPay Cashback Credit Card",
+    "times-black-credit-card": "Times Black ICICI Bank Credit Card",
+    "sbi-bpcl-credit-card": "SBI BPCL Credit Card",
+    "hdfc-diners-privilege-credit-card": "HDFC Diners Privilege Credit Card",
+    "kotak-solitaire-credit-card": "Kotak Solitaire Credit Card ",
+    "bobcard-prime-credit-card": "BOBCARD PRIME Credit Card",
+    "xcite-ultra-credit-card": "AU Xcite Ultra Credit Card",
+    "equitas-tiga-credit-card": "Equitas Tiga Credit Card",
+    "standard-chartered-super-value-titanium-credit-card": "Standard Chartered Super Value Titanium Credit Card ",
+    "hdfc-biz-first-credit-card": "HDFC Biz First Credit Card",
+    "paizabazaar-step-up-sbm-credit-card": "Paisabazaar Step-Up SBM Credit Card",
+    "signet-credit-card": "Signet Credit Card",
+    "imperio-credit-card": "Imperio Credit Card",
+    "idfc-first-power-credit-card": "IDFC FIRST POWER Credit Card",
+    "indusind-tiger-credit-card": "IndusInd Tiger Credit Card",
+    "sbi-elite-card": "SBI ELITE Card",
+    "sbi-elite-credit-card": "SBI Elite Credit Card",
+    "american-express-gold-card": "American Express Gold Card",
+    "bob-irctc-credit-card": "BOB IRCTC Credit Card",
+    "sbi-etihad-premier-credit-card": "SBI Etihad Premier Credit Card ",
+    "hdfc-flipkart-wholesale-credit-card": "HDFC Flipkart Wholesale Credit Card",
+    "hdfc-indian-oil-credit-card": "HDFC Indian Oil Credit Card",
+    "standard-chartered-digismart-credit-card": "Standard Chartered DigiSmart Credit Card",
+    "sbi-simply-save-credit-card": "SBI Simply Save Credit Card",
+    "au-altura-credit-card": "AU Altura Credit Card",
+    "indusind-nexxt-credit-card": "IndusInd Nexxt Creditt card",
+    "indusind-legend-credit-card": "IndusInd Legend Credit Card",
+    "sbi-ola-money-credit-card": "SBI OLA Money Credit Card",
+    "axis-atlas-credit-card": "Axis Atlas Credit Card",
+    "google-pay-flex-credit-card": "Google Pay Flex Credit Card",
+    "sbi-reliance-credit-card": "SBI Reliance Credit Card ",
+    "sbi-landmark-reward-prime-credit-card": "SBI Landmark Reward PRIME Credit Card",
+    "au-altura-plus-credit-card": "AU Altura Plus Credit Card",
+    "sbi-landmark-reward-select-credit-card": "SBI Landmark Reward SELECT Credit Card",
+    "rbl-cookies-credit-card": "RBL Bank Cookies Credit Card",
+    "roarbank-rupay-credit-card": "Roarbank Rupay Credit Card",
+    "sbi-landmark-reward-credit-card": "SBI Landmark Reward Credit Card",
+    "shoppers-stop-black-hdfc-credit-card": "HDFC Shoppers Stop Black Credit Card",
+    "sbm-zet-credit-card": "SBM ZET Credit Card",
+    "icici-rubyx-credit-card": "ICICI Rubyx Credit Card",
+    "bob-snapdeal-credit-card": "BOB Snapdeal Credit Card",
+    "phonepe-hdfc-bank-uno-credit-card": "PhonePe HDFC Bank Uno Credit Card",
+    "hdfc-diners-club-rewardz-credit-card": "HDFC Diners Club Rewardz Credit Card",
+    "hdfc-freedom-credit-card": "HDFC Freedom Credit Card",
+    "hdfc-indigo-credit-card": "HDFC 6E Rewards Indigo Credit Card",
+    "axis-rewards-credit-card": "Axis Rewards Credit Card",
+    "kotak-urbane-gold-credit-card": "Kotak Urbane Gold Credit Card",
+    "rbl-blockbuster-credit-card": "RBL Blockbuster Credit Card",
+    "poonawalla-fincrop-indusind-elite-rupay-credit-card": "Poonawalla Fincrop IndusInd eLITE Rupay Credit Card",
+    "icici-platinum-chip-credit-card": "ICICI Platinum Chip Credit Card",
+    "sbi-etihad-guest-credit-card": "SBI Etihad Guest Credit Card",
+    "indus-bank-platinum-aura-edge-credit-card": "IndusInd Platinum Aura Edge Credit Card",
+    "sbi-indigo-elite-credit-card": "SBI IndiGo ELITE Credit Card",
+    "hdfc-shoppers-stop-credit-card": "HDFC Shoppers Stop Credit Card",
+    "au-zenith-credit-card": "AU Zenith Credit Card",
+    "american-express-mr-credit-card": "American Express Membership Rewards Credit Card",
+    "american-express-platinum-travel-credit-card": "American Express Platinum Travel Credit Card",
+    "american-express-smart-earn-credit-card": "American Express SmartEarn Credit Card",
+    "sbi-yatra-credit-card": "SBI Yatra Credit Card",
+    "au-zenith-plus-credit-card": "AU Zenith Plus Credit Card",
+    "icici-hpcl-coral-credit-card": "ICICI HPCL Coral Credit Card",
+    "sbi-indigo-credit-card": "SBI IndiGo Credit Card",
+    "bob-easy-credit-card": "BOB EASY Credit Card",
+    "sbi-paytm-select-credit-card": "SBI Paytm Select Credit card ",
+    "dbs-vantage-credit-card": "DBS Vantage Credit Card",
+    "icici-mmt-platinum-credit-card": "ICICI MakeMyTrip Credit Card",
+    "axis-samsung-infinite-credit-card": "Axis Samsung Infinite Credit Card",
+    "sbi-paytm-credit-card": "SBI Paytm Credit Card ",
+    "rbl-movie-and-more-credit-card": "RBL Movie and More Credit Card",
+    "axis-select-credit-card": "Axis Select Credit Card",
+    "sbi-aditya-birla-credit-card": "SBI Aditya Birla Credit Card",
+    "hdfc-irctc-credit-card": "HDFC IRCTC Credit Card",
+    "hdfc-rupay-credit-card": "HDFC RuPay Credit Card",
+    "idfc-first-wow-credit-card": "IDFC FIRST WOW Credit Card",
+    "sbi-prime-credit-card": "SBI Prime Credit Card",
+    "axis-aura-credit-card": "Axis Aura Credit Card",
+    "american-express-platinum-reserve": "American Express Platinum Reserve Credit Card",
+    "hdfc-superia-airline-credit-card": "HDFC Superia Airline Credit Card",
+    "idfc-first-private-credit-card": "IDFC FIRST Private Credit Card",
+    "yes-bank-paisabazaar-paisasave-credit-card": "Yes Bank Paisabazaar PaisaSave Credit Card",
+    "hdfc-moneyback-plus-credit-card": "HDFC MoneyBack Plus Credit Card",
+    "axis-ikea-family-credit-card": "Axis IKEA Family Credit Card ",
+    "rbl-popcorn-credit-card": "RBL Popcorn Credit Card",
+    "rbl-world-plus-credit-card": "RBL World Plus Credit Card",
+    "rbl-insignia-preferred-credit-card": "RBL Insignia Preferred Credit Card",
+    "kotak-indianoil-credit-card": "Kotak IndianOil Credit Card",
+    "au-nomo-credit-card": "AU Nomo Credit Card",
+    "kotak-zen-signature-credit-card": "Kotak Zen Signature Credit Card",
+    "standard-chartered-ultimate-credit-card": "Standard Chartered Ultimate Credit Card",
+    "irctc-sbi-platinum-card": "IRCTC SBI Platinum Card",
+    "axis-shopper-stop-credit-card": "Axis Shoppers Stop Credit Card",
+    "irctc-rbl-credit-card": "IRCTC RBL Credit Card",
+    "sbi-card-miles": "SBI Card Miles Credit Card",
+    "makemytrip-icici-signature": "MakeMyTrip ICICI Bank Signature Credit Card",
+    "pvr-kotak-platinum": "PVR Kotak Platinum Credit Card",
+    "paytm-hdfc-bank-select-credit-card": "Paytm HDFC Bank Select Credit Card ",
+    "kotak-delight-platinum-credit-card": "Kotak Delight Platinum Credit Card",
+    "kotak-essentia-platinum-credit-card": "Kotak Essentia Platinum Credit Card ",
+    "axis-privilege-amex-credit-card": "Axis Privilege Amex Credit Card ",
+    "supermoney-rupay-credit-card": "Axis Supermoney Rupay Card",
+    "rbl-bank-play-credit-card": "RBL Bank Play Credit Card",
+    "kotak-mojo-platinum-credit-card": "Kotak Mojo Platinum Credit card",
+    "rbl-platinum-maxima-plus-credit-card": "RBL Platinum Maxima Plus Credit Card",
+    "idfc-first-dual-indigo-credit-card": "IDFC FIRST Dual Indigo Credit Card",
+    "axis-ace-credit-card": "Axis ACE Credit Card",
+    "bob-cashback-credit-card": "BOB Cashback Credit Card",
+    "hdfc-business-moneyback-credit-card": "HDFC Business Moneyback Credit card",
+    "spicejet-axis-bank-voyage-credit-card": "Axis SpiceJet Voyage Credit Card",
+    "spicejet-axis-bank-voyage-black-credit-card": "Axis SpiceJet Voyage Black Credit Card",
+    "lic-axis-credit-card": "LIC Axis Platinum Credit Card ",
+    "hdfc-bharat-credit-card": "HDFC Bank Bharat Credit Card",
+    "lic-axis-bank-signature-credit-card": "LIC Axis Signature Credit Card"
+  },
+  "calls": {
+    "recommend_single": {
+      "tool": "recommend_cards",
+      "arguments": {
+        "amazon_spends": 15000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "HDFC MILLENIA",
+            "bank_name": "HDFC",
+            "card_type": "VISA",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,180 (incl. GST)",
+            "annual_fee": "Free (waived at ₹1,00,000/yr spend; ₹1,180 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [
+              {
+                "id": 34,
+                "brands": [],
+                "card_id": 18,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 1000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "other_offline_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-millenia-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680"
+          },
+          {
+            "rank": 2,
+            "card_name": "ICICI Amazon Pay Credit Card",
+            "bank_name": "ICICI Bank",
+            "card_type": "VISA",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "online_food_ordering",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "icici-amazon-pay-credit-card",
+            "rating": 5,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125139_BankKaro_Mobile.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "Swiggy Ornge HDFC Bank Credit card ",
+            "bank_name": "HDFC",
+            "card_type": "Mastercard",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹590 (incl. GST)",
+            "annual_fee": "Free (waived at ₹1,50,000/yr spend; ₹590 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [
+              {
+                "id": 140,
+                "brands": [
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 179,
+                "rp_bonus": "",
+                "maximum_days": "37",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "new_monthly_cat_1",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "swiggy-ornge-hdfc-credit-card",
+            "rating": 3.1,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130238_BankKaro_20260316_140731331_RBL_4.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      }
+    },
+    "recommend_mixed": {
+      "tool": "recommend_cards",
+      "arguments": {
+        "dining_or_going_out": 20000,
+        "flights_annual": 150000,
+        "fuel": 5000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "SBI Landmark Reward SELECT Credit Card",
+            "bank_name": "SBI",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹37,981",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹30,000",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹1,769 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 196,
+                "brands": [],
+                "card_id": 263,
+                "rp_bonus": "6000",
+                "maximum_days": "",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "0.25",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "sbi-landmark-reward-select-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "ixigo AU credot Card",
+            "bank_name": "AU Small Finance Bank",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹29,750",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹20,000",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 225,
+                "brands": [
+                  {
+                    "id": 471,
+                    "name": "Ixigo"
+                  }
+                ],
+                "card_id": 239,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "1000",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 2000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "ixigo-au-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260729_143058744_AU_ALTURA__2.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "HDFC Diners Club Black Metal Edition",
+            "bank_name": "HDFC",
+            "card_type": "DinersClub",
+            "net_annual_savings": "₹25,200",
+            "annual_rewards_value": "₹37,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹11,800 (incl. GST)",
+            "annual_fee": "₹11,800 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 49,
+                "brands": [
+                  {
+                    "id": 31,
+                    "name": "Club Marriott"
+                  },
+                  {
+                    "id": 17,
+                    "name": "Amazon Prime"
+                  },
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 103,
+                "rp_bonus": "",
+                "maximum_days": "90",
+                "minimum_spend": "150000",
+                "voucher_bonus": "25000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹2,083.333"
+              },
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹1,000"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-diners-club-black-metal-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125405_BankKaro_HDFC_Dineer_Bc.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      }
+    },
+    "recommend_empty": {
+      "tool": "recommend_cards",
+      "arguments": {
+        "top_n": 3
+      },
+      "response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "IDFC FIRST SELECT",
+            "bank_name": "IDFC",
+            "card_type": "RuPay",
+            "net_annual_savings": "₹0",
+            "annual_rewards_value": "₹0",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 201,
+                "brands": [
+                  {
+                    "id": 111,
+                    "name": "Travel and Shop - IDFC Mobile App"
+                  }
+                ],
+                "card_id": 8,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "5000",
+                "voucher_bonus": "500",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "grocery_spends_online",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "idfc-first-select-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121949_AGB_Mockup-19.webp1736855248245"
+          },
+          {
+            "rank": 2,
+            "card_name": "HSBC Platinum Credit Card",
+            "bank_name": "HSBC Bank",
+            "card_type": "VISA",
+            "net_annual_savings": "₹0",
+            "annual_rewards_value": "₹0",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 37,
+                "brands": [
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 25,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "5000",
+                "voucher_bonus": "500",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 0
+              },
+              {
+                "id": 38,
+                "brands": [
+                  {
+                    "id": 14,
+                    "name": "Amazon"
+                  }
+                ],
+                "card_id": 25,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "0",
+                "voucher_bonus": "250",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 250
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "grocery_spends_online",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hsbc-platinum-credit-card",
+            "rating": 4,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122009_BankKaro_20260129_14412496_HSBC_Visa_Platinum_Credit_Card.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "AU ZENITH",
+            "bank_name": "AU Small Finance Bank",
+            "card_type": "VISA",
+            "net_annual_savings": "₹0",
+            "annual_rewards_value": "₹0",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "online_food_ordering",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "au-zenith-credit-card",
+            "rating": 4.3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122013_BankKaro_20260420_182727847_Mockup_18.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      }
+    },
+    "card_details": {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "response": {
+        "name": "SBI Cashback Credit Card",
+        "nick_name": "SBI Cashback,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 413,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹250",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1001 - ₹10000",
+              "fee": "₹ 750"
+            },
+            {
+              "outstanding": "₹10000 - ₹25000",
+              "fee": "₹ 950"
+            },
+            {
+              "outstanding": "₹25001- ₹ 50000",
+              "fee": "₹ 1100"
+            },
+            {
+              "outstanding": "₹50000 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Dining",
+            "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+          },
+          {
+            "title": "Earn 5% Cashback on Online Spends",
+            "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on",
+            "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Food Orders",
+            "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback",
+            "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 1% Cashback",
+            "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get Flat 1% Cashback",
+            "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on online spends\n• Maximum online cashback of ₹2,000 per statement cycle\n• 1% cashback on offline spends\n• Maximum offline cashback of ₹2,000 per statement cycle; total cashback capped at ₹4,000 per statement cycle\n• Annual fee reversal on annual spends of ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get 5% Cashback on Dining restaurant payments processed through online platform using the SBI Cashback Credit Card"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• Get a 1% fuel surcharge waiver for transactions between ₹500 and ₹3,000, with a maximum waiver of ₹100 per billing cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-cashback-credit-card"
+      }
+    },
+    "compare": {
+      "tool": "compare_cards",
+      "arguments": {
+        "card_aliases": [
+          "sbi-cashback-credit-card",
+          "axis-flipkart-credit-card"
+        ]
+      },
+      "response": {
+        "comparison": [
+          {
+            "name": "SBI Cashback Credit Card",
+            "bank": "SBI",
+            "card_type": "VISA",
+            "card_network": null,
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "fees": {
+              "joining": "₹1,179 (₹999 + GST)",
+              "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+              "annual": "₹1,179 (₹999 + GST)",
+              "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+              "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+              "gst_note": "All fees include 18% GST."
+            },
+            "fee_schedule": {
+              "apr_monthly": "3.75%",
+              "apr_annual": "45.00%",
+              "forex_markup": "3.50%",
+              "atm_withdrawal_fee": "2.50%",
+              "late_payment_slabs": [
+                {
+                  "outstanding": "₹0 - ₹500",
+                  "fee": "₹0"
+                },
+                {
+                  "outstanding": "₹501 - ₹1000",
+                  "fee": "₹400"
+                },
+                {
+                  "outstanding": "₹1001 - ₹10000",
+                  "fee": "₹ 750"
+                },
+                {
+                  "outstanding": "₹10000 - ₹25000",
+                  "fee": "₹ 950"
+                },
+                {
+                  "outstanding": "₹25001- ₹ 50000",
+                  "fee": "₹ 1100"
+                },
+                {
+                  "outstanding": "₹50000 and above",
+                  "fee": "₹1300"
+                }
+              ],
+              "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+            },
+            "rewards": {
+              "point_value": null,
+              "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+              "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+              "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+            },
+            "key_benefits": [
+              {
+                "title": "Get 5% Cashback on Dining",
+                "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+              },
+              {
+                "title": "Earn 5% Cashback on Online Spends",
+                "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+              },
+              {
+                "title": "Get 5% Cashback on",
+                "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": "Get 5% Cashback on Food Orders",
+                "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": " Get 5% Cashback",
+                "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": "Get 5% Cashback on\t",
+                "description": " Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": "Get 5% Cashback\t",
+                "description": " on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": "Get 1% Cashback",
+                "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+              },
+              {
+                "title": "Get Flat 1% Cashback",
+                "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+              },
+              {
+                "title": "Get Flat 1% Cashback",
+                "description": "on all offline shopping spends with a capping of ₹2,000 per statement cycle"
+              }
+            ],
+            "eligibility": {
+              "min_age": 21,
+              "max_age": 65,
+              "income_salaried_lpa": 3,
+              "income_self_emp_lpa": 3,
+              "crif_salaried": 750,
+              "crif_self_emp": 750
+            },
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping"
+            ],
+            "card_alias": "sbi-cashback-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945"
+          },
+          {
+            "name": "Axis Flipkart Credit Card",
+            "bank": "Axis",
+            "card_type": "VISA",
+            "card_network": null,
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "fees": {
+              "joining": "Free",
+              "joining_note": null,
+              "annual": "₹590 (₹500 + GST)",
+              "annual_note": null,
+              "annual_fee_waiver": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+              "gst_note": "All fees include 18% GST."
+            },
+            "fee_schedule": {
+              "apr_monthly": "3.75%",
+              "apr_annual": "45.00%",
+              "forex_markup": "3.5%",
+              "atm_withdrawal_fee": "2.5%",
+              "late_payment_slabs": [
+                {
+                  "outstanding": "₹0 - ₹500",
+                  "fee": "₹0"
+                },
+                {
+                  "outstanding": "₹501 - ₹5,000",
+                  "fee": "₹500"
+                },
+                {
+                  "outstanding": "₹5,001 - ₹10,000",
+                  "fee": "₹750"
+                },
+                {
+                  "outstanding": "₹10,001 and above",
+                  "fee": "₹1,200"
+                }
+              ],
+              "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+            },
+            "rewards": {
+              "point_value": null,
+              "redemption_options": "This is a cashback card; the cashback value is adjusted in your monthly statement.",
+              "exclusions": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances",
+              "exclusion_spends": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances"
+            },
+            "key_benefits": [
+              {
+                "title": "Shopping Get 7.5% Cashback on Myntra",
+                "description": "spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Flipkart",
+                "description": "spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Cleartrip",
+                "description": "bookings capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Wednesday Swiggy Treats with 10% off",
+                "description": "on orders placed via Swiggy every Wednesday"
+              },
+              {
+                "title": "Swiggy New User Deal with 50% Instant Discount ",
+                "description": "up to ₹100 on first transaction within 30 days using code AXISFKNEW on a minimum cart of ₹129"
+              },
+              {
+                "title": "Travel Savings with Instant Savings up to 15%",
+                "description": "on flights and hotels via MakeMyTrip every Wednesday"
+              },
+              {
+                "title": "Shopping Get 7.5% Cashback on Myntra\t",
+                "description": " spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Flipkart\t",
+                "description": " spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Swiggy New User Deal with 50% Instant Discount\t ",
+                "description": "up to ₹100 on first transaction within 30 days using code AXISFKNEW on a minimum cart of ₹129"
+              },
+              {
+                "title": "Tira Discount With 10% off",
+                "description": "up to ₹1,000 on Tira every Wednesday"
+              },
+              {
+                "title": "Enjoy 4% Cashback on Spends",
+                "description": "on Uber, Swiggy, PVR and Cult.fit with unlimited earnings"
+              },
+              {
+                "title": "Flipkart Welcome Voucher Worth ₹250",
+                "description": "after your first transaction within 30 days of card issuance"
+              }
+            ],
+            "eligibility": {
+              "min_age": 18,
+              "max_age": 70,
+              "income_salaried_lpa": 3,
+              "income_self_emp_lpa": 3.5,
+              "crif_salaried": 720,
+              "crif_self_emp": 720
+            },
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-flipkart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121912_AGB_Mockup-6.webp1736855576881"
+          }
+        ]
+      }
+    },
+    "eligibility": {
+      "tool": "check_eligibility",
+      "arguments": {
+        "pincode": "110001",
+        "annual_income": "600000",
+        "employment_status": "salaried"
+      },
+      "response": {
+        "eligible_cards_count": 232,
+        "profile": {
+          "pincode": "110001",
+          "annual_income": "₹6,00,000",
+          "employment": "salaried"
+        },
+        "eligible_cards": [
+          {
+            "name": "SBI Cashback Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,179 (₹999 + GST)",
+            "annual_fee": "₹1,179 (₹999 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Get 5% Cashback on Dining",
+              "Earn 5% Cashback on Online Spends",
+              "Get 5% Cashback on"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping"
+            ],
+            "card_alias": "sbi-cashback-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945"
+          },
+          {
+            "name": "Axis Flipkart Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Shopping Get 7.5% Cashback on Myntra",
+              "Get 5% Cashback on Flipkart",
+              "Get 5% Cashback on Cleartrip"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-flipkart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121912_AGB_Mockup-6.webp1736855576881"
+          },
+          {
+            "name": "HSBC Cashback Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹1,179 (₹999 + GST)",
+            "rating": 1,
+            "invite_only": false,
+            "employment_type": "salaried",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Get 4 Domestic Airport Lounge",
+              "Get 10% Cashback on dining",
+              "Get 10% Cashback on food delivery"
+            ],
+            "tags": [
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping",
+              "Travel"
+            ],
+            "card_alias": "hsbc-cashback-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122008_BankKaro_20260331_180207158_IDFC_FIRST_Indigo_Credit_Card_-mockup_4.png"
+          },
+          {
+            "name": "Kiwi Klick Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "rating": 4.5,
+            "invite_only": false,
+            "employment_type": "salaried",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Flat ₹250 Cashback (1000 Kiwis)",
+              "Flat ₹250 Cashback (1000 Kiwis)",
+              "Get 1.5% Cashback"
+            ],
+            "tags": [
+              "Shopping",
+              "UPI"
+            ],
+            "card_alias": "kiwi-klick-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125208_BankKaro_Mockup-13.png"
+          },
+          {
+            "name": "SBI Simply Click Credit Card",
+            "bank": "",
+            "joining_fee": "₹589 (₹499 + GST)",
+            "annual_fee": "₹589 (₹499 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get 10X Reward Points at Cleartrip & Yatra",
+              "Get 10X Reward Points on Swiggy & Dominos",
+              "Get 10X Reward Points at Myntra, Tata Cliq"
+            ],
+            "tags": [
+              "Shopping"
+            ],
+            "card_alias": "sbi-simply-click-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260922_095234489_Mockup_97.png"
+          },
+          {
+            "name": "HDFC Regalia Gold Credit Card",
+            "bank": "",
+            "joining_fee": "₹2,950 (₹2,500 + GST)",
+            "annual_fee": "₹2,950 (₹2,500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy",
+              "Earn SmartBuy Travel Rewards on Flights, Hotels, RedBus",
+              "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "hdfc-regalia-gold",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125153_BankKaro_Mockup-12.webp"
+          },
+          {
+            "name": "Flipkart SBI Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+              "Earn 4% Cashback on",
+              "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "flipkart-sbi-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125857_BankKaro_HDFC_Bank_UPI_Rupay_Credit_Card-mockup.png"
+          },
+          {
+            "name": "Swiggy BLCK HDFC Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,180 (₹1,000 + GST)",
+            "annual_fee": "₹1,180 (₹1,000 + GST)",
+            "rating": 4.7,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "10% Cashback on Swiggy Instamart",
+              "10% Cashback on Swiggy Orders",
+              "10% Cashback on Swiggy Orders"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping"
+            ],
+            "card_alias": "swiggy-blck-hdfc-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122002_BankKaro_20260316_12502238_RBL_1.png"
+          },
+          {
+            "name": "IDFC FIRST Millennia Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get A ₹500 Voucher from partner brands like Amazon, BigBasket,",
+              "Get 5% Cashback on Converting Eligible",
+              "25% Off on Movie Tickets via District App"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "idfc-first-millennia-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_124953_BankKaro_20260129_125526152_IDFC_MILLENIA.png"
+          },
+          {
+            "name": "Tata Neu Infinity HDFC Bank Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹1,769 (₹1,499 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Get 5% NeuCoins at partner Tata brands Like Croma, Tata Cliq",
+              "Get 5% NeuCoins at bigbasket with Spends",
+              "Get 5% NeuCoins at IHCL, Air India Express and Air India"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Grocery Shopping",
+              "Travel",
+              "Utility Bills",
+              "UPI"
+            ],
+            "card_alias": "tata-neu-hdfc-bank-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125214_BankKaro_20260129_124325671_TATA_Nue.png"
+          },
+          {
+            "name": "Axis MyZone Credit Card",
+            "bank": "",
+            "joining_fee": "₹590 (₹500 + GST)",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 1,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get Movie Ticket Free on Your Second District Booking with Coupon AXIS200",
+              "Get ₹120 Off on Swiggy Orders With Coupon AXIS120",
+              "Enjoy Lounge Access with 1 Complimentary"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-bank-myzone-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121735_AGB_image.png1734951697889"
+          },
+          {
+            "name": "HDFC Millennia Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,180 (₹1,000 + GST)",
+            "annual_fee": "₹1,180 (₹1,000 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get 10% Additional Discount on Swiggy Dineout",
+              "Earn 1% Cashback on all Other Spends",
+              "Earn 5% Cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit"
+            ],
+            "tags": [
+              "Shopping",
+              "Dining"
+            ],
+            "card_alias": "hdfc-millenia-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680"
+          },
+          {
+            "name": "Standard Chartered Smart Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹589 (₹499 + GST)",
+            "rating": 5,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 2% Cashback on all Online Spends",
+              "Earn 1% Cashback on all Other Spends",
+              "Earn 2% Cashback on all Online Spends"
+            ],
+            "tags": [
+              "Shopping"
+            ],
+            "card_alias": "stanc-smart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121952_BankKaro_IDFC_FIRST_Indigo_Credit_Card_-mockup_1.png"
+          },
+          {
+            "name": "HSBC Travel One Credit Card",
+            "bank": "",
+            "joining_fee": "₹5,899 (₹4,999 + GST)",
+            "annual_fee": "₹5,899 (₹4,999 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 2 Reward Points",
+              "Save up to 15% on Travel Bookings",
+              "Enjoy Discounts with Zomato District"
+            ],
+            "tags": [
+              "Dining",
+              "Travel"
+            ],
+            "card_alias": "hsbc-travel-one",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125506_BankKaro_20260129_125045722_HSBC_TravelOne_Credit_Card.png"
+          },
+          {
+            "name": "Indian Oil RBL Bank XTRA Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,770 (₹1,500 + GST)",
+            "annual_fee": "₹1,770 (₹1,500 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 15 Fuel Points per ₹100 on IndianOil Fuel Stations",
+              "2 Fuel Points per ₹100 on Other Spends",
+              "Earn 2 Fuel Points"
+            ],
+            "tags": [
+              "Fuel",
+              "Shopping"
+            ],
+            "card_alias": "indian-oil-rbl-bank-xtra-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125221_BankKaro_20260129_124738216_RBL_indian_oil_xtra.png"
+          }
+        ]
+      }
+    },
+    "resolve_card": {
+      "tool": "whatsapp_resolve_card_or_category",
+      "arguments": {
+        "phrase": "hdfc regaliaa"
+      },
+      "response": {
+        "reply_type": "resolution",
+        "summary": "I could not confidently resolve that phrase.",
+        "matches": [],
+        "best_match": null,
+        "next_action": "ask_clarifying_question",
+        "next_question": "Can you share the card name, brand, or category in different words?"
+      }
+    },
+    "resolve_category": {
+      "tool": "whatsapp_resolve_card_or_category",
+      "arguments": {
+        "phrase": "swiggy and zomato"
+      },
+      "response": {
+        "reply_type": "resolution",
+        "summary": "I found possible matches.",
+        "matches": [
+          {
+            "type": "brand",
+            "brand": "swiggy",
+            "category": "food_delivery",
+            "spending_key": "online_food_ordering",
+            "channel": "online",
+            "confidence": "high",
+            "matched_on": "brand_mapping",
+            "needs_clarification": false,
+            "next_question": "Roughly how much do you spend on swiggy per month?"
+          },
+          {
+            "type": "brand",
+            "brand": "zomato",
+            "category": "food_delivery",
+            "spending_key": "online_food_ordering",
+            "channel": "online",
+            "confidence": "high",
+            "matched_on": "brand_mapping",
+            "needs_clarification": false,
+            "next_question": "Roughly how much do you spend on zomato per month?"
+          },
+          {
+            "type": "category",
+            "category": "food_delivery",
+            "slug": "online-food-ordering",
+            "label": "food delivery",
+            "confidence": "high",
+            "matched_on": "category_alias"
+          }
+        ],
+        "best_match": {
+          "type": "brand",
+          "brand": "swiggy",
+          "category": "food_delivery",
+          "spending_key": "online_food_ordering",
+          "channel": "online",
+          "confidence": "high",
+          "matched_on": "brand_mapping",
+          "needs_clarification": false,
+          "next_question": "Roughly how much do you spend on swiggy per month?"
+        },
+        "next_action": "ask_spend_amount_then_recommend_spend_profile",
+        "next_question": "Roughly how much do you spend on swiggy per month?"
+      }
+    }
+  },
+  "tool_descriptions": {
+    "whatsapp_resolve_card_or_category": "WhatsApp facade: Resolve a user phrase to known card aliases or category slugs. Use before details, comparison, or category recommendation tools.",
+    "recommend_cards": "PERSONALIZED credit card recommendations based on the user's actual spending pattern.\nAnalyzes 100+ Indian credit cards and ranks by NET ANNUAL SAVINGS (rewards earned + lounge value + milestone benefits - joining fee - annual fee).\n\nPRE-REQUISITE: If you haven't called get_advisor_context yet this session, call it FIRST to load brand mappings and conversation flow. Without it, you'll mismap brands to spending keys.\n\nWHEN TO USE: User provides specific spending amounts OR mentions brands/categories they spend on.\nWHEN NOT TO USE: User just wants to browse cards without spending context -> use list_cards instead.\n\nSPENDING KEY MAPPING (CRITICAL — map user mentions to correct keys):\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n• amazon_spends → Amazon.in ONLY\n• flipkart_spends → Flipkart ONLY\n• other_online_spends → ALL other e-commerce: Myntra, Meesho, Nykaa, Ajio, Tata CLiQ, Croma online, BookMyShow, Ola, Uber rides, PharmEasy, NetMeds, 1mg, Lenskart, Pepperfry, Urban Company, CRED bills, subscription boxes\n• other_offline_spends → Physical store purchases: malls, retail, electronics stores, local markets, salons, gyms, medical stores, any POS/tap/swipe\n• grocery_spends_online → Online grocery ONLY: BigBasket, Blinkit, Zepto, Swiggy Instamart, JioMart, Amazon Fresh, Flipkart Grocery, DMart Ready\n• online_food_ordering → Food DELIVERY: Swiggy (food, not Instamart), Zomato, EatSure, Dominos/Pizza Hut online orders\n• fuel → Petrol pumps: HP, Indian Oil, BPCL, Shell, Nayara, Reliance\n• dining_or_going_out → IN-PERSON restaurants, cafes (Starbucks, CCD, Third Wave), bars, pubs, food courts\n• flights_annual → ANNUAL flight spend (all airlines, all booking platforms) — convert monthly×12\n• hotels_annual → ANNUAL hotel/stay spend (hotels, Airbnb, OYO) — convert monthly×12\n• domestic_lounge_usage_quarterly → Domestic lounge visits PER QUARTER — \"fly 4x/year\" = 1/quarter\n• international_lounge_usage_quarterly → International lounge visits PER QUARTER\n• mobile_phone_bills → Jio, Airtel, Vi, BSNL monthly bills\n• electricity_bills → Monthly electricity bill\n• water_bills → Monthly water bill\n• insurance_health_annual → ANNUAL health insurance premium — convert monthly×12\n• insurance_car_or_bike_annual → ANNUAL vehicle insurance — convert monthly×12\n• rent → Monthly rent (via CRED RentPay, NoBroker, etc.)\n• school_fees → Monthly education fees (school, coaching, college)\n• offline_grocery → Monthly physical grocery store spend: DMart, Reliance Smart/Fresh, Nature's Basket, 24Seven, kirana stores, liquor stores\n• life_insurance → ANNUAL life insurance premium: LIC, HDFC Life, SBI Life, ICICI Prudential, Max Life, Tata AIA, term plans, ULIPs\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nVAGUE QUERY HANDLING:\n• \"best card for shopping\" → ask what they buy and where, OR estimate: amazon_spends=5000, flipkart_spends=3000, other_online_spends=5000\n• \"premium card\" → suggest high spenders profile: flights_annual=100000, hotels_annual=50000, dining=10000, domestic_lounge_usage_quarterly=3\n• \"I spend a lot on food\" → clarify: delivery (online_food_ordering) vs dining out (dining_or_going_out) vs groceries (grocery_spends_online)\n• \"cashback card\" → focus on the user's biggest spending categories for maximum net savings\n• \"travel card\" → ask about flights, hotels, lounges; these drive the biggest travel card differentiation\n\nIMPORTANT UNITS:\n• Most fields are MONTHLY amounts in ₹ (including offline_grocery)\n• flights_annual, hotels_annual, insurance_health_annual, insurance_car_or_bike_annual, life_insurance are ANNUAL — multiply monthly by 12\n• lounge fields are PER QUARTER — divide annual visits by 4\n• All fee outputs include 18% GST",
+    "get_card_details": "Get FULL details of a specific credit card by its alias/slug.\nReturns: fees (with 18% GST), all benefits, rewards structure, eligibility, ratings.\nNOTE: If you haven't called get_advisor_context yet, do so first — it has the full card alias reference.\n\nWHEN TO USE: After recommend_cards or list_cards, when the user wants to deep-dive into a specific card.\nALSO USE WHEN: User names a specific card like \"tell me about HDFC Regalia\" — construct the alias as lowercase-hyphenated bank-card-name (e.g. \"hdfc-regalia-gold-credit-card\").\n\nCOMMON CARD ALIAS PATTERNS (aliases are NOT predictable — use list_cards if unsure):\n• HDFC: hdfc-regalia-gold, hdfc-millenia-credit-card, hdfc-swiggy-credit-card, hdfc-infinia-credit-card, hdfc-diners-club-black, hdfc-diners-club-black-metal-credit-card, hdfc-diners-privilege-credit-card, hdfc-freedom-credit-card, hdfc-indian-oil-credit-card, hdfc-pixel-play-credit-card, hdfc-rupay-credit-card, hdfc-indigo-credit-card, HDFC-Moneyback-Credit-Card, hdfc-moneyback-plus-credit-card, hdfc-marriott-bonvoy-credit-card, hdfc-tata-neu-plus-credit-card, hdfc-irctc-credit-card, shoppers-stop-black-hdfc-credit-card, paytm-hdfc-bank-select-credit-card, hdfc-bharat-credit-card, hdfc-superia-airline-credit-card, hdfc-biz-grow-credit-card, hdfc-biz-first-credit-card\n• Axis: axis-bank-magnus-credit-card, axis-flipkart-credit-card, axis-privilege-amex-credit-card, axis-atlas-credit-card, axis-neo-credit-card, axis-bank-myzone-credit-card, axis-horizon-credit-card, axis-cashback-credit-card, axis-indian-oil-rupay-credit-card, axis-select-credit-card, axis-airtel-credit-card, axis-aura-credit-card, axis-rewards-credit-card, axis-samsung-infinite-credit-card, axis-bank-privilege-credit-card, axis-shopper-stop-credit-card\n• SBI: sbi-cashback-credit-card, sbi-elite-card, sbi-aurum-credit-card, sbi-simply-click-credit-card, sbi-bpcl-octane-credit-card, flipkart-sbi-credit-card, tata-neu-infinity-sbi-credit-card, irctc-sbi-platinum-card, sbi-simply-save-credit-card, sbi-prime-credit-card, sbi-card-pulse-credit-card\n• ICICI: icici-amazon-pay-credit-card, icici-sapphiro-credit-card, icici-hpcl-coral-credit-card, icici-rubyx-credit-card, icici-platinum-chip-credit-card, makemytrip-icici-signature, icici-hpcl-super-saver-credit-card, times-black-credit-card\n• IDFC: idfc-first-millennia-credit-card, idfc-first-select-credit-card, idfc-first-classic-credit-card, idfc-first-wow-credit-card, idfc-wealth-credit-card, idfc-first-private-credit-card, idfc-swyp-credit-card, idfc-ashva-credit-card, idfc-mayura-credit-card\n• Others: scapia-credit-card, au-altura-credit-card, au-altura-plus-credit-card, au-nomo-credit-card, au-zenith-credit-card, zagg-rupay-credit-card, hsbc-travel-one, hsbc-live-plus-credit-card, standard-charted-ultimate, amex-platinum-travel-credit-card, american-express-platinum-card, amex-gold-credit-card, kotak-zen-signature-credit-card, indusind-legend-credit-card, rbl-world-safari-credit-card, yes-bank-ace-credit-card, jupiter-edge-credit-card\n⚠️ ALIAS QUIRKS: Some aliases have mixed case (HDFC-Moneyback-Credit-Card), typos (standard-charted-ultimate), or missing suffixes (hdfc-diners-club-black has no -credit-card). ALWAYS use list_cards to verify.\n\nIMPORTANT: Aliases are inconsistent (some have -credit-card suffix, some don't, some use bank name, some don't). ALWAYS use list_cards first if you're not 100% sure of the alias.\n\nPRESENT: lead with card+bank+one-line positioning. Show fee block: \"Joining ₹X | Annual ₹Y | Waiver: Z\". Top 3-5 benefits relevant to user.\nELIGIBILITY: show as \"Age X-Y | ₹X LPA salaried / ₹Y LPA self-emp | CIBIL XXX\". Check against user's stated profile proactively.\nNever invent rates not in the data. Never add GST again (fees already include 18% GST).",
+    "list_cards": "Browse and filter credit cards without needing spending data.\nNOTE: If you haven't called get_advisor_context yet, do so first — it has category mappings and feature-to-filter rules.\n\nWHEN TO USE: User wants to explore/discover cards, asks about a category, or hasn't shared spending details.\nWHEN NOT TO USE: User has given spending amounts -> use recommend_cards for personalized ranking.\n\nCATEGORY MAPPING (map user intent to category slug):\n• \"premium\" / \"luxury\" / \"lounge access\" / \"travel\" / \"airport\" → best-travel-credit-card\n• \"shopping\" / \"cashback\" / \"online shopping\" / \"rewards\" → best-shopping-credit-card\n• \"fuel\" / \"petrol\" / \"diesel\" / \"fuel surcharge\" → best-fuel-credit-card\n• \"dining\" / \"restaurant\" / \"food\" (in-person) / \"Starbucks\" → best-dining-credit-card\n• \"grocery\" / \"BigBasket\" / \"Blinkit\" / \"Zepto\" → best-cards-grocery-shopping\n• \"Swiggy\" / \"Zomato\" / \"food delivery\" → online-food-ordering\n• \"utility\" / \"bills\" / \"recharge\" / \"electricity\" → best-utility-credit-card\n• \"all cards\" / no specific category → leave empty\n\nUSER INTENT → FILTER MAPPING:\n• \"free card\" / \"no fee\" / \"LTF\" / \"lifetime free\" / \"no annual charge\" → free_cards=\"true\"\n• \"Amex\" / \"American Express\" → card_networks=[\"American Express\"]\n• \"works internationally\" → card_networks=[\"Visa\"] or [\"Mastercard\"]\n• \"RuPay\" / \"UPI linked\" → card_networks=[\"RuPay\"]\n• \"budget card\" / \"entry level\" → annual_fees=\"0-500\" or free_cards=\"true\"\n• \"super premium\" / \"invite only\" → annual_fees=\"10000+\"\n• \"HDFC card\" / \"Axis card\" etc → use bank_ids if known, otherwise suggest using recommend_cards\n\nCOMMON FOLLOW-UP: After listing, user often picks a card → use get_card_details for the deep dive.",
+    "compare_cards": "Compare 2-3 credit cards side by side.\nNOTE: If you haven't called get_advisor_context yet, do so first — it has correct card alias patterns.\n\nWHEN TO USE: User is deciding between specific cards, says \"X vs Y\", or asks \"which is better\".\nREQUIRES: card_aliases from previous recommend_cards or list_cards results.\n\nPresent the comparison highlighting the differences that matter for the user's use case.\nCommon comparisons: HDFC Regalia vs Axis Magnus, SBI Cashback vs ICICI Amazon Pay, HDFC Swiggy vs Axis Flipkart.",
+    "check_eligibility": "Check which cards a user can actually APPLY for based on pincode, income, and employment.\nNOTE: If you haven't called get_advisor_context yet, do so first — it has income conversion rules and employment mapping.\n\nWHEN TO USE: User asks \"can I get this card?\", \"which cards am I eligible for?\", \"I earn X, what can I get?\", or before recommending cards to someone with a stated income.\n\nINCOME CONVERSION (users state income in many ways):\n• \"50k/month\" or \"50k per month\" → annual_income = \"600000\"\n• \"10 LPA\" or \"10 lakhs per annum\" → annual_income = \"1000000\"\n• \"1.5L/month\" → annual_income = \"1800000\"\n• \"8 lakhs\" (ambiguous) → likely annual, so \"800000\"\n\nEMPLOYMENT MAPPING:\n• Salaried: full-time, part-time, contract workers, government employees\n• Self-employed: freelancers, business owners, consultants, doctors/lawyers/CAs with own practice, gig workers, YouTubers, influencers\n\nIDEAL FLOW: check_eligibility first → then recommend_cards with spending to find the BEST eligible card."
+  },
+  "export_samples": {
+    "au-altura-plus-credit-card": {
+      "name": "AU Altura Plus Credit Card",
+      "card_alias": "au-altura-plus-credit-card",
+      "fees": {
+        "joining": "Free",
+        "joining_note": "The joining fee of ₹499 is waived on completing minimum retail spends of ₹20,000 within 90 days of card set up.",
+        "annual": "Free",
+        "annual_note": null,
+        "annual_fee_waiver": "Not Applicable",
+        "gst_note": "All fees include 18% GST."
+      },
+      "key_benefits": [
+        {
+          "title": "Earn 2 Reward Points Per ₹100",
+          "description": "on all eligible online retail purchases"
+        },
+        {
+          "title": "Earn 500 Bonus Reward Points Every Month",
+          "description": "on spending ₹20,000 or more on eligible retail purchases in a calendar month"
+        },
+        {
+          "title": "Earn 1.5% Cashback On Offline Retail Spends",
+          "description": "capped at ₹100 per statement cycle"
+        },
+        {
+          "title": "Get 2 Complimentary Railway Lounge",
+          "description": "Visits Per Quarter at select railway stations across India, totalling 8 visits per year"
+        }
+      ],
+      "eligibility": {
+        "min_age": 21,
+        "max_age": 60,
+        "income_salaried_lpa": 4,
+        "income_self_emp_lpa": 5,
+        "min_income_monthly": 400000,
+        "crif_salaried": 720,
+        "crif_self_emp": 720
+      }
+    },
+    "american-express-smart-earn-credit-card": {
+      "name": "American Express SmartEarn Credit Card",
+      "card_alias": "american-express-smart-earn-credit-card",
+      "fees": {
+        "joining": "₹584 (₹495 + GST)",
+        "joining_note": "A one-time joining fee of ₹495 is charged at the time of card issuance as per the bank's policy.",
+        "annual": "₹584 (₹495 + GST)",
+        "annual_note": "The annual fee is charged every year and may be waived if you meet the bank's spending conditions.",
+        "annual_fee_waiver": "The annual fee is waived if you spend ₹40000 or more in a year on your card, as per bank policy.",
+        "gst_note": "All fees include 18% GST."
+      },
+      "key_benefits": [
+        {
+          "title": "Earn 10X Membership Rewards on Zomato, Flipkart, Uber & More",
+          "description": "10 points per ₹50 spent on Zomato, Ajio, Nykaa, BookMyShow, Uber and other 10X partners"
+        },
+        {
+          "title": "Earn 5X Membership Rewards on Amazon spends",
+          "description": "5 points per ₹50 spent on all Amazon Transactions"
+        },
+        {
+          "title": "Earn 10X Membership Rewards on Zomato",
+          "description": "10 points per ₹50 spent on Zomato and other 10X partners"
+        },
+        {
+          "title": "Earn 10X Membership Rewards on Flipkart, Ajio, Nykaa",
+          "description": "10 points per ₹50 spent on Flipkart, Ajio, Nykaa and other 10X partners"
+        },
+        {
+          "title": "Earn 5X Membership Rewards on Amazon Spends",
+          "description": "5 points per ₹50 spent on all Amazon Transactions"
+        },
+        {
+          "title": "Get ₹500 Cashback as Statement Credit on Joining",
+          "description": "on spending ₹10,000 in eligible transactions within the first 90 days of card membership"
+        }
+      ],
+      "eligibility": {
+        "min_age": 21,
+        "max_age": 65,
+        "income_salaried_lpa": 4.5,
+        "income_self_emp_lpa": 6,
+        "min_income_monthly": 600000,
+        "crif_salaried": 720,
+        "crif_self_emp": 720
+      }
+    },
+    "spicejet-axis-bank-voyage-credit-card": {
+      "name": "Axis SpiceJet Voyage Credit Card",
+      "card_alias": "spicejet-axis-bank-voyage-credit-card",
+      "fees": {
+        "joining": "₹885 (₹750 + GST)",
+        "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+        "annual": "₹885 (₹750 + GST)",
+        "annual_note": "The annual fee is not waived under any spending conditions.",
+        "annual_fee_waiver": "Not Applicable",
+        "gst_note": "All fees include 18% GST."
+      },
+      "key_benefits": [
+        {
+          "title": "Get Complimentary SpiceClub Silver",
+          "description": "Tier Membership with SpiceJet add-on vouchers on card issuance"
+        },
+        {
+          "title": "Earn 6 SpiceClub Points",
+          "description": "per ₹200 on online food orders"
+        },
+        {
+          "title": "Earn Up To 18 SpiceClub Points",
+          "description": "Per ₹200 on SpiceJet mobile app and website, combining 6 points as card benefit and 12 points as Silver membership"
+        },
+        {
+          "title": "Enjoy 4 Complimentary Domestic Airport Lounge",
+          "description": "visits per year subject to minimum spends of ₹50,000 in the previous quarter"
+        },
+        {
+          "title": "Earn 3 SpiceClub Points",
+          "description": "Per ₹200 on other domestic retail and international transactions, excluding fuel, wallet and EMI transactions"
+        },
+        {
+          "title": "Save Up To 15%",
+          "description": "on flights and hotels booked via MakeMyTrip every Wednesday"
+        },
+        {
+          "title": "Get 10% Off",
+          "description": "on Swiggy orders every Wednesday"
+        },
+        {
+          "title": "Get ₹1,500 SpiceJet E-Voucher",
+          "description": "on completing 2 transactions within 30 days of card issuance"
+        },
+        {
+          "title": "Get 10% Off Up To ₹1,000",
+          "description": "on Tira every Wednesday"
+        }
+      ],
+      "eligibility": {
+        "min_age": 18,
+        "max_age": 70,
+        "income_salaried_lpa": 2.5,
+        "income_self_emp_lpa": 3,
+        "min_income_monthly": 250000,
+        "crif_salaried": 720,
+        "crif_self_emp": 720
+      }
+    }
+  }
+}

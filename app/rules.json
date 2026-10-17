@@ -1,0 +1,840 @@
+{
+  "mcp": {
+    "tools": {
+      "recommend": "recommend_cards",
+      "card_details": "get_card_details",
+      "list_cards": "list_cards",
+      "compare": "compare_cards",
+      "check_eligibility": "check_eligibility",
+      "resolve": "whatsapp_resolve_card_or_category"
+    },
+    "args": {
+      "card_alias": "card_alias",
+      "card_aliases": "card_aliases",
+      "top_n": "top_n",
+      "response_format": "response_format",
+      "limit": "limit",
+      "pincode": "pincode",
+      "annual_income": "annual_income",
+      "employment_status": "employment_status",
+      "phrase": "phrase"
+    },
+    "options": {
+      "recommend_top_n": 3,
+      "recommend_format": "full",
+      "list_limit": 300,
+      "list_format": "brief",
+      "card_list_cache_seconds": 3600,
+      "eligible_cards_shown": 5,
+      "max_compare": 3
+    },
+    "spend_key_units": {
+      "suffixes": {
+        "_annual": "year",
+        "_quarterly": "quarter"
+      },
+      "default": "month",
+      "overrides": {
+        "life_insurance": "year"
+      }
+    },
+    "response": {
+      "card_lists": [
+        "recommendations",
+        "cards",
+        "comparison",
+        "eligible_cards"
+      ],
+      "single_card_marker": [
+        "name",
+        "card_name"
+      ],
+      "fields": {
+        "card_id": [
+          "card_alias",
+          "alias"
+        ],
+        "card_name": [
+          "card_name",
+          "name"
+        ],
+        "net_savings": [
+          "net_annual_savings"
+        ],
+        "rewards": [
+          "annual_rewards_value",
+          "annual_rewards"
+        ],
+        "milestone": [
+          "milestone_benefits"
+        ],
+        "lounge": [
+          "lounge_value"
+        ],
+        "joining_fee": [
+          "joining_fee",
+          "fees.joining"
+        ],
+        "annual_fee": [
+          "annual_fee",
+          "fees.annual"
+        ],
+        "fee_waived": [
+          "annual_fee_waived"
+        ],
+        "fee_waiver_note": [
+          "fees.annual_fee_waiver"
+        ],
+        "benefits": [
+          "key_benefits"
+        ],
+        "benefit_title": [
+          "title"
+        ],
+        "category_breakdown": [
+          "top_spend_categories"
+        ],
+        "breakdown_value": [
+          "annual_value"
+        ],
+        "salaried_lpa": [
+          "eligibility.income_salaried_lpa"
+        ],
+        "self_emp_lpa": [
+          "eligibility.income_self_emp_lpa"
+        ],
+        "min_income_monthly": [
+          "eligibility.min_income_monthly"
+        ],
+        "min_age": [
+          "eligibility.min_age"
+        ],
+        "max_age": [
+          "eligibility.max_age"
+        ],
+        "eligible_count": [
+          "eligible_cards_count"
+        ],
+        "cards_analyzed": [
+          "total_cards_analyzed"
+        ],
+        "error": [
+          "error"
+        ]
+      },
+      "zero_words": [
+        "free",
+        "nil",
+        "lifetime free",
+        "not applicable"
+      ],
+      "lpa_unit": 100000
+    },
+    "resolver": {
+      "best_match": "best_match",
+      "spending_key": "spending_key",
+      "needs_clarification": "needs_clarification"
+    }
+  },
+  "guards": {
+    "input_block": [
+      {
+        "name": "sensitive_data",
+        "patterns": [
+          "(?<!\\d)(?:\\d[ -]?){12,18}\\d(?!\\d)",
+          "(?<!\\d)\\d{4}[ -]?\\d{4}[ -]?\\d{4}(?!\\d)",
+          "\\b[a-z]{5}\\d{4}[a-z]\\b",
+          "\\b(otp|cvv)\\b\\W{0,5}\\d{3,6}"
+        ],
+        "message": "Please don't share card numbers, OTPs, CVVs, Aadhaar or PAN here. I don't need them, and I haven't stored what you sent. Tell me roughly what you spend each month and where."
+      },
+      {
+        "name": "prompt_injection",
+        "patterns": [
+          "\\b(ignore|forget|disregard|override|bypass)\\b.{0,25}\\b(rules?|instructions?|guidelines|guardrails|prompt|system)\\b",
+          "\\b(pretend|act as if|role ?play)\\b.{0,30}\\b(no rules|bank|approv)",
+          "\\bdeveloper mode\\b|\\bjailbreak\\b",
+          "\\b(show|give|tell|reveal|print|share)\\b.{0,15}\\b(system prompt|your (prompt|instructions|rules))\\b"
+        ],
+        "message": "I can't change how I work. I only share card facts from the card data, and approval is always the bank's decision. Tell me about your spending and I'll suggest a card."
+      },
+      {
+        "name": "approval_promise",
+        "patterns": [
+          "\\bguarantee(d|e)?\\b.*\\bapprov",
+          "\\bapprov.*\\bguarantee",
+          "\\bwill i (surely|definitely|100%?) get\\b",
+          "\\bpakka\\b.*\\b(approv|milega|mil jayega)\\b",
+          "\\bconfirm\\b.*\\bapprov",
+          "\\b(definitely|surely|certainly|100\\s?%?)\\b.{0,20}\\b(get )?approv",
+          "\\bapprov\\w*\\b.{0,20}\\b(100\\s?%|sure|certain|definite)"
+        ],
+        "message": "I can't promise approval. The bank makes the final decision, but I can show which cards you are likely eligible for."
+      },
+      {
+        "name": "tax_advice",
+        "patterns": [
+          "\\btax\\b.*\\b(save|saving|deduct|benefit|file|return|evade|exempt)",
+          "\\b(save|saving|deduct).*\\btax\\b",
+          "\\b80c\\b|\\bgst\\b.*\\b(claim|file)",
+          "\\bincome tax\\b",
+          "\\b(claim|file|save)\\b.{0,15}\\bgst\\b"
+        ],
+        "message": "I can't give tax advice. Please talk to a qualified tax professional for that. I can help you choose or compare credit cards."
+      },
+      {
+        "name": "off_topic_product",
+        "patterns": [
+          "\\b(personal |home |car |gold |business )loans?\\b",
+          "\\b(need|want|get|suggest|best|buy|take)\\b.{0,15}\\bloans?\\b",
+          "\\b(need|want|suggest|best|buy|which)\\b.{0,20}\\binsurance (policy|plan)\\b",
+          "\\b(stocks?|share market|mutual funds?|crypto|bitcoin|demat)\\b",
+          "\\b(fixed deposit|savings account)\\b"
+        ],
+        "message": "I only help with credit cards. For loans, insurance plans or investments you'll need a different service."
+      }
+    ],
+    "banned_output": [
+      {
+        "name": "approval_promise",
+        "pattern": "\\b(guaranteed|assured|definite|100%?)\\b.{0,20}\\bapprov"
+      },
+      {
+        "name": "approval_promise_strong",
+        "pattern": "\\byou will (surely|definitely|certainly) (get|be approved)"
+      },
+      {
+        "name": "tax_advice",
+        "pattern": "\\btax (benefit|saving|deduction)s?\\b"
+      },
+      {
+        "name": "pii_request",
+        "pattern": "\\b(otp|cvv|password|full card number|aadhaar number|pan number)\\b"
+      }
+    ],
+    "min_checked_amount": 2,
+    "redact_patterns": [
+      "(?<!\\d)(?:\\d[ -]?){12,18}\\d(?!\\d)",
+      "(?<!\\d)\\d{4}[ -]?\\d{4}[ -]?\\d{4}(?!\\d)",
+      "\\b[a-z]{5}\\d{4}[a-z]\\b",
+      "\\b(otp|cvv)\\b\\W{0,5}\\d{3,6}"
+    ]
+  },
+  "intent": {
+    "rules": [
+      {
+        "intent": "compare",
+        "patterns": [
+          "\\bcompare\\b",
+          "\\bvs\\.?\\b",
+          "\\bversus\\b",
+          "\\b(difference|differ) between\\b",
+          "\\bkaunsa better\\b",
+          "\\bwhich (is|one is) (better|best)\\b",
+          "\\bor\\b.{0,40}\\bwhich (is )?better\\b",
+          "\\bbetter\\b.{0,20}\\?\\s*$"
+        ]
+      },
+      {
+        "intent": "eligibility",
+        "patterns": [
+          "\\beligib",
+          "\\bqualif",
+          "\\bcan i get\\b",
+          "\\bam i able\\b",
+          "\\b(cards?|what) can i (get|apply)",
+          "\\bmil (sakta|sakti|jayega)\\b"
+        ]
+      },
+      {
+        "intent": "card_details",
+        "patterns": [
+          "\\b(fee|fees|charges?|annual fee|joining fee)\\b",
+          "\\b(benefits?|rewards?|lounge|cashback rate)\\b.*\\b(of|for|on)\\b",
+          "\\btell me about\\b",
+          "\\bdetails (of|about|for)\\b"
+        ]
+      },
+      {
+        "intent": "recommend",
+        "patterns": [
+          "\\bbest card\\b",
+          "\\brecommend\\b",
+          "\\bsuggest\\b",
+          "\\bwhat card\\b",
+          "\\bkaun ?sa card\\b",
+          "\\bwhich (credit )?card\\b",
+          "\\bbest (savings|cashback|rewards?)\\b",
+          "\\bi spend\\b",
+          "\\bmy spend",
+          "\\bfor my spending\\b",
+          "\\bshould i (get|take|use)\\b",
+          "\\bworth it\\b"
+        ]
+      }
+    ],
+    "dominance_margin": 2
+  },
+  "slots": {
+    "spend_keys": {
+      "amazon_spends": [
+        "\\bamazon\\b"
+      ],
+      "flipkart_spends": [
+        "\\bflipkart\\b"
+      ],
+      "other_online_spends": [
+        "\\bonline\\b(?! (grocer|food))",
+        "\\be-?commerce\\b",
+        "\\bmyntra\\b",
+        "\\bnykaa\\b",
+        "\\bajio\\b"
+      ],
+      "grocery_spends_online": [
+        "\\bonline grocer(y|ies)\\b",
+        "\\bblinkit\\b",
+        "\\bzepto\\b",
+        "\\bbig ?basket\\b",
+        "\\binstamart\\b"
+      ],
+      "offline_grocery": [
+        "(?<!online )\\bgrocer(y|ies)\\b",
+        "\\bdmart\\b",
+        "\\bkirana\\b"
+      ],
+      "online_food_ordering": [
+        "\\bswiggy\\b(?! instamart)",
+        "\\bzomato\\b",
+        "\\bfood delivery\\b",
+        "\\border(ing)? food\\b"
+      ],
+      "dining_or_going_out": [
+        "\\bdining\\b",
+        "\\brestaurants?\\b",
+        "\\beating out\\b",
+        "\\bdine\\b"
+      ],
+      "fuel": [
+        "\\bfuel\\b",
+        "\\bpetrol\\b",
+        "\\bdiesel\\b"
+      ],
+      "flights_annual": [
+        "\\bflights?\\b",
+        "\\bfly\\b",
+        "\\bflying\\b",
+        "\\bair ?tickets?\\b",
+        "\\btravel\\b"
+      ],
+      "hotels_annual": [
+        "\\bhotels?\\b",
+        "\\bstays?\\b"
+      ],
+      "mobile_phone_bills": [
+        "\\b(mobile|phone) bills?\\b",
+        "\\brecharge\\b"
+      ],
+      "electricity_bills": [
+        "\\belectricity\\b"
+      ],
+      "water_bills": [
+        "\\bwater bills?\\b"
+      ],
+      "rent": [
+        "\\brent\\b"
+      ],
+      "school_fees": [
+        "\\bschool\\b",
+        "\\btuition\\b",
+        "\\bcoaching\\b"
+      ],
+      "other_offline_spends": [
+        "(?<!online )\\bshopping\\b(?!\\s+online)",
+        "\\boffline\\b",
+        "\\bmalls?\\b"
+      ]
+    },
+    "units": {
+      "k": 1000,
+      "thousand": 1000,
+      "l": 100000,
+      "lac": 100000,
+      "lacs": 100000,
+      "lakh": 100000,
+      "lakhs": 100000,
+      "lpa": 100000,
+      "cr": 10000000,
+      "crore": 10000000,
+      "crores": 10000000
+    },
+    "unit_periods": {
+      "lpa": "year"
+    },
+    "currency_prefixes": [
+      "₹",
+      "rs.",
+      "rs",
+      "inr"
+    ],
+    "monthly_words": [
+      "per month",
+      "monthly",
+      "a month",
+      "every month",
+      "/month",
+      "pm",
+      "mahine"
+    ],
+    "yearly_words": [
+      "per year",
+      "yearly",
+      "annually",
+      "a year",
+      "every year",
+      "/year",
+      "per annum",
+      "pa",
+      "annual",
+      "saal"
+    ],
+    "income_words": [
+      "salary",
+      "income",
+      "earn",
+      "earning",
+      "package",
+      "ctc",
+      "lpa"
+    ],
+    "pincode_words": [
+      "pincode",
+      "pin code",
+      "pin",
+      "postal code",
+      "zip"
+    ],
+    "employment": {
+      "salaried": [
+        "salaried",
+        "salary",
+        "job",
+        "employee",
+        "working professional",
+        "naukri"
+      ],
+      "self_employed": [
+        "self employed",
+        "self-employed",
+        "business",
+        "freelancer",
+        "freelance",
+        "consultant",
+        "own shop"
+      ]
+    },
+    "after_window": 40,
+    "before_window": 20,
+    "min_spend": 100,
+    "wrong_side_penalty": 3,
+    "frequency": {
+      "pattern_words": {
+        "times": [
+          "times",
+          "trips",
+          "visits",
+          "baar"
+        ],
+        "per": [
+          "a",
+          "per",
+          "every",
+          "in a",
+          "each"
+        ]
+      },
+      "periods": {
+        "year": [
+          "year",
+          "annum",
+          "saal"
+        ],
+        "month": [
+          "month",
+          "mahina",
+          "mahine"
+        ]
+      },
+      "each_words": [
+        "each",
+        "per trip",
+        "every trip",
+        "each trip",
+        "per visit",
+        "every time",
+        "each time",
+        "har baar"
+      ]
+    },
+    "key_conflicts": [
+      {
+        "keep": "grocery_spends_online",
+        "drop": "offline_grocery",
+        "within": 30
+      },
+      {
+        "keep": "online_food_ordering",
+        "drop": "dining_or_going_out",
+        "within": 30
+      },
+      {
+        "keep": "other_online_spends",
+        "drop": "other_offline_spends",
+        "within": 15
+      }
+    ],
+    "income_window": 25,
+    "pincode_blockers": {
+      "before": 15,
+      "after": 15
+    }
+  },
+  "matching": {
+    "word_match": 85,
+    "card_match": 0.6,
+    "common_share": 0.5,
+    "min_fuzzy_len": 4,
+    "min_word_len": 2,
+    "max_word_gap": 1,
+    "tie_margin": 0.2,
+    "short_forms": {
+      "amex": "american express",
+      "sc": "standard chartered",
+      "stanchart": "standard chartered",
+      "bob": "bank of baroda",
+      "ioc": "indian oil",
+      "iocl": "indian oil"
+    }
+  },
+  "validation": {
+    "max_fee": 1000000,
+    "rounding_tolerance": 1,
+    "formula_checks": [
+      {
+        "name": "net_savings_math",
+        "result": "net_savings",
+        "plus": [
+          "rewards",
+          "milestone",
+          "lounge"
+        ],
+        "minus": [
+          "annual_fee"
+        ],
+        "fault": "mcp_tool",
+        "warn_user": true,
+        "problem": "net savings does not match the tool's own formula (rewards + milestone + lounge - annual fee)"
+      },
+      {
+        "name": "description_says_joining_fee_is_subtracted",
+        "result": "net_savings",
+        "plus": [
+          "rewards",
+          "milestone",
+          "lounge"
+        ],
+        "minus": [
+          "joining_fee",
+          "annual_fee"
+        ],
+        "only_if_nonzero": "joining_fee",
+        "fault": "mcp_tool",
+        "warn_user": false,
+        "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not"
+      }
+    ],
+    "zero_ranking": {
+      "fault": "mcp_tool",
+      "warn_user": true,
+      "problem": "tool returned ranked cards although every card shows zero savings"
+    },
+    "breakdown_period": {
+      "fault": "mcp_tool",
+      "warn_user": false,
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly"
+    },
+    "income_consistency": {
+      "tolerance": 0.1,
+      "fault": "data",
+      "warn_user": false,
+      "problem": "minimum income in LPA and minimum monthly income do not agree"
+    },
+    "monthly_looks_yearly": {
+      "fault": "data",
+      "warn_user": false,
+      "problem": "minimum monthly income is about as big as the yearly minimum (LPA), so it looks like a yearly figure in the monthly field"
+    },
+    "name_mismatch": {
+      "fault": "data",
+      "warn_user": false,
+      "problem": "card name differs from the card list for the same alias"
+    },
+    "milestone_heavy": {
+      "share": 0.5,
+      "fault": "mcp_tool",
+      "warn_user": false,
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending"
+    }
+  },
+  "eligibility": {
+    "lpa_field_by_employment": {
+      "salaried": "salaried_lpa",
+      "self_employed": "self_emp_lpa"
+    },
+    "default_employment": "salaried",
+    "monthly_looks_yearly_share": 0.8
+  },
+  "llm": {
+    "card_fields": [
+      "card_name",
+      "net_savings",
+      "rewards",
+      "milestone",
+      "lounge",
+      "joining_fee",
+      "annual_fee",
+      "fee_waived",
+      "fee_waiver_note"
+    ],
+    "max_benefits": 4
+  },
+  "clarify": {
+    "recommend": [
+      {
+        "missing": "spend_where",
+        "question": "Where does most of that money go? For example Amazon, fuel, dining, groceries or flights."
+      },
+      {
+        "missing": "spend",
+        "question": "Sure. Roughly how much do you spend each month, and where does most of it go? For example Amazon, fuel, dining or flights."
+      }
+    ],
+    "card_details": [
+      {
+        "missing": "card",
+        "question": "I couldn't tell which card you mean. Could you share its full name?"
+      }
+    ],
+    "compare": [
+      {
+        "missing": "two_cards",
+        "question": "Which cards should I compare? Please name two or three."
+      }
+    ],
+    "eligibility_card": [
+      {
+        "missing": "income",
+        "question": "What is your monthly income, roughly? I need it to check eligibility."
+      }
+    ],
+    "eligibility_list": [
+      {
+        "missing": "income",
+        "question": "What is your monthly income, roughly?"
+      },
+      {
+        "missing": "employment",
+        "question": "Are you salaried or self-employed?"
+      },
+      {
+        "missing": "pincode",
+        "question": "What is your 6-digit pincode? Banks check eligibility by location."
+      }
+    ]
+  },
+  "messages": {
+    "bank_note": "Approval is up to the bank.",
+    "suspect_note": "Some of this card data looks unusual, so please confirm it with the bank.",
+    "help": "I can suggest a credit card for your spending, compare cards, or check eligibility. Tell me what you spend each month and where.",
+    "need_more": "I need a little more information.",
+    "best_badge": "Best for you",
+    "eligible_badge": "You may qualify",
+    "no_data": "I don't have reliable data to answer that right now.",
+    "which_one": "Which one do you mean: {options}?",
+    "no_savings": "I couldn't work out savings for that spending. Could you tell me the amount and where you spend it, for example 10k a month on Amazon?",
+    "service_down": "I can't reach the card data right now, so I won't guess. Please try again in a moment.",
+    "compare_limit": "I can compare up to {n} cards at a time, so here are the first {n}."
+  },
+  "replies": {
+    "_about": "Plain-English replies used when the LLM is off, down, or its reply fails the output guard. Every {placeholder} is filled from the card data only.",
+    "recommend_with_total": "On about ₹{total} a year of spending, {card} comes out on top. It should save you around {net} a year after fees.",
+    "recommend": "{card} comes out on top for your spending. It should save you around {net} a year after fees.",
+    "runner_up": " {card} is next at {net}.",
+    "joining_fee": " It has a {fee} joining fee, so the first year works out a little lower.",
+    "milestone_heavy": " Most of that is its milestone benefit ({milestone}), usually vouchers you earn by hitting yearly spend targets, so make sure that's something you'd actually use.",
+    "tied": "{cards} come out level here, each saving around {net} a year. The real difference is the joining fee ({fees}).",
+    "tied_pick": " If you'd rather not pay to join, {card} is the simpler pick.",
+    "no_value": "Honestly, a credit card won't save you much on this spending. Even the top pick, {card}, comes out at {net} a year once the fees are counted.",
+    "card_details": "Here's what {card} offers. It costs {joining} to join and {annual} a year.",
+    "card_details_waiver": " {waiver}",
+    "compare": "Here's how {cards} stack up. The fees are the quickest way to tell them apart: {fees}.",
+    "eligibility_list": "From what you've told me, you may be eligible for {count} cards. Here are a few to start with.",
+    "eligibility_meets": "Your income clears {card}'s minimum of about {need}, so you may be eligible. The bank will still look at things like your credit score.",
+    "eligibility_short": "{card} usually asks for about {need}, which is more than you mentioned, so you may not qualify for it yet.",
+    "eligibility_unknown": "I couldn't find the income requirement for {card}, so I can't say either way.",
+    "eligibility_yearly_in_monthly": " The card data lists ₹{listed} as a monthly minimum, which looks like a yearly figure, so I read it as ₹{used} a month.",
+    "eligibility_disagree": " One thing to know: the card data lists two different minimums (₹{a} and ₹{b} a month), so I went with the higher one.",
+    "list_join": " and ",
+    "fee_item": "{fee} for {card}",
+    "short_name_drop": [" Credit Card", " Card"]
+  },
+  "session": {
+    "max_sessions": 1000
+  },
+  "ui": {
+    "title": "Card Advisor",
+    "status": "Live card data from Great.cards",
+    "welcome_title": "Find the card that pays you back the most.",
+    "welcome": "Tell me roughly what you spend each month and where. I'll check the cards on Great.cards and show what each one actually saves you after fees.",
+    "welcome_footer": "Figures come straight from Great.cards card data. I never promise approval.",
+    "placeholder": "Tell me what you spend and where, e.g. 10k on fuel, 5k on Swiggy",
+    "new_chat": "New chat",
+    "error": "Something went wrong. Please check the server is running and try again.",
+    "results_title": {
+      "recommend": "Top cards for your spending",
+      "compare": "Side by side",
+      "eligibility_list": "Cards you may be able to get",
+      "card_details": "Card details",
+      "eligibility_card": "Card details"
+    },
+    "results_value_title": {
+      "recommend": "Saves per year"
+    },
+    "headline_metric": "net_savings",
+    "summary_metrics": [
+      "joining_fee",
+      "annual_fee"
+    ],
+    "labels": {
+      "net_savings": "You save",
+      "rewards": "Rewards",
+      "milestone": "Milestone benefits",
+      "lounge": "Lounge value",
+      "joining_fee": "Joining",
+      "annual_fee": "Annual fee",
+      "free_join": "Free to join",
+      "show_breakdown": "Show breakdown",
+      "hide_breakdown": "Hide breakdown"
+    },
+    "card_actions": [
+      {
+        "label": "Full card details",
+        "text": "Tell me about {card}"
+      },
+      {
+        "label": "Am I eligible?",
+        "text": "Am I eligible for {card}?"
+      }
+    ],
+    "followups": {
+      "recommend": [
+        {
+          "label": "Compare these",
+          "text": "Compare {cards}",
+          "min_cards": 2
+        },
+        {
+          "label": "Add more spending",
+          "fill": "I also spend "
+        },
+        {
+          "label": "Which ones can I get?",
+          "text": "Which cards can I get?"
+        }
+      ],
+      "card_details": [
+        {
+          "label": "Am I eligible?",
+          "text": "Am I eligible for {card}?"
+        },
+        {
+          "label": "Find a better card for me",
+          "text": "Which card should I get for my spending?"
+        }
+      ],
+      "compare": [
+        {
+          "label": "Which saves more for me?",
+          "text": "Which card should I get for my spending?"
+        }
+      ],
+      "eligibility_card": [
+        {
+          "label": "Show cards I can get",
+          "text": "Which cards can I get?"
+        }
+      ],
+      "eligibility_list": [
+        {
+          "label": "Which saves me the most?",
+          "text": "Which card should I get for my spending?"
+        }
+      ]
+    },
+    "meter": {
+      "title": "Your income vs the card's minimum",
+      "you": "You",
+      "needed": "Needed",
+      "per": "a month",
+      "meets": "Clears the minimum",
+      "short": "Below the minimum"
+    },
+    "card_metrics": {
+      "recommend": [
+        "net_savings",
+        "rewards",
+        "milestone",
+        "lounge",
+        "annual_fee",
+        "joining_fee"
+      ],
+      "card_details": [
+        "joining_fee",
+        "annual_fee"
+      ],
+      "compare": [
+        "joining_fee",
+        "annual_fee"
+      ],
+      "eligibility_list": [
+        "joining_fee",
+        "annual_fee"
+      ]
+    },
+    "hide_if_zero": [
+      "milestone",
+      "lounge"
+    ],
+    "suggestions": [
+      {
+        "label": "15k a month on Amazon",
+        "text": "I spend 15k a month on Amazon. Which card should I get?",
+        "icon": "cart"
+      },
+      {
+        "label": "I fly a lot, about 3 lakh a year",
+        "text": "I travel a lot, around 3 lakh a year on flights. Which card should I get?",
+        "icon": "plane"
+      },
+      {
+        "label": "Compare two cards",
+        "text": "Compare two cards",
+        "icon": "compare"
+      },
+      {
+        "label": "Which cards can I get?",
+        "text": "Which cards can I get?",
+        "icon": "check"
+      }
+    ]
+  }
+}

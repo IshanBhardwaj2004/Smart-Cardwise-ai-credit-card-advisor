@@ -1,0 +1,191 @@
+{
+  "name": "HDFC Millennia Credit Card",
+  "nick_name": "HDFC Millennia,Credit Card",
+  "bank": "HDFC",
+  "bank_id": 6,
+  "card_type": "VISA",
+  "card_network": null,
+  "rating": 3,
+  "user_ratings": 325,
+  "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680",
+  "priority_tag": null,
+  "invite_only": false,
+  "employment_type": "both",
+  "new_to_credit": true,
+  "existing_customer_only": true,
+  "fees": {
+    "joining": "₹1,180 (₹1,000 + GST)",
+    "joining_note": "A one-time joining fee of ₹1000 is charged at the time of card issuance as per the bank's policy.",
+    "annual": "₹1,180 (₹1,000 + GST)",
+    "annual_note": "The annual fee is charged every year and may be waived if you meet the bank's spending conditions.",
+    "annual_fee_waiver": "The annual fee is waived if you spend ₹1 lakh or more in a year on your card, as per bank policy.",
+    "gst_note": "All fees include 18% GST."
+  },
+  "fee_schedule": {
+    "apr_monthly": "3.75%",
+    "apr_annual": "45.00%",
+    "forex_markup": "3.50%",
+    "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+    "atm_withdrawal_fee": "2.50%",
+    "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card, subject to a minimum of ₹500.",
+    "railway_surcharge": "1%",
+    "railway_surcharge_note": "Railway ticket bookings made using this card attract a surcharge of 1% of the transaction amount plus applicable GST, as charged by Indian Railways / payment gateway",
+    "rent_payment_fee": "1%",
+    "cash_payment_fee": "₹250",
+    "cheque_payment_fee": "₹50",
+    "reward_redemption_fee": "₹50",
+    "late_payment_slabs": [
+      {
+        "outstanding": "₹0 - ₹100",
+        "fee": "₹0"
+      },
+      {
+        "outstanding": "₹101 - ₹500",
+        "fee": "₹100"
+      },
+      {
+        "outstanding": "₹501 - ₹5000",
+        "fee": "₹500"
+      },
+      {
+        "outstanding": "₹5001 - ₹10000",
+        "fee": "₹600"
+      },
+      {
+        "outstanding": "₹10001 - ₹25000",
+        "fee": "₹800"
+      },
+      {
+        "outstanding": "₹25001 - and above",
+        "fee": "₹1300"
+      }
+    ],
+    "late_payment_note": "Late payment charges apply if the Minimum Amount Due (MAD) is not paid by the due date. Charges are based on the total outstanding amount as per the slab structure above.",
+    "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+  },
+  "rewards": {
+    "point_value": "1 Reward Point = ₹1",
+    "redemption_options": "• Flights &amp; Hotels\n• Products &amp; Vouchers\n• Statement Credit (CashBack)",
+    "redemption_catalogue": "https://offers.smartbuy.hdfc.bank.in/v2/foryou",
+    "exclusions": "Fuel Spends, Rent Payment, Government Transactions, Cash Advances, Outstanding Payment, Bank Charges & Fees, EMI Spends, Wallet Loads, Prepaid Card Loads, Voucher Purchases, Education Spends, Cancelled Transactions",
+    "exclusion_spends": "Fuel Spends, Rent Payment, Wallet Loads, Prepaid Card Loads, Gift Card Loads, Voucher Purchases, Cash Advances, EMI Spends, Interest Charges, Bank Charges & Fees"
+  },
+  "welcome_benefits": null,
+  "lounge_summary": null,
+  "annual_saving_claimed": 14115,
+  "milestone_benefits": [
+    {
+      "spend_target": null,
+      "reward": null,
+      "description": null
+    }
+  ],
+  "key_benefits": [
+    {
+      "title": "Get 10% Additional Discount on Swiggy Dineout",
+      "description": "using coupon code HDFCCARDS"
+    },
+    {
+      "title": "Earn 1% Cashback on all Other Spends",
+      "description": "redeemable as statement credit, capped at 3,000 reward points per calendar month"
+    },
+    {
+      "title": "Earn 5% Cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit",
+      "description": "cashback is in reward points redeemable against statement balance (1 point = ₹1)"
+    },
+    {
+      "title": "Get up to 10% Additional Cashback Across 200+ Brands",
+      "description": "via SmartBuy/PayZapp Shop"
+    },
+    {
+      "title": "Earn 5% cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit",
+      "description": "cashback is in reward points redeemable against statement balance (1 point = ₹1)"
+    }
+  ],
+  "tags": [
+    "Shopping",
+    "Dining"
+  ],
+  "detailed_benefits": [
+    {
+      "type": "all",
+      "sub_type": "All Card Benefits",
+      "details": "• 5% cashback on leading brands Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV, and Cult.fit\n• Cashback is earned as reward points 1 reward point = ₹1 as statement credit\n• 1% cashback on all other spends\n• Cashback redemption capped at 3,000 reward points per calendar month minimum 500 points required for redemption\n• Up to 10% additional cashback across 200+ brands via SmartBuy/PayZapp Shop\n• ₹1,000 gift voucher on spending ₹1,00,000 or more in each calendar quarter alternatively, choose 1 domestic lounge access"
+    },
+    {
+      "type": "welcome",
+      "sub_type": "Welcome Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "travel",
+      "sub_type": "Flight Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "lounge",
+      "sub_type": "Airport Lounge Benefits",
+      "details": "• 1 domestic lounge access per calendar quarter on spending ₹1,00,000 or more in that quarter (part of milestone program choose either lounge access voucher or ₹1,000 gift voucher)\n• Lounge access is integrated into the quarterly spends milestone program"
+    },
+    {
+      "type": "lounge",
+      "sub_type": "Railway Lounge Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "movie_ticket",
+      "sub_type": "Movie Ticket Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "dining",
+      "sub_type": "Dining",
+      "details": "• 10% additional discount on Swiggy Dineout using coupon code HDFCCARDS"
+    },
+    {
+      "type": "fuel",
+      "sub_type": "Fuel Surcharge Waiver Benefits",
+      "details": "• 1% fuel surcharge waiver at all fuel stations across India, Applicable on minimum transaction of ₹400 and maximum transaction of ₹5,000, Maximum waiver of ₹250 per statement cycle"
+    },
+    {
+      "type": "insurance",
+      "sub_type": "Insurance Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "bank_offers",
+      "sub_type": "Bank Offers",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "travel",
+      "sub_type": "Railway Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "travel",
+      "sub_type": "Cab Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "travel",
+      "sub_type": "Bus Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    },
+    {
+      "type": "fuel",
+      "sub_type": "Fuel Benefits",
+      "details": "• This card does not offer any benefits in this category"
+    }
+  ],
+  "eligibility": {
+    "min_age": 21,
+    "max_age": 60,
+    "income_salaried_lpa": 4,
+    "income_self_emp_lpa": 6,
+    "min_income_monthly": 35000,
+    "crif_salaried": 720,
+    "crif_self_emp": 720
+  },
+  "card_alias": "hdfc-millenia-credit-card"
+}

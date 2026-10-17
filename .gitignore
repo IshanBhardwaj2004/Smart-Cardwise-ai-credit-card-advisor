@@ -1,0 +1,30 @@
+
+# Python generated files
+*.pyc
+__pycache__/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Evaluation outputs and local snapshots
+eval_results.json
+mcp_snapshot.json
+
+# Local traces and test outputs
+traces/
+traces_eval/
+traces_test/
+
+# Logs and temporary files
+*.log
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
