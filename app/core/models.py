@@ -44,6 +44,7 @@ class Slots(BaseModel):
     monthly_income: Optional[int] = None
     employment: Optional[str] = None   # server value: "salaried" / "self_employed"
     pincode: Optional[str] = None
+    visits: dict[str, int] = Field(default_factory=dict)   # lounge visits per quarter, by server key
 
     @property
     def total_annual_spend(self) -> Optional[int]:

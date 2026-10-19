@@ -1,0 +1,96 @@
+{
+  "request_id": "ea5744f5da0c",
+  "session_id": null,
+  "ts": 1792360524.9409025,
+  "user_message": "tell me about great travel elite",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [
+      "flights_annual"
+    ],
+    "card_names": [
+      "Great Travel Elite"
+    ],
+    "card_ids": [
+      "great-travel-elite"
+    ],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "card_details",
+  "tool_calls": [
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-travel-elite"
+      },
+      "raw_response": {
+        "name": "Great Travel Elite",
+        "card_alias": "great-travel-elite",
+        "bank": "Great Bank",
+        "fees": {
+          "joining": "₹5,900 (incl. GST)",
+          "annual": "₹5,900 (incl. GST)"
+        },
+        "key_benefits": [
+          {
+            "title": "6% value on flights and hotels",
+            "description": ""
+          },
+          {
+            "title": "8 domestic lounge visits a year",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 9,
+          "income_self_emp_lpa": 12,
+          "min_income_monthly": 75000
+        }
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": {
+    "kind": "card_details",
+    "cards": [
+      {
+        "card_name": "Great Travel Elite",
+        "joining_fee": "₹5,900 (incl. GST)",
+        "annual_fee": "₹5,900 (incl. GST)",
+        "benefits": [
+          "6% value on flights and hotels",
+          "8 domestic lounge visits a year"
+        ]
+      }
+    ]
+  },
+  "llm_raw_reply": "Here's what Great Travel Elite offers. It costs ₹5,900 to join and ₹5,900 a year.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Here's what Great Travel Elite offers. It costs ₹5,900 to join and ₹5,900 a year.",
+  "notes": [
+    "intent by keyword: card_details",
+    "card list from cache (4 cards)",
+    "cards found in message: ['Great Travel Elite']",
+    "card list from cache (4 cards)"
+  ]
+}

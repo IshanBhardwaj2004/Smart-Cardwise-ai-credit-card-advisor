@@ -1,0 +1,37 @@
+{
+  "request_id": "486979177ba4",
+  "session_id": "s-move-on",
+  "ts": 1792360525.1395934,
+  "user_message": "tell me about tata neu",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "Which one do you mean: Tata Neu Plus SBI Card or HDFC Tata Neu Plus Credit Card or Tata Neu Infinity SBI Card or Tata Neu Infinity HDFC Bank Credit Card?",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "Which one do you mean: Tata Neu Plus SBI Card or HDFC Tata Neu Plus Credit Card or Tata Neu Infinity SBI Card or Tata Neu Infinity HDFC Bank Credit Card?",
+  "notes": [
+    "intent by keyword: card_details",
+    "card list from cache (258 cards)",
+    "cards found in message: ['Tata Neu Plus SBI Card']"
+  ]
+}

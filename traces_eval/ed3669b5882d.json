@@ -1,0 +1,126 @@
+{
+  "request_id": "ed3669b5882d",
+  "session_id": null,
+  "ts": 1792360524.9662313,
+  "user_message": "am I eligible for great fuel saver, my salary is 28000 per month",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [
+      "fuel"
+    ],
+    "card_names": [
+      "Great Fuel Saver"
+    ],
+    "card_ids": [
+      "great-fuel-saver"
+    ],
+    "monthly_income": 28000,
+    "employment": "salaried",
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "eligibility_card",
+  "tool_calls": [
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-fuel-saver"
+      },
+      "raw_response": {
+        "name": "Great Fuel Saver",
+        "card_alias": "great-fuel-saver",
+        "bank": "Fuel Bank",
+        "fees": {
+          "joining": "₹499 (incl. GST)",
+          "annual": "₹499 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹50,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% value back on fuel",
+            "description": ""
+          },
+          {
+            "title": "1% fuel surcharge waiver",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 2.5,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000
+        }
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "Great Fuel Saver.eligibility",
+      "problem": "minimum income in LPA and minimum monthly income do not agree (2.5 LPA = 20833 a month, but minimum monthly says 30000)",
+      "suspected_fault": "data",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "eligibility_card",
+    "cards": [
+      {
+        "card_name": "Great Fuel Saver",
+        "joining_fee": "₹499 (incl. GST)",
+        "annual_fee": "₹499 (incl. GST)",
+        "fee_waiver_note": "The annual fee is waived if you spend ₹50,000 or more in a year.",
+        "benefits": [
+          "5% value back on fuel",
+          "1% fuel surcharge waiver"
+        ]
+      }
+    ],
+    "user_profile": {
+      "monthly_income": 28000,
+      "annual_income": 336000,
+      "employment": "salaried"
+    },
+    "verdict": {
+      "card_name": "Great Fuel Saver",
+      "employment_used": "salaried",
+      "employment_assumed": false,
+      "your_monthly_income": 28000,
+      "required_monthly_income": 30000,
+      "required_lpa": 2.5,
+      "required_annual_income": 250000,
+      "meets_income": false,
+      "min_age": 21,
+      "max_age": 65,
+      "card_data_disagrees": {
+        "minimum_from_lpa_per_month": 20833,
+        "minimum_monthly": 30000
+      }
+    }
+  },
+  "llm_raw_reply": "Great Fuel Saver usually asks for about ₹30,000 a month, which is more than you mentioned, so you may not qualify for it yet. One thing to know: the card data lists two different minimums (₹20,833 and ₹30,000 a month), so I went with the higher one.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Great Fuel Saver usually asks for about ₹30,000 a month, which is more than you mentioned, so you may not qualify for it yet. One thing to know: the card data lists two different minimums (₹20,833 and ₹30,000 a month), so I went with the higher one.",
+  "notes": [
+    "intent by keyword: eligibility",
+    "card list from cache (4 cards)",
+    "cards found in message: ['Great Fuel Saver']",
+    "card list from cache (4 cards)"
+  ]
+}

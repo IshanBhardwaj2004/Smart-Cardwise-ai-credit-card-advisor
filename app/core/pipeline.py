@@ -9,10 +9,11 @@ Messages and limits: rules.json
 """
 from __future__ import annotations
 
+import re
 from collections import OrderedDict
 
 from app.config import config, rules
-from app.core.models import CardView, ChatReply, Intent, Meter, Metric, Slots, ToolCallRecord
+from app.core.models import CardView, ChatReply, Intent, Meter, Metric, Slots, ToolCallRecord, ValidationFlag
 from app.guards.input_guard import check_input
 from app.llm.client import LLMClient
 from app.llm.composer import compose_answer
@@ -23,7 +24,7 @@ from app.nlu.intent import _keyword_intent, resolve_intent
 from app.nlu.slots import extract_slots, to_spend
 from app.trace.store import save_trace
 from app.trace.trace import Trace
-from app.validation.tool_validator import milestone_heavy, validate_tool_output
+from app.validation.tool_validator import invite_only_flag, milestone_heavy, milestone_overvalued_flag, validate_tool_output
 from app.workflows.name_resolver import card_index, find_cards_in_text
 from app.workflows.router import route
 
@@ -134,8 +135,18 @@ class Pipeline:
         # 10. validator: check data before the LLM (all flags kept in the trace as evidence)
         names = self._known_names(trace)
         flags = validate_tool_output(raw, names)
+        removed = raw.get("_removed_over_income") if isinstance(raw, dict) else None
+        if removed:
+            cfg = rules["validation"]["eligibility_list_over_income"]
+            flags.append(ValidationFlag(
+                field="response.eligible_cards", suspected_fault=cfg["fault"], warn_user=cfg["warn_user"],
+                problem=f"{cfg['problem']}: " + ", ".join(
+                    f"{r['card_name']} needs about {r['required_monthly_income']}/month" for r in removed)
+                + f" (user: {slots.monthly_income}/month)"))
         trace.validation_flags = flags
         shown = _shown_cards(mode, raw)
+        if mode == "recommend":
+            flags += self._terms_checks(shown, trace)
         suspect = _is_suspect(flags, shown)
 
         if mode == "recommend" and shown and all(schema.number(c, "net_savings") == 0 for c in shown):
@@ -143,7 +154,9 @@ class Pipeline:
             return _reply(trace, _MSG["no_savings"], intent, clarifying=True, suspect_data=True)
 
         # 11-12. LLM reply + output guard (retry / fallback handled inside)
-        data = _llm_data(mode, raw, result, slots, shown, names)
+        overvalued = frozenset(f.field.rsplit(".", 1)[0] for f in flags if f.field.endswith(".milestone_terms"))
+        invite_only = frozenset(f.field.rsplit(".", 1)[0] for f in flags if f.field.endswith(".invite_only"))
+        data = _llm_data(mode, raw, result, slots, shown, names, overvalued, invite_only)
         trace.validated_data = data
         text, used_fallback = compose_answer(msg, data, self.llm, trace)
 
@@ -155,7 +168,7 @@ class Pipeline:
         flagged = {f.field.rsplit(".", 1)[0] for f in flags if f.warn_user}
         return _reply(
             trace, text, intent,
-            cards=_card_views(mode, shown, result, flagged, names),
+            cards=_card_views(mode, shown, result, flagged, names, frozenset(f.field for f in flags)),
             # the bank note matters only when we talk about eligibility
             note=_MSG["bank_note"] if mode.startswith("eligibility") else None,
             warning=_MSG["suspect_note"] if suspect else None,
@@ -166,6 +179,12 @@ class Pipeline:
     # ---------------- helpers (methods) ----------------
     def _intent(self, msg: str, pending, trace: Trace) -> Intent:
         keyword, _ = _keyword_intent(msg)
+        if keyword is None and pending and pending["intent"] != Intent.RECOMMEND and extract_slots(msg).spends:
+            # the bot asked something else ("which card?"), but the user moved on and described
+            # spending ("I fly 4 times a year, 15k each trip"): that's a new recommendation
+            trace.intent_source = "spending"
+            trace.note(f"new question: dropped the pending {pending['intent'].value} question")
+            return Intent.RECOMMEND
         if keyword is None and pending:
             trace.intent_source = "session"
             trace.note(f"continuing {pending['intent'].value}, answer for '{pending['expecting']}'")
@@ -205,6 +224,26 @@ class Pipeline:
             else:
                 unresolved.append(loose)
         slots.loose_amounts = unresolved
+
+    def _terms_checks(self, shown: list[dict], trace: Trace) -> list[ValidationFlag]:
+        """Check each recommended card against its own details: invite-only, and (for cards whose
+        ranking leans on a milestone) the milestone's value by the card's own terms."""
+        from app.workflows.card_details import fetch
+        flags = []
+        for card in shown:
+            if not schema.card_id(card):
+                continue
+            try:
+                details = fetch(schema.card_id(card), self.mcp, trace)
+            except MCPError:
+                continue
+            if not isinstance(details, dict) or schema.error_of(details):
+                continue
+            checks = [invite_only_flag(card, details)]
+            if milestone_heavy(card):
+                checks.append(milestone_overvalued_flag(card, details))
+            flags += [f for f in checks if f]
+        return flags
 
     def _known_names(self, trace: Trace) -> dict[str, str]:
         try:
@@ -250,6 +289,7 @@ def _merge(old: Slots, new: Slots) -> Slots:
         monthly_income=new.monthly_income if new.monthly_income is not None else old.monthly_income,
         employment=new.employment or old.employment,
         pincode=new.pincode or old.pincode,
+        visits={**old.visits, **new.visits},
     )
 
 
@@ -279,6 +319,8 @@ def _user_profile(slots: Slots) -> dict:
         profile["spends"] = [{"spending_key": s.key, "amount": s.amount, "per": s.unit, "per_year": s.annual_amount}
                              for s in slots.spends]
         profile["total_annual_spend"] = slots.total_annual_spend
+    if slots.visits:
+        profile["lounge_visits_per_quarter"] = slots.visits
     if slots.monthly_income is not None:
         profile["monthly_income"] = slots.monthly_income
         profile["annual_income"] = slots.monthly_income * 12
@@ -287,7 +329,8 @@ def _user_profile(slots: Slots) -> dict:
     return profile
 
 
-def _compact_card(card: dict, names: dict[str, str]) -> dict:
+def _compact_card(card: dict, names: dict[str, str], overvalued: frozenset = frozenset(),
+                  invite_only: frozenset = frozenset()) -> dict:
     """Only the card fields the LLM needs, with server text as is."""
     out = {"card_name": _display_name(card, names)}
     for key in _LLM["card_fields"]:
@@ -301,21 +344,29 @@ def _compact_card(card: dict, names: dict[str, str]) -> dict:
         out["benefits"] = benefits
     if milestone_heavy(card):
         out["mostly_milestone"] = True
+    if schema.card_label(card) in overvalued:
+        out["milestone_overvalued"] = True
+    if schema.card_label(card) in invite_only:
+        out["invite_only"] = True
     return out
 
 
-def _llm_data(mode: str, raw, result, slots: Slots, shown: list[dict], names: dict[str, str]) -> dict:
+def _llm_data(mode: str, raw, result, slots: Slots, shown: list[dict], names: dict[str, str],
+              overvalued: frozenset = frozenset(), invite_only: frozenset = frozenset()) -> dict:
     """Small, clean data for the LLM (Qwen 8B has a short context). The output guard checks against this."""
-    data = {"kind": mode, "cards": [_compact_card(c, names) for c in shown]}
+    data = {"kind": mode, "cards": [_compact_card(c, names, overvalued, invite_only) for c in shown]}
     profile = _user_profile(slots)
     if profile:
         data["user_profile"] = profile
-    for key in ("cards_analyzed", "eligible_count"):
+    # the server's eligible count ignores income (T7 in failures.md), so it isn't passed on
+    for key in ("cards_analyzed",):
         value = schema.field(raw, key) if isinstance(raw, dict) else None
         if value is not None:
             data[key] = value
     if mode == "eligibility_card":
         data["verdict"] = result["verdict"]
+    if isinstance(raw, dict) and raw.get("_removed_over_income"):
+        data["left_out_over_income"] = [r["card_name"] for r in raw["_removed_over_income"]]
     tied = _tied_top(mode, shown)
     if len(tied) > 1:
         data["top_cards_tied"] = [_display_name(c, names) for c in tied]
@@ -328,6 +379,14 @@ def _tied_top(mode: str, shown: list[dict]) -> list[dict]:
         return []
     top = schema.number(shown[0], "net_savings")
     return [c for c in shown if top is not None and schema.number(c, "net_savings") == top]
+
+
+_PAISE_RE = re.compile(r"₹\s?(\d[\d,]*)\.\d+")
+
+
+def _whole_rupees(text: str) -> str:
+    """The server sometimes sends '₹54,001.079': show whole rupees ('₹54,001')."""
+    return _PAISE_RE.sub(lambda m: "₹" + schema.format_inr(round(float(m.group(0)[1:].strip().replace(",", "")))), text)
 
 
 def _split(text: str) -> tuple[str, str | None]:
@@ -349,7 +408,8 @@ def _meter(v: dict) -> Meter | None:
                  fill=round(min(you / need, 1.0), 3))
 
 
-def _card_views(mode: str, shown: list[dict], result, flagged: set[str], names: dict[str, str]) -> list[CardView]:
+def _card_views(mode: str, shown: list[dict], result, flagged: set[str], names: dict[str, str],
+                flag_fields: frozenset = frozenset()) -> list[CardView]:
     """UI cards: metrics from rules.json -> ui.card_metrics, values from server text.
     flagged: cards whose data has a user-facing problem (they get no badge)."""
     metric_mode = "card_details" if mode == "eligibility_card" else mode
@@ -362,7 +422,7 @@ def _card_views(mode: str, shown: list[dict], result, flagged: set[str], names: 
             value = schema.text(card, key)
             if value is None or (key in _UI["hide_if_zero"] and schema.money(value) == 0):
                 continue
-            main, detail = _split(value)
+            main, detail = _split(_whole_rupees(value))
             metrics.append(Metric(key=key, label=_UI["labels"][key], value=main, detail=detail,
                                   highlight=key == "net_savings" and (schema.money(value) or 0) > 0))
         badge = None
@@ -373,6 +433,8 @@ def _card_views(mode: str, shown: list[dict], result, flagged: set[str], names: 
             badge = _MSG["eligible_badge"]
         benefits = schema.benefit_titles(card, _LLM["max_benefits"]) if metric_mode == "card_details" else []
         tags = [_UI["labels"]["free_join"]] if schema.money(schema.text(card, "joining_fee")) == 0 else []
+        if f"{schema.card_label(card)}.invite_only" in flag_fields:
+            tags.append(_UI["labels"]["invite_only"])
         views.append(CardView(name=_display_name(card, names), alias=schema.card_id(card),
                               badge=badge, metrics=metrics, benefits=benefits, tags=tags))
     return views

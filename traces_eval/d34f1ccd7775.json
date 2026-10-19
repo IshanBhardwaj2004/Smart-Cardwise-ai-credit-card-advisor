@@ -1,0 +1,1860 @@
+{
+  "request_id": "d34f1ccd7775",
+  "session_id": "eval-e1",
+  "ts": 1792359775.8343987,
+  "user_message": "45000 a month, self employed, pincode 560001",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "session",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": 45000,
+    "employment": "self_employed",
+    "pincode": "560001",
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "eligibility_list",
+  "tool_calls": [
+    {
+      "tool": "check_eligibility",
+      "arguments": {
+        "pincode": "560001",
+        "annual_income": "540000",
+        "employment_status": "self_employed"
+      },
+      "raw_response": {
+        "eligible_cards_count": 230,
+        "profile": {
+          "pincode": "560001",
+          "annual_income": "₹5,40,000",
+          "employment": "self_employed"
+        },
+        "eligible_cards": [
+          {
+            "name": "SBI Cashback Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,179 (₹999 + GST)",
+            "annual_fee": "₹1,179 (₹999 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Get 5% Cashback on Dining",
+              "Earn 5% Cashback on Online Spends",
+              "Get 5% Cashback on"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping"
+            ],
+            "card_alias": "sbi-cashback-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945"
+          },
+          {
+            "name": "Axis Flipkart Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Shopping Get 7.5% Cashback on Myntra",
+              "Get 5% Cashback on Flipkart",
+              "Get 5% Cashback on Cleartrip"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-flipkart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121912_AGB_Mockup-6.webp1736855576881"
+          },
+          {
+            "name": "SBI Simply Click Credit Card",
+            "bank": "",
+            "joining_fee": "₹589 (₹499 + GST)",
+            "annual_fee": "₹589 (₹499 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get 10X Reward Points at Cleartrip & Yatra",
+              "Get 10X Reward Points on Swiggy & Dominos",
+              "Get 10X Reward Points at Myntra, Tata Cliq"
+            ],
+            "tags": [
+              "Shopping"
+            ],
+            "card_alias": "sbi-simply-click-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260922_095234489_Mockup_97.png"
+          },
+          {
+            "name": "HDFC Regalia Gold Credit Card",
+            "bank": "",
+            "joining_fee": "₹2,950 (₹2,500 + GST)",
+            "annual_fee": "₹2,950 (₹2,500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy",
+              "Earn SmartBuy Travel Rewards on Flights, Hotels, RedBus",
+              "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "hdfc-regalia-gold",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125153_BankKaro_Mockup-12.webp"
+          },
+          {
+            "name": "Flipkart SBI Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+              "Earn 4% Cashback on",
+              "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "flipkart-sbi-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125857_BankKaro_HDFC_Bank_UPI_Rupay_Credit_Card-mockup.png"
+          },
+          {
+            "name": "Swiggy BLCK HDFC Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,180 (₹1,000 + GST)",
+            "annual_fee": "₹1,180 (₹1,000 + GST)",
+            "rating": 4.7,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "10% Cashback on Swiggy Instamart",
+              "10% Cashback on Swiggy Orders",
+              "10% Cashback on Swiggy Orders"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Dining",
+              "Grocery Shopping"
+            ],
+            "card_alias": "swiggy-blck-hdfc-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122002_BankKaro_20260316_12502238_RBL_1.png"
+          },
+          {
+            "name": "IDFC FIRST Millennia Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get A ₹500 Voucher from partner brands like Amazon, BigBasket,",
+              "Get 5% Cashback on Converting Eligible",
+              "25% Off on Movie Tickets via District App"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "idfc-first-millennia-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_124953_BankKaro_20260129_125526152_IDFC_MILLENIA.png"
+          },
+          {
+            "name": "Tata Neu Infinity HDFC Bank Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹1,769 (₹1,499 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Get 5% NeuCoins at partner Tata brands Like Croma, Tata Cliq",
+              "Get 5% NeuCoins at bigbasket with Spends",
+              "Get 5% NeuCoins at IHCL, Air India Express and Air India"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Grocery Shopping",
+              "Travel",
+              "Utility Bills",
+              "UPI"
+            ],
+            "card_alias": "tata-neu-hdfc-bank-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125214_BankKaro_20260129_124325671_TATA_Nue.png"
+          },
+          {
+            "name": "Axis MyZone Credit Card",
+            "bank": "",
+            "joining_fee": "₹590 (₹500 + GST)",
+            "annual_fee": "₹590 (₹500 + GST)",
+            "rating": 1,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get Movie Ticket Free on Your Second District Booking with Coupon AXIS200",
+              "Get ₹120 Off on Swiggy Orders With Coupon AXIS120",
+              "Enjoy Lounge Access with 1 Complimentary"
+            ],
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-bank-myzone-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121735_AGB_image.png1734951697889"
+          },
+          {
+            "name": "HDFC Millennia Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,180 (₹1,000 + GST)",
+            "annual_fee": "₹1,180 (₹1,000 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Get 10% Additional Discount on Swiggy Dineout",
+              "Earn 1% Cashback on all Other Spends",
+              "Earn 5% Cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit"
+            ],
+            "tags": [
+              "Shopping",
+              "Dining"
+            ],
+            "card_alias": "hdfc-millenia-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680"
+          },
+          {
+            "name": "Standard Chartered Smart Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹589 (₹499 + GST)",
+            "rating": 5,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 2% Cashback on all Online Spends",
+              "Earn 1% Cashback on all Other Spends",
+              "Earn 2% Cashback on all Online Spends"
+            ],
+            "tags": [
+              "Shopping"
+            ],
+            "card_alias": "stanc-smart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121952_BankKaro_IDFC_FIRST_Indigo_Credit_Card_-mockup_1.png"
+          },
+          {
+            "name": "HSBC Travel One Credit Card",
+            "bank": "",
+            "joining_fee": "₹5,899 (₹4,999 + GST)",
+            "annual_fee": "₹5,899 (₹4,999 + GST)",
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 2 Reward Points",
+              "Save up to 15% on Travel Bookings",
+              "Enjoy Discounts with Zomato District"
+            ],
+            "tags": [
+              "Dining",
+              "Travel"
+            ],
+            "card_alias": "hsbc-travel-one",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125506_BankKaro_20260129_125045722_HSBC_TravelOne_Credit_Card.png"
+          },
+          {
+            "name": "Indian Oil RBL Bank XTRA Credit Card",
+            "bank": "",
+            "joining_fee": "₹1,770 (₹1,500 + GST)",
+            "annual_fee": "₹1,770 (₹1,500 + GST)",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": false,
+            "key_benefits": [
+              "Earn 15 Fuel Points per ₹100 on IndianOil Fuel Stations",
+              "2 Fuel Points per ₹100 on Other Spends",
+              "Earn 2 Fuel Points"
+            ],
+            "tags": [
+              "Fuel",
+              "Shopping"
+            ],
+            "card_alias": "indian-oil-rbl-bank-xtra-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125221_BankKaro_20260129_124738216_RBL_indian_oil_xtra.png"
+          },
+          {
+            "name": "IDFC FIRST Wealth Credit Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "rating": 3,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "20% Off on Dining",
+              "Earn 10X Reward Points",
+              "Enjoy 4 Complimentary Lounge Access"
+            ],
+            "tags": [
+              "Airport Lounge",
+              "Travel",
+              "Utility Bills"
+            ],
+            "card_alias": "idfc-first-wealth-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125047_BankKaro_20251218_140353112_induslnd_legend.png"
+          },
+          {
+            "name": "ICICI Emeralde Credit Card",
+            "bank": "",
+            "joining_fee": "₹14,160 (₹12,000 + GST)",
+            "annual_fee": "₹14,160 (₹12,000 + GST)",
+            "rating": 4.1,
+            "invite_only": false,
+            "employment_type": "both",
+            "new_to_credit": true,
+            "key_benefits": [
+              "Travel Complimentary Unlimited Visits Lounge Access",
+              "TATA CLiQ Worth ₹5,000",
+              "Earn Up To 12X Rewards on"
+            ],
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "icici-emeralde-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130228_BankKaro_20260202_121156323_axis_horizon_1.png"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Cashback Credit Card",
+        "nick_name": "SBI Cashback,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 413,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹250",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1001 - ₹10000",
+              "fee": "₹ 750"
+            },
+            {
+              "outstanding": "₹10000 - ₹25000",
+              "fee": "₹ 950"
+            },
+            {
+              "outstanding": "₹25001- ₹ 50000",
+              "fee": "₹ 1100"
+            },
+            {
+              "outstanding": "₹50000 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Dining",
+            "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+          },
+          {
+            "title": "Earn 5% Cashback on Online Spends",
+            "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on",
+            "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Food Orders",
+            "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback",
+            "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 1% Cashback",
+            "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get Flat 1% Cashback",
+            "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on online spends\n• Maximum online cashback of ₹2,000 per statement cycle\n• 1% cashback on offline spends\n• Maximum offline cashback of ₹2,000 per statement cycle; total cashback capped at ₹4,000 per statement cycle\n• Annual fee reversal on annual spends of ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get 5% Cashback on Dining restaurant payments processed through online platform using the SBI Cashback Credit Card"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• Get a 1% fuel surcharge waiver for transactions between ₹500 and ₹3,000, with a maximum waiver of ₹100 per billing cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "axis-flipkart-credit-card"
+      },
+      "raw_response": {
+        "name": "Axis Flipkart Credit Card",
+        "nick_name": "Axis Flipkart, Credit Card",
+        "bank": "Axis",
+        "bank_id": 1,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 790,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121912_AGB_Mockup-6.webp1736855576881",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "₹590 (₹500 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card minimum ₹500, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹175",
+          "cheque_payment_fee": "2%",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹5,000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 and above",
+              "fee": "₹1,200"
+            }
+          ],
+          "late_payment_note": "Additional INR 100 on missing payment of Minimum Amount Due by due date for two consecutive cycles; applicable every cycle until MAD is cleared.",
+          "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card; the cashback value is adjusted in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances",
+          "exclusion_spends": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 12000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Shopping Get 7.5% Cashback on Myntra",
+            "description": "spends capped at ₹4,000 per statement quarter"
+          },
+          {
+            "title": "Get 5% Cashback on Flipkart",
+            "description": "spends capped at ₹4,000 per statement quarter"
+          },
+          {
+            "title": "Get 5% Cashback on Cleartrip",
+            "description": "bookings capped at ₹4,000 per statement quarter"
+          },
+          {
+            "title": "Wednesday Swiggy Treats with 10% off",
+            "description": "on orders placed via Swiggy every Wednesday"
+          },
+          {
+            "title": "Swiggy New User Deal with 50% Instant Discount",
+            "description": "up to ₹100 on first transaction within 30 days using code AXISFKNEW on a minimum cart of ₹129"
+          },
+          {
+            "title": "Travel Savings with Instant Savings up to 15%",
+            "description": "on flights and hotels via MakeMyTrip every Wednesday"
+          },
+          {
+            "title": "Tira Discount With 10% off",
+            "description": "up to ₹1,000 on Tira every Wednesday"
+          },
+          {
+            "title": "Enjoy 4% Cashback on Spends",
+            "description": "on Uber, Swiggy, PVR and Cult.fit with unlimited earnings"
+          },
+          {
+            "title": "Flipkart Welcome Voucher Worth ₹250",
+            "description": "after your first transaction within 30 days of card issuance"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 7.5% cashback on Myntra spends capped at ₹4,000 per statement quarter\n• 5% cashback on Flipkart &amp; Cleartrip capped at ₹4,000 per statement quarter per merchant\n• Unlimited 4% cashback on preferred merchants\n• Unlimited 1% cashback on other eligible spends"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• ₹250 Flipkart voucher on first transaction within 30 days\n• Applicable only on paid cards with joining fee\n• 50% off up to ₹100 on Swiggy for new users\n• ₹350 worth total activation benefits"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• Up to 15% discount on flights &amp; hotels via MakeMyTrip\n• Additional offer: 15% off up to ₹500 on eligible travel bookings"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• 50% off up to ₹100 on Swiggy for first-time users using code “AXISFKNEW”\n• 10% off on Swiggy orders every Wednesday"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Wavier Benefits",
+            "details": "• 1% fuel surcharge waiver on fuel transactions across India Valid on transactions between ₹400 and ₹4,000 Maximum waiver up to ₹400 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 18,
+          "max_age": 70,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3.5,
+          "min_income_monthly": 25000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "axis-flipkart-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-simply-click-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Simply Click Credit Card",
+        "nick_name": "SBI Simply Click,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "Mastercard",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 440,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260922_095234489_Mockup_97.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹589 (₹499 + GST)",
+          "joining_note": null,
+          "annual": "₹589 (₹499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.50%",
+          "apr_annual": "42.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "1% of the transaction amount + GST will be charged on Railway Ticket Purchases",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹100",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1,100"
+            },
+            {
+              "outstanding": "₹50,000+",
+              "fee": "₹1,300"
+            }
+          ],
+          "late_payment_note": "Late payment charges are applicable if the Minimum Amount Due (MAD) is not paid by the payment due date. An additional ₹100 will be charged if MAD is missed for two consecutive billing cycles",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/SimplyClick-TnC.pdf"
+        },
+        "rewards": {
+          "point_value": "1 reward point = ₹0.25",
+          "redemption_options": "• Flight/Hotels\n• Product Catalogue",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Rent Payments, Fuel, Insurance, EMI Transactions, Cash Withdrawals, Jewellery, School & Educational Services, Government-Related Transactions, Wallet Transactions, Fees & GST Charges, All Reversals, Gambling, Tolls, Security Broker Services, Charity, Railways, Utility Bill Payments, Balance Transfer, Financial Charges",
+          "exclusion_spends": "Rent Payments, Fuel, Insurance, EMI Transactions, Cash Withdrawals, Jewellery, School & Educational Services, Government-Related Transactions, Wallet Transactions, Fees, GST Charges, All Reversals, Gambling, Tolls, Security Broker Services, Charity, Railways, Utility Bill Payments, Balance Transfer, Financial Charges"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 4567,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Get 10X Reward Points at Cleartrip & Yatra",
+            "description": "on online spend counted within the 10,000 reward points monthly cap across accelerated categories"
+          },
+          {
+            "title": "Get 10X Reward Points on Swiggy & Dominos",
+            "description": "on online spends counted within the 10,000 reward points monthly cap across accelerated categories"
+          },
+          {
+            "title": "Get 10X Reward Points at Myntra, Tata Cliq",
+            "description": "Apollo 24x7, BookMyShow, IGP,  and on e-Gift Voucher purchases at the Gyftr portal,  on online spends counted within the 10,000 reward points monthly cap across accelerated categories"
+          },
+          {
+            "title": "Get 5X Reward Points on all other Online Spends",
+            "description": "capped at 10,000 reward points per calendar month across accelerated categories, after which spends earn 1 reward point per ₹100"
+          }
+        ],
+        "tags": [
+          "Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 10X reward points on online spends with partners like Amazon, BookMyShow, Cleartrip, Swiggy, Myntra, etc\n• 5X reward points on all other online spends\n• Monthly cap of 10,000 reward points on accelerated (10X &amp; 5X) earnings; post cap earn rate reduces to 1 point per ₹100\n• Earn 1 reward point per ₹100 on other spends\n• ₹2,000 e-vouchers on annual online spend milestones of ₹1 lakh and ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• ₹500 Amazon e-Gift voucher on payment of annual fee of ₹499\n• Voucher issued within 21 days of fee payment \n• Valid for 12 months from addition to Amazon Pay"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Wavier Benefits",
+            "details": "• 1% fuel surcharge waiver on transactions between ₹500–₹3,000 at petrol pumps across India\n• Maximum waiver of ₹100 per statement cycle per credit card account"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 20000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-simply-click-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-regalia-gold"
+      },
+      "raw_response": {
+        "name": "HDFC Regalia Gold Credit Card",
+        "nick_name": "HDFC Regalia Gold",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "VISA,Mastercard",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 450,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125153_BankKaro_Mockup-12.webp",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹2,950 (₹2,500 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹2,950 (₹2,500 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹4 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "2%",
+          "forex_markup_note": "2% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (2%):₹100 → ₹2₹1,000 → ₹20₹10,000 → ₹200₹1,00,000 → ₹2,000",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "1% of the transaction amount + GST will be charged on railway ticket purchase",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "Not Applicable",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹1001 - ₹5000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹5001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹900"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50,001 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": null,
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        },
+        "rewards": {
+          "point_value": "1 RP = ₹ 0.20",
+          "redemption_options": "• &nbsp;SmartBuy&nbsp;",
+          "redemption_catalogue": "https://offers.reward360.in/v1/regaliagold",
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Government and Statutory Payments, Education Payments, Railway Ticket Bookings, Gift Card or Voucher Purchases, Gambling or Lottery Transactions, Cryptocurrency or Digital Asset Transactions",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Government and Statutory Payments, Education Payments, Railway Ticket Bookings, Gift Card or Voucher Purchases, Gambling or Lottery Transactions, Cryptocurrency or Digital Asset Transactions"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 25000,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy",
+            "description": "transactions through SmartBuy, within the Regalia SmartBuy cap of 4,000 reward points per month and 2,000 per day"
+          },
+          {
+            "title": "Earn SmartBuy Travel Rewards on Flights, Hotels, RedBus",
+            "description": "instant vouchers, Apple Imagine, Zoomcar and MMT Holiday Packages with 5X or 10X reward points through SmartBuy for Regalia cards, redeemable at 1 Reward Point = Rs. 0.50 for up to 70% of flight and hotel booking value"
+          },
+          {
+            "title": "Enjoy 3 Domestic Lounge Visits per Calendar Quarter",
+            "description": "on ₹60,000 previous-quarter spends plus 6 international lounge visits a year via Priority Pass, along with a MakeMyTrip BLACK Gold membership"
+          },
+          {
+            "title": "Earn 5X Rewards on Myntra, Nykaa, Reliance Digital",
+            "description": "spends above ₹150 with 5,000 bonus points capped per month, plus Nykaa and Myntra SmartBuy spends within 4,000 points per month and 2,000 per day"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 4 Reward Points per ₹200 on retail spends\n• 5X Reward Points on Myntra, Nykaa, Reliance Digital &amp; select merchants (capped at 5,000 RP per month)\n• Reward Points capped at 50,000 per statement cycle\n• Reward Points redemption value: Flights/Hotels ₹0.5 per RP, Catalogue ₹0.65 per RP, Cashback ₹0.20 per RP\n• Quarterly milestone: ₹1,500 voucher on spends of ₹1.5 lakh per quarter"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Complimentary Swiggy One membership on spends of ₹1 lakh within first 90 days\n• Complimentary MMT Black Gold membership on spends of ₹1 lakh within first 90 days"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• ₹5,000 flight voucher on annual spends of ₹7.5 lakh\n• ₹5,000 flight vouchers also on milestone spends of ₹5 lakh and ₹7.5 lakh\n• Redeem Reward Points for flights and hotels up to 70% of booking value\n• Redemption capped at 50,000 Reward Points per calendar month for travel bookings"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge  Benefits",
+            "details": "• 3 complimentary lounge visits within India per calendar quarter on spends of ₹60,000 or more in the preceding calendar quarter\n• 6 complimentary international lounge visits per calendar year outside India via Priority Pass"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge  Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 18,
+          "income_self_emp_lpa": 18,
+          "min_income_monthly": 150000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "hdfc-regalia-gold"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "flipkart-sbi-credit-card"
+      },
+      "raw_response": {
+        "name": "Flipkart SBI Credit Card",
+        "nick_name": "Flipkart SBI, Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA,Mastercard",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 654,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125857_BankKaro_HDFC_Bank_UPI_Rupay_Credit_Card-mockup.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "₹590 (₹500 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1.80%",
+          "railway_surcharge_note": "A railway booking surcharge of 1.80% for online transactions and 2.50% for other bookings is applied, with additional bank charges and taxes recovered at actuals",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹200",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 – ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 – ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 – ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 – ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 – ₹50,000",
+              "fee": "₹1,100"
+            },
+            {
+              "outstanding": "₹50,001 and above",
+              "fee": "₹1,300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/en/most-important-terms-and-conditions.page"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card cashback is adjusted in your monthly statement",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Spends, Rent Payment, EMI Spends, Wallet Loads, Insurance Payments",
+          "exclusion_spends": "Fuel Spends, Rent Payment, EMI Spends, Wallet Loads, Insurance Payments"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 30000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+            "description": "each with up to ₹4,000 cashback per calendar quarter"
+          },
+          {
+            "title": "Earn 4% Cashback on",
+            "description": "Select/Preferred Merchants (up to ₹4,000 per calendar quarter)"
+          },
+          {
+            "title": "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart",
+            "description": "up to ₹4,000 per calendar quarter each"
+          },
+          {
+            "title": "Earn 5% Cashback on Cleartrip",
+            "description": "up to ₹4,000 per calendar quarter"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 7.5% cashback on Myntra (quarterly cap ₹4,000)\n• 5% cashback on Flipkart (including Shopsy/Flipkart Travel) &amp; Cleartrip (up to ₹4,000 per calendar quarter separately for Flipkart bucket and Cleartrip bucket\n• 4% cashback on &nbsp;Zomato, Uber, Netmeds, PVR (quarterly cap ₹4,000)\n• 1% cashback on all other eligible spends (unlimited)\n• Reversal of renewal fee on annual spends of ₹3.5 lakh in the preceding year"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• ₹250 Flipkart e-Gift Voucher within 60 days of joining fee realization (valid for 1 year from issuance)"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• On Cleartrip: 7% instant discount + 5% cashback on flights"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• On Cleartrip: 10% instant discount + 5% cashback on buses"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Surcharge Waiver Benefits",
+            "details": "• Get 1% fuel surcharge waiver across all petrol pumps in India on transactions from ₹500 up to ₹4,000&nbsp;"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 70,
+          "income_salaried_lpa": 3.6,
+          "income_self_emp_lpa": 3.6,
+          "min_income_monthly": 30000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "flipkart-sbi-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "swiggy-blck-hdfc-credit-card"
+      },
+      "raw_response": {
+        "name": "Swiggy BLCK HDFC Credit Card",
+        "nick_name": "HDFC Swiggy Blck, credit Card",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "Mastercard",
+        "card_network": null,
+        "rating": 4.7,
+        "user_ratings": 3843,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122002_BankKaro_20260316_12502238_RBL_1.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,180 (₹1,000 + GST)",
+          "joining_note": null,
+          "annual": "₹1,180 (₹1,000 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "1% of the transaction amount + GST will be charged on Railway Ticket Purchases",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹100",
+          "reward_redemption_fee": "₹50",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹10001 - ₹25000",
+              "fee": "₹800"
+            },
+            {
+              "outstanding": "₹25001 - ₹50000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50001 - and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Late Payment charges will be applicable if Minimum Amount Due is not paid by the payment due date",
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-blck-hdfc-bank-credit-card/pdf/t-and-cs-swiggy-blck-hdfc-bank-credit-card-04-03-2026.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Gift Cards and Vouchers, Wallet Loads, Rent Payment, Government-related Transactions, Fuel Spends, Jewellery Purchases, EMI Spends, Cash Advances, Forex Transactions, Smartpay, Smartbuy Portal",
+          "exclusion_spends": "Gift Cards and Vouchers, Wallet Loads, Rent Payment, Government-related Transactions, Fuel Spends, Jewellery Purchases, EMI Spends, Cash Advances, Forex Transactions, Smartpay, Smartbuy Portal"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 11676,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "10% Cashback on Swiggy Instamart",
+            "description": "up to ₹1,500 per billing cycle"
+          },
+          {
+            "title": "10% Cashback on Swiggy Orders",
+            "description": "on food orders through Swiggy redeemable as statement credit, up to ₹1,500 cashback per month"
+          },
+          {
+            "title": "5% Cashback on Online Spends",
+            "description": "across apps like Amazon, Flipkart, Myntra, AJIO, and many more up to ₹1,500 cashback per cycle"
+          },
+          {
+            "title": "10% Cashback",
+            "description": "on payments through Swiggy Dineout, capped at ₹1,500 per month"
+          },
+          {
+            "title": "Complimentary Swiggy One Membership",
+            "description": "activate your card to enjoy 3 months of free Swiggy One Membership, unlocking exclusive restaurant discounts"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Card Benefits",
+            "details": "• Earn 10% cashback on Swiggy services, including food ordering, Instamart, Dineout, and Genie. Cashback is capped at ₹1,500 per billing cycle\n• Receive 5% cashback on online purchases across eligible Merchant Category Codes, with a maximum of ₹1,500 cashback per billing cycle\n• Enjoy a free 3-month Swiggy BLCK membership upon card activation, offering benefits like free deliveries and exclusive discounts\n• Report your lost card immediately to HDFC Bank’s 24-hour call center to avoid liability on any fraudulent transactions"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Activate your card to receive a 3-month free Swiggy BLCK Membership, providing unlimited benefits across restaurants, Instamart, and Genie orders on Swiggy, including free delivery and exclusive discounts"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• 5% cashback on online cab transactions with Ola, Uber, Zoom"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get complimentary Swiggy BLCK Membership on card activation, unlocking exclusive dining benefits on Swiggy\n• Enjoy 10% cashback on Swiggy Dineout transactions, capped at ₹1,500 per billing cycle"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 12,
+          "income_self_emp_lpa": 12,
+          "min_income_monthly": 100000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "swiggy-blck-hdfc-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "idfc-first-millennia-credit-card"
+      },
+      "raw_response": {
+        "name": "IDFC FIRST Millennia Credit Card",
+        "nick_name": "IDFC First Millennia, Credit Card",
+        "bank": "IDFC",
+        "bank_id": 2,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 3,
+        "user_ratings": 300,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_124953_BankKaro_20260129_125526152_IDFC_MILLENIA.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "Free",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.99%",
+          "apr_annual": "47.88%",
+          "forex_markup": "0%",
+          "forex_markup_note": "No forex markup is charged on transactions made in currencies other than INR; the card carries 0% forex markup on all overseas transactions",
+          "atm_withdrawal_fee": "0%",
+          "atm_withdrawal_note": "0% interest (45 days) | ₹199 + GST per withdrawal",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "1% fee beyond ₹25,000 Passenger Railway spends per statement cycle; platform charges extra.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "Not Applicable",
+          "cheque_payment_fee": "Not Applicable",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0 - ₹100"
+            },
+            {
+              "outstanding": "₹500",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5000",
+              "fee": "₹5000"
+            },
+            {
+              "outstanding": "₹8000",
+              "fee": "₹8000"
+            },
+            {
+              "outstanding": "₹10,000",
+              "fee": "₹10,000"
+            },
+            {
+              "outstanding": "₹10,000 & above",
+              "fee": "₹10,000 & above"
+            }
+          ],
+          "late_payment_note": "Late payment charges are 15% of the Total Amount Due from the previous statement, minus any payments received before the due date (minimum ₹100, maximum ₹1,300).",
+          "tnc_url": "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/MITC-Document-Customer.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Flights/Hotels\n• Product Catalogue",
+          "redemption_catalogue": "https://www.firstrewards.com/",
+          "exclusions": "Fuel Spends, Wallet Loads, ATM Cash Withdrawals, EMI Spends, All Reversals, Gift Card and Voucher Purchases, Bank Charges & Fees, Interest Charges, Late Payment Fees, Money Transfers, P2P Transfers, Government-related Transactions, Taxes, Utility Bill Payments, Cryptocurrency/Digital Asset Transactions, Gambling Transactions, Outstanding Payments",
+          "exclusion_spends": "Fuel Spends, Wallet Loads, ATM Cash Withdrawals, EMI Spends, All Reversals, Gift Card and Voucher Purchases, Bank Charges & Fees, Interest Charges, Late Payment Fees, Money Transfers, P2P Transfers, Government-related Transactions, Taxes, Utility Bill Payments, Cryptocurrency/Digital Asset Transactions, Gambling Transactions, Outstanding Payments"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 12000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get A ₹500 Voucher from partner brands like Amazon, BigBasket,",
+            "description": "Uber, and Lifestyle on spending ₹5,000 or more within 30 days of card generation, capped at one voucher worth ₹500 for the primary card only"
+          },
+          {
+            "title": "Get 5% Cashback on Converting Eligible",
+            "description": "credit card transactions to EMI, capped at ₹1,000 on the first EMI conversion done within 30 days of card generation for customers who have never converted a transaction to EMI before"
+          },
+          {
+            "title": "25% Off on Movie Tickets via District App",
+            "description": "once every month, capped at ₹100 per transaction"
+          },
+          {
+            "title": "4 Complimentary Railway Lounge",
+            "description": "Visits per Quarter on spending at least ₹20,000 in the previous month to unlock free visits in the current month"
+          },
+          {
+            "title": "Zero Annual & Renewal Fees",
+            "description": "making the card lifetime free with no renewal charge"
+          },
+          {
+            "title": "Complimentary 24×7 Roadside Assistance",
+            "description": "up to 4 times a year, worth ₹1,399, provided through Global Assure"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on first EMI transaction within 30 days (maximum ₹1,000)\n• ₹500 welcome gift voucher on spending ₹5,000 within 30 days\n• 25% discount on movie ticket bookings\n• Access to 300+ merchant offers across the year\n• Cashback credited within 90 days of offer fulfilment period"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• ₹500 gift voucher on spending ₹5,000 within 30 days of card issuance\n• Voucher valid across brands like Amazon, BigBasket, Uber, Lifestyle\n• 5% cashback on first EMI transaction within 30 days"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• 25% discount on movie ticket bookings via the District by Zomato mobile app every month"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Wavier Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 4,
+          "min_income_monthly": 25000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "idfc-first-millennia-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "response.eligible_cards",
+      "problem": "check_eligibility listed cards whose own minimum income is above the user's income: HDFC Regalia Gold Credit Card needs about 150000/month, Swiggy BLCK HDFC Credit Card needs about 100000/month (user: 45000/month)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "eligibility_list",
+    "cards": [
+      {
+        "card_name": "SBI Cashback Credit Card",
+        "joining_fee": "₹1,179 (₹999 + GST)",
+        "annual_fee": "₹1,179 (₹999 + GST)",
+        "benefits": [
+          "Get 5% Cashback on Dining",
+          "Earn 5% Cashback on Online Spends",
+          "Get 5% Cashback on"
+        ]
+      },
+      {
+        "card_name": "Axis Flipkart Credit Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (₹500 + GST)",
+        "benefits": [
+          "Shopping Get 7.5% Cashback on Myntra",
+          "Get 5% Cashback on Flipkart",
+          "Get 5% Cashback on Cleartrip"
+        ]
+      },
+      {
+        "card_name": "SBI Simply Click Credit Card",
+        "joining_fee": "₹589 (₹499 + GST)",
+        "annual_fee": "₹589 (₹499 + GST)",
+        "benefits": [
+          "Get 10X Reward Points at Cleartrip & Yatra",
+          "Get 10X Reward Points on Swiggy & Dominos",
+          "Get 10X Reward Points at Myntra, Tata Cliq"
+        ]
+      },
+      {
+        "card_name": "Flipkart SBI Credit Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (₹500 + GST)",
+        "benefits": [
+          "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+          "Earn 4% Cashback on",
+          "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart"
+        ]
+      },
+      {
+        "card_name": "IDFC FIRST Millennia Credit Card",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "benefits": [
+          "Get A ₹500 Voucher from partner brands like Amazon, BigBasket,",
+          "Get 5% Cashback on Converting Eligible",
+          "25% Off on Movie Tickets via District App"
+        ]
+      }
+    ],
+    "user_profile": {
+      "monthly_income": 45000,
+      "annual_income": 540000,
+      "employment": "self_employed"
+    },
+    "left_out_over_income": [
+      "HDFC Regalia Gold Credit Card",
+      "Swiggy BLCK HDFC Credit Card"
+    ]
+  },
+  "llm_raw_reply": "You can apply for the SBI Cashback, Axis Flipkart, SBI Simply Click, Flipkart SBI or IDFC FIRST Millennia cards – they all fit your ₹45 k monthly income. The IDFC FIRST Millennia is free to join and has a ₹500 partner voucher, while the others have modest fees and cashback on shopping or dining. HDFC Regalia Gold and Swiggy BLCK HDFC were left out because they require a higher income.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "You can apply for the SBI Cashback, Axis Flipkart, SBI Simply Click, Flipkart SBI or IDFC FIRST Millennia cards – they all fit your ₹45 k monthly income. The IDFC FIRST Millennia is free to join and has a ₹500 partner voucher, while the others have modest fees and cashback on shopping or dining. HDFC Regalia Gold and Swiggy BLCK HDFC were left out because they require a higher income.",
+  "notes": [
+    "continuing eligibility, answer for 'income'",
+    "card list from cache (258 cards)",
+    "cards found in message: []",
+    "eligibility list: kept 5, left out 2 over the user's income",
+    "card list from cache (258 cards)"
+  ]
+}

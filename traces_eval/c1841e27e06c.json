@@ -1,0 +1,308 @@
+{
+  "request_id": "c1841e27e06c",
+  "session_id": "s2",
+  "ts": 1792360525.0040152,
+  "user_message": "I spend 10k a month on fuel",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "fuel",
+        "amount": 10000,
+        "unit": "month",
+        "annual_amount": 120000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "fuel": 10000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 4,
+        "recommendations": [
+          {
+            "card_name": "Great Fuel Saver",
+            "bank_name": "Fuel Bank",
+            "net_annual_savings": "₹6,000",
+            "annual_rewards_value": "₹6,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹499 (incl. GST)",
+            "annual_fee": "Free (waived at ₹50,000/yr spend; ₹499 (incl. GST) otherwise)",
+            "annual_fee_waived": true,
+            "top_spend_categories": [
+              {
+                "category": "fuel",
+                "annual_value": "₹500"
+              }
+            ],
+            "card_alias": "great-fuel-saver",
+            "rank": 1
+          },
+          {
+            "card_name": "Great Cashback Card",
+            "bank_name": "Great Bank",
+            "net_annual_savings": "₹1,200",
+            "annual_rewards_value": "₹1,200",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free (waived at ₹1,00,000/yr spend; ₹590 (incl. GST) otherwise)",
+            "annual_fee_waived": true,
+            "top_spend_categories": [
+              {
+                "category": "fuel",
+                "annual_value": "₹100"
+              }
+            ],
+            "card_alias": "great-cashback-card",
+            "rank": 2
+          },
+          {
+            "card_name": "Great Travel Elit",
+            "bank_name": "Great Bank",
+            "net_annual_savings": "₹-4,100",
+            "annual_rewards_value": "₹1,800",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹5,900 (incl. GST)",
+            "annual_fee": "₹5,900 (incl. GST)",
+            "annual_fee_waived": false,
+            "top_spend_categories": [
+              {
+                "category": "fuel",
+                "annual_value": "₹150"
+              }
+            ],
+            "card_alias": "great-travel-elite",
+            "rank": 3
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-fuel-saver"
+      },
+      "raw_response": {
+        "name": "Great Fuel Saver",
+        "card_alias": "great-fuel-saver",
+        "bank": "Fuel Bank",
+        "fees": {
+          "joining": "₹499 (incl. GST)",
+          "annual": "₹499 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹50,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% value back on fuel",
+            "description": ""
+          },
+          {
+            "title": "1% fuel surcharge waiver",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 2.5,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000
+        }
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-cashback-card"
+      },
+      "raw_response": {
+        "name": "Great Cashback Card",
+        "card_alias": "great-cashback-card",
+        "bank": "Great Bank",
+        "fees": {
+          "joining": "Free",
+          "annual": "₹590 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1,00,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% cashback on online spends",
+            "description": ""
+          },
+          {
+            "title": "1% cashback on offline spends",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3.5,
+          "min_income_monthly": 25000
+        }
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-travel-elite"
+      },
+      "raw_response": {
+        "name": "Great Travel Elite",
+        "card_alias": "great-travel-elite",
+        "bank": "Great Bank",
+        "fees": {
+          "joining": "₹5,900 (incl. GST)",
+          "annual": "₹5,900 (incl. GST)"
+        },
+        "key_benefits": [
+          {
+            "title": "6% value on flights and hotels",
+            "description": ""
+          },
+          {
+            "title": "8 domestic lounge visits a year",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 9,
+          "income_self_emp_lpa": 12,
+          "min_income_monthly": 75000
+        }
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "Great Fuel Saver.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 6000, formula gives 5501)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Great Fuel Saver.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 500, x12 = 6000, annual rewards 6000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Great Cashback Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 100, x12 = 1200, annual rewards 1200)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Great Travel Elit.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says -4100, formula gives -10000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Great Travel Elit.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 150, x12 = 1800, annual rewards 1800)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Great Travel Elit.name",
+      "problem": "card name differs from the card list for the same alias ('Great Travel Elit' vs 'Great Travel Elite', alias great-travel-elite)",
+      "suspected_fault": "data",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "Great Fuel Saver",
+        "net_savings": "₹6,000",
+        "rewards": "₹6,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹499 (incl. GST)",
+        "annual_fee": "Free (waived at ₹50,000/yr spend; ₹499 (incl. GST) otherwise)",
+        "fee_waived": true
+      },
+      {
+        "card_name": "Great Cashback Card",
+        "net_savings": "₹1,200",
+        "rewards": "₹1,200",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free (waived at ₹1,00,000/yr spend; ₹590 (incl. GST) otherwise)",
+        "fee_waived": true
+      },
+      {
+        "card_name": "Great Travel Elite",
+        "net_savings": "₹-4,100",
+        "rewards": "₹1,800",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹5,900 (incl. GST)",
+        "annual_fee": "₹5,900 (incl. GST)",
+        "fee_waived": false
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "fuel",
+          "amount": 10000,
+          "per": "month",
+          "per_year": 120000
+        }
+      ],
+      "total_annual_spend": 120000
+    },
+    "cards_analyzed": 4
+  },
+  "llm_raw_reply": "On about ₹1,20,000 a year of spending, Great Fuel Saver comes out on top. It should save you around ₹6,000 a year after fees. It has a ₹499 joining fee, so the first year works out a little lower. Great Cashback is next at ₹1,200.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "On about ₹1,20,000 a year of spending, Great Fuel Saver comes out on top. It should save you around ₹6,000 a year after fees. It has a ₹499 joining fee, so the first year works out a little lower. Great Cashback is next at ₹1,200.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (4 cards)"
+  ]
+}

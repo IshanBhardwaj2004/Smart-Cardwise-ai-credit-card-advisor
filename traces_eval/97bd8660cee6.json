@@ -1,0 +1,888 @@
+{
+  "request_id": "97bd8660cee6",
+  "session_id": null,
+  "ts": 1792359733.9288652,
+  "user_message": "I spend 5k on Myntra and 3k on DMart, best card?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "other_online_spends",
+        "amount": 5000,
+        "unit": "month",
+        "annual_amount": 60000
+      },
+      {
+        "key": "offline_grocery",
+        "amount": 3000,
+        "unit": "month",
+        "annual_amount": 36000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "other_online_spends": 5000,
+        "offline_grocery": 3000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "HSBC Live+ Credit Card",
+            "bank_name": "HSBC Bank",
+            "card_type": "VISA",
+            "net_annual_savings": "₹8,421",
+            "annual_rewards_value": "₹9,600",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,179 (incl. GST)",
+            "annual_fee": "₹1,179 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 35,
+                "brands": [],
+                "card_id": 50,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "25000",
+                "voucher_bonus": "1000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 0
+              },
+              {
+                "id": 36,
+                "brands": [
+                  {
+                    "id": 14,
+                    "name": "Amazon"
+                  }
+                ],
+                "card_id": 50,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "0",
+                "voucher_bonus": "250",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 250
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "offline_grocery",
+                "annual_value": "₹300"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hsbc-live-plus-credit-card",
+            "rating": 4,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122030_AGB_Mockup-22.webp1735897902637"
+          },
+          {
+            "rank": 2,
+            "card_name": "PIXEL Play Credit Card",
+            "bank_name": "HDFC",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹3,600",
+            "annual_rewards_value": "₹3,600",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 111,
+                "brands": [],
+                "card_id": 120,
+                "rp_bonus": "500",
+                "maximum_days": "90",
+                "minimum_spend": "20000",
+                "voucher_bonus": "",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹150"
+              },
+              {
+                "category": "offline_grocery",
+                "annual_value": "₹150"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-pixel-play-credit-card",
+            "rating": 3.5,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260724_104107289_PIXEL_Play_Credit_Card-Mockup.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "Kotak Essentia Platinum Credit Card ",
+            "bank_name": "Kotak",
+            "card_type": "VISA",
+            "net_annual_savings": "₹3,316",
+            "annual_rewards_value": "₹4,200",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹884 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "offline_grocery",
+                "annual_value": "₹300"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹50"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "kotak-essentia-platinum-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125622_BankKaro_Mockup_10.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hsbc-live-plus-credit-card"
+      },
+      "raw_response": {
+        "name": "HSBC Live Plus Credit Card",
+        "nick_name": "HSBC Live Plus, Credit Card",
+        "bank": "HSBC Bank",
+        "bank_id": 12,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 300,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122030_AGB_Mockup-22.webp1735897902637",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "salaried",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee of ₹999 is charged at the time of card issuance as per the bank's policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank's spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹200000 or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.50% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card, subject to a minimum of ₹500.",
+          "railway_surcharge": "1.80%",
+          "railway_surcharge_note": "A railway booking surcharge of 1.80% for online transactions and 2.50% for other bookings is applied, with additional bank charges and taxes recovered at actuals.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "₹500",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10001- and above",
+              "fee": "₹1200"
+            }
+          ],
+          "late_payment_note": "Late payment charges apply if the Minimum Amount Due (MAD) is not paid by the due date. Charges are based on the total outstanding amount as per the slab structure above.",
+          "tnc_url": "https://www.hsbc.co.in/content/dam/hsbc/in/documents/most-important-terms-and-conditions.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Utilities, Wallet loads, Fuel, Property management fees, Rent payments, Insurance premiums, Education, Government payments, Toll, Casino/gambling, Money transfers, EMI transactions, Business services, Security brokers, Jewellery, Charity, Wholesale clubs, Card repayments, Foreign currency, Cash withdrawal.",
+          "exclusion_spends": "Utilities, Wallet loads, Fuel, Property management fees, Rent payments, Insurance premiums, Education, Government payments, Toll, Casino/gambling, Money transfers, EMI transactions, Business services, Security brokers, Jewellery, Charity, Wholesale clubs, Card repayments, Foreign currency, Cash withdrawa"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 30000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Earn 10% Cashback on Dining",
+            "description": "capped at ₹1,000 per month"
+          },
+          {
+            "title": "Earn 10% Cashback on Food Delivery",
+            "description": "capped at ₹1,000 per month"
+          },
+          {
+            "title": "Earn 10% Cashback on Grocery Shopping",
+            "description": "capped at ₹1,000 per month"
+          },
+          {
+            "title": "Earn 1.5% Unlimited Cashback on Shopping",
+            "description": "& on most other retail categories with no monthly cap"
+          },
+          {
+            "title": "Earn 1.5% Unlimited Cashback on Hotels",
+            "description": "& on most other retail categories with no monthly cap"
+          },
+          {
+            "title": "Get ₹1,000 Cashback on Spending ₹20,000",
+            "description": "in the first 30 days plus ₹250 Amazon eGift Voucher on online application with video verification"
+          },
+          {
+            "title": "Get 4 Complimentary Domestic Airport Lounge",
+            "description": "visits per year maximum 1 visit per calendar quarter"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 10% cashback on dining, food delivery, and grocery spends, one of the highest cashback rates in these everyday categories, capped at ₹1,000/month\n• Get 1.5% unlimited cashback with no monthly cap on shopping, hotels, medicine, and most other retail spends\n• Welcome package worth ₹1,250 - ₹1,000 cashback on ₹20,000 spend in 30 days plus ₹250 Amazon voucher on online application"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get ₹1,000 cashback as statement credit on spending ₹20,000 within the first 30 days, requires downloading and logging into the HSBC India Mobile Banking app\n• Get ₹250 Amazon eGift Voucher on applying online, completing video verification, and receiving the card"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• 4 complimentary domestic airport lounge visits per year, maximum 1 visit per calendar quarter"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• 1.5% unlimited cashback applicable on movie and entertainment spends"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• 10% cashback on dining and food delivery spends, capped at ₹1,000 per month (shared cap across dining, food delivery, and grocery)"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• 10% cashback on grocery spends, capped at ₹1,000 per month (shared cap with dining and food delivery)\n• 1.5% unlimited cashback on shopping, hotels, medicine, and most other retail categories, no monthly cap\n• Annual fee of ₹999 waived on spending ₹2,00,000 in a card year"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 6,
+          "income_self_emp_lpa": 6,
+          "min_income_monthly": 50000,
+          "crif_salaried": 720,
+          "crif_self_emp": 725
+        },
+        "card_alias": "hsbc-live-plus-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-pixel-play-credit-card"
+      },
+      "raw_response": {
+        "name": "HDFC PIXEL Play Credit Card",
+        "nick_name": "HDFC PIXEL Play, Credit Card",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "VISA,RuPay",
+        "card_network": null,
+        "rating": 3.5,
+        "user_ratings": 654,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260724_104107289_PIXEL_Play_Credit_Card-Mockup.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "Free",
+          "joining_note": "This card has no joining fee — it is lifetime free.",
+          "annual": "Free",
+          "annual_note": "This card has no annual fee — it is lifetime free.",
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "₹25",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹1,001 - ₹5000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹5001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹900"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50,001 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared.",
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/pixel-play-credit-card/zapp-credit-card-mitc-version-1-05.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and your cashback is adjusted in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Spends,Wallet Spends,Rent Payments,Government‑Related Transactions,EMI Transactions,Purchases converted to EMI post‑facto,Cash Advances,Outstanding Payments,Bank Charges & Fees",
+          "exclusion_spends": "Fuel spends,Wallet Spends,Rent Payments,Government‑Related Transactions,EMI Transactions & Post‑Facto,EMI Conversions,Cash Advances,Outstanding Payment"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 20976,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Earn 1% Cashback",
+            "description": "on UPI Spends (only for PIXEL RuPay Credit Cardholders)"
+          },
+          {
+            "title": "Earn 5% Cashback",
+            "description": "on grocery spends on Blinkit and Reliance Smart Bazaar when Grocery is selected as a chosen category"
+          },
+          {
+            "title": "Enjoy Up to 10% Off",
+            "description": "on restaurant bill payments via Swiggy Dineout at 20,000+ restaurants when paying through the Swiggy app only"
+          },
+          {
+            "title": "Earn 3% Cashback",
+            "description": "on Amazon, Flipkart or PayZapp by choosing 1 platform via PayZapp"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining",
+          "Grocery Shopping",
+          "Travel",
+          "UPI"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 5% cashback on the choice of any two categories including Dining &amp; Entertainment (BookMyShow, Zomato), Travel (MakeMyTrip, Uber), Grocery (Blinkit, Reliance Smart Bazaar), Electronics (Croma, Reliance Digital), and Fashion (Nykaa, Myntra)\n• Earn 3% Cashback on Amazon, Flipkart, or PayZapp transactions, as applicable\n• Earn 1% cashback on UPI spends (PIXEL RuPay Credit Card holders only)"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• Earn 5% cashback on Uber spends when Travel is selected as a chosen category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• Earn 5% cashback on BookMyShow spends when Dining &amp; Entertainment is selected as a chosen category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Earn 5% cashback on Zomato spends when Dining &amp; Entertainment is selected as a chosen category\n• Get up to 10% off on restaurant bill payments via Swiggy Dineout (20,000+ restaurants; valid on payments via Swiggy app only)"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all fuel stations across India on transactions between ₹400 and ₹5,000, capped at ₹250 per statement cycle"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 6,
+          "min_income_monthly": 25000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "hdfc-pixel-play-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "kotak-essentia-platinum-credit-card"
+      },
+      "raw_response": {
+        "name": "Kotak Essentia Platinum Credit Card ",
+        "nick_name": "Kotak Essentia Platinum, Credit Card",
+        "bank": "Kotak",
+        "bank_id": 13,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 3,
+        "user_ratings": 423,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125622_BankKaro_Mockup_10.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": "Not Applicable",
+          "annual": "₹884 (₹749 + GST)",
+          "annual_note": "Not Applicable",
+          "annual_fee_waiver": "The annual fee of ₹749+GST is non-waivable and will be charged every year.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.50%",
+          "apr_annual": "42.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "3%",
+          "atm_withdrawal_note": "3% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹300, if applicable).",
+          "railway_surcharge": "1.80%",
+          "railway_surcharge_note": "A railway booking surcharge of 1.80% for online transactions and 2.50% for other bookings is applied, with additional bank charges and taxes recovered at actuals.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "Not Applicable",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹10000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "Above ₹10000",
+              "fee": "₹700"
+            }
+          ],
+          "late_payment_note": "An additional Late Payment Charge of ₹100 will be levied on missing payment of Minimum Amount Due (MAD) by the due date for two consecutive cycles. This charge will continue to be levied for every payment cycle until the MAD is cleared",
+          "tnc_url": "https://www.kotak.bank.in/content/dam/Kotak/files/english-rcas.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Saving Point = ₹1",
+          "redemption_options": "• Mobile Recharge\n• E-vouchers\n• Travel (Flights and Hotels)\n• Cashback",
+          "redemption_catalogue": "https://kotakrewards.com/",
+          "exclusions": "Rent payment, Fuel, EMI Transactions, Cash Withdrawals, Jewellery, School & Educational Services, Government related transactions, Wallet transactions - Load money, Fees, GST charges, All Reversals, Gambling, Tolls, Security Broker Services, Charity, Railways, Utility Bill Payments, Balance Transfer, Financial Charges",
+          "exclusion_spends": "Rent payment, Fuel, Insurance, EMI Transactions, Cash Withdrawals, Jewellery, School & Educational Services, Government related transactions, Wallet transactions - Load money, Fees, GST charges, All Reversals, Gambling, Tolls, Security Broker Services, Charity, Railways, Utility Bill Payments, Balance Transfer, Financial Charges"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 209876,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Earn 10 Saving Points",
+            "description": "for Every ₹100 spent at Departmental & Grocery Stores, on transactions between ₹1,500 and ₹4,000, with a maximum of 500 Saving Points per month (worth ₹500)"
+          },
+          {
+            "title": "Earn 10 Saving Points for every ₹100 spent",
+            "description": "at Departmental & Grocery Stores on eligible transactions, with a monthly cap of 500 Saving Points (₹500), subject to transaction value and merchant category conditions"
+          },
+          {
+            "title": "Get Free PVR Tickets",
+            "description": "or 1,200 Reward Points on spending ₹1,25,000 every 6 months, with a maximum of 12 free tickets per year valid on any day and any show"
+          },
+          {
+            "title": "Earn 1 Saving Point",
+            "description": "on every ₹250 spent on all other categories, over and above Saving Points earned on departmental and grocery stores"
+          }
+        ],
+        "tags": [
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 10 Saving Points on every ₹100 spent at Departmental &amp; Grocery Stores; 1 Saving Point = ₹1; applicable on transactions between ₹1,500 and ₹4,000; capped at 500 Saving Points (₹500) per billing cycle\n• Earn 1 Saving Point on every ₹250 spent on all other categories (no restrictions)\n• Get 6 complimentary PVR tickets or 1,200 Reward Points on spending ₹1,25,000 every 6 months (maximum 12 free PVR tickets per year)"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• Get 6 complimentary PVR tickets on spending ₹1,25,000 every 6 months (maximum 12 free PVR tickets per year; valid for any day, any show; redeemable at pvrcinemas.com)"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category."
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "kotak-essentia-platinum-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "HSBC Live+ Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 8421, formula gives 7242)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HSBC Live+ Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 800, x12 = 9600, annual rewards 9600)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "PIXEL Play Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 300, x12 = 3600, annual rewards 3600)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Kotak Essentia Platinum Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 3316, formula gives 1547)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Kotak Essentia Platinum Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 350, x12 = 4200, annual rewards 4200)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "HSBC Live Plus Credit Card",
+        "net_savings": "₹8,421",
+        "rewards": "₹9,600",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹1,179 (incl. GST)",
+        "annual_fee": "₹1,179 (incl. GST)",
+        "fee_waived": false
+      },
+      {
+        "card_name": "HDFC PIXEL Play Credit Card",
+        "net_savings": "₹3,600",
+        "rewards": "₹3,600",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "fee_waived": false
+      },
+      {
+        "card_name": "Kotak Essentia Platinum Credit Card",
+        "net_savings": "₹3,316",
+        "rewards": "₹4,200",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹1,769 (incl. GST)",
+        "annual_fee": "₹884 (incl. GST)",
+        "fee_waived": false
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "other_online_spends",
+          "amount": 5000,
+          "per": "month",
+          "per_year": 60000
+        },
+        {
+          "spending_key": "offline_grocery",
+          "amount": 3000,
+          "per": "month",
+          "per_year": 36000
+        }
+      ],
+      "total_annual_spend": 96000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "HSBC Live Plus will give you the biggest boost – about ₹8.4 k saved a year on your ₹96 k spend. It does charge a ₹1,179 joining/annual fee, but the reward upside still outweighs that. The HDFC PIXEL Play and Kotak Essentia Platinum are lower‑saving alternatives.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "HSBC Live Plus will give you the biggest boost – about ₹8.4 k saved a year on your ₹96 k spend. It does charge a ₹1,179 joining/annual fee, but the reward upside still outweighs that. The HDFC PIXEL Play and Kotak Essentia Platinum are lower‑saving alternatives.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

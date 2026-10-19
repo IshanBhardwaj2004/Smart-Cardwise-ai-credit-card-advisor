@@ -1,0 +1,23 @@
+{
+  "request_id": "66e4e3ad86b5",
+  "session_id": null,
+  "ts": 1792360525.0861912,
+  "user_message": "My card number is [redacted], which card is better?",
+  "input_guard": {
+    "blocked": true,
+    "reason": "input_block:sensitive_data",
+    "user_message": "Please don't share card numbers, OTPs, CVVs, Aadhaar or PAN here. I don't need them, and I haven't stored what you sent. Tell me roughly what you spend each month and where."
+  },
+  "intent": "refuse",
+  "intent_source": null,
+  "slots": null,
+  "clarify_question": null,
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "Please don't share card numbers, OTPs, CVVs, Aadhaar or PAN here. I don't need them, and I haven't stored what you sent. Tell me roughly what you spend each month and where.",
+  "notes": []
+}

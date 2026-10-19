@@ -1,0 +1,961 @@
+{
+  "request_id": "4fa91f7d6495",
+  "session_id": null,
+  "ts": 1792360949.8530593,
+  "user_message": "I travel a lot, around 3 lakh a year on flights and 1 lakh on hotels, recommend a card",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "flights_annual",
+        "amount": 300000,
+        "unit": "year",
+        "annual_amount": 300000
+      },
+      {
+        "key": "hotels_annual",
+        "amount": 100000,
+        "unit": "year",
+        "annual_amount": 100000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "flights_annual": 300000,
+        "hotels_annual": 100000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "Axis Bank Magnus Burgundy",
+            "bank_name": "Axis",
+            "card_type": "VISA",
+            "net_annual_savings": "₹72,602",
+            "annual_rewards_value": "₹1,08,002.157",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹35,400 (incl. GST)",
+            "annual_fee": "₹35,400 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 131,
+                "brands": [
+                  {
+                    "id": 85,
+                    "name": "Postcard Hotels"
+                  },
+                  {
+                    "id": 102,
+                    "name": "Yatra"
+                  },
+                  {
+                    "id": 64,
+                    "name": "Luxe Gift Card"
+                  }
+                ],
+                "card_id": 173,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "",
+                "voucher_bonus": "5000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 5000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹6,750"
+              },
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹2,250.18"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "magnus-burgundy-credit-card",
+            "rating": 4,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130226_BankKaro_20260202_181828409_Axis_Magnus.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "SBI Landmark Reward SELECT Credit Card",
+            "bank_name": "SBI",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹38,231",
+            "annual_rewards_value": "₹10,000.2",
+            "milestone_benefits": "₹30,000",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹1,769 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 196,
+                "brands": [],
+                "card_id": 263,
+                "rp_bonus": "6000",
+                "maximum_days": "",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "0.25",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹625"
+              },
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹208.35"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "sbi-landmark-reward-select-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "AXIS MAGNUS",
+            "bank_name": "Axis",
+            "card_type": "VISA",
+            "net_annual_savings": "₹33,251",
+            "annual_rewards_value": "₹48,000.961",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹14,750 (incl. GST)",
+            "annual_fee": "₹14,750 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 8,
+                "brands": [
+                  {
+                    "id": 85,
+                    "name": "Postcard Hotels"
+                  },
+                  {
+                    "id": 102,
+                    "name": "Yatra"
+                  },
+                  {
+                    "id": 64,
+                    "name": "Luxe Gift Card"
+                  }
+                ],
+                "card_id": 6,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "12500",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 12500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹3,000"
+              },
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹1,000.08"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "axis-bank-magnus-credit-card",
+            "rating": 4,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121948_BankKaro_20260129_121658926_Axis_Magnus.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "magnus-burgundy-credit-card"
+      },
+      "raw_response": {
+        "name": "Axis Burgundy Magnus Credit Card",
+        "nick_name": "Magnus Burgundy, Credit Card",
+        "bank": "Axis",
+        "bank_id": 1,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 200,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130226_BankKaro_20260202_181828409_Axis_Magnus.png",
+        "priority_tag": null,
+        "invite_only": true,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹35,400 (₹30,000 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹35,400 (₹30,000 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹25 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3%",
+          "apr_annual": "36.00%",
+          "forex_markup": "2%",
+          "forex_markup_note": "2% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (2%):₹100 → ₹2₹1,000 → ₹20₹10,000 → ₹200₹1,00,000 → ₹2,000",
+          "atm_withdrawal_fee": null,
+          "atm_withdrawal_note": "N/A",
+          "railway_surcharge": "As prescribed by IRCTC / Indian Railways",
+          "railway_surcharge_note": "Surcharge on booking or cancelling railway tickets will be levied as prescribed by IRCTC or Indian Railways and may vary based on their applicable charges.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹175",
+          "cheque_payment_fee": null,
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "Above ₹10,000",
+              "fee": "₹1200"
+            }
+          ],
+          "late_payment_note": "Late Payment Fee is based on the total amount due: Nil (&lt;₹500), ₹500 (₹501–₹5,000), ₹750 (₹5,001–₹10,000), ₹1,200 (&gt;₹10,000).&nbsp;Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared.",
+          "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.20",
+          "redemption_options": "• Airline &amp; Hotel Transfers\n• Travel EDGE Portal\n• Rewards Store &amp; Vouchers\n• Statement Credits",
+          "redemption_catalogue": "https://edgerewards.axisbank.co.in/lms/",
+          "exclusions": "Fuel Spends, Wallet Loads, Rent Payment, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments",
+          "exclusion_spends": "Fuel Spends, Wallet Loads, Rent Payment, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 100000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Superior Miles Conversion for Burgundy",
+            "description": "earn 4 partner miles for every 5 EDGE Reward Points, delivering higher value compared to regular Magnus"
+          },
+          {
+            "title": "Priority Pass with Guest Access",
+            "description": "enjoy unlimited international lounge visits with 4 complimentary guest visits per year"
+          },
+          {
+            "title": "Travel EDGE Rewards",
+            "description": "earn 5X EDGE Reward Points on spends via the Travel EDGE portal on cumulative spends up to ₹2 lakh per calendar month"
+          },
+          {
+            "title": "Airport Meet & Assist Services",
+            "description": "provide 4 complimentary services per calendar year, including assistance with check-in, security, immigration, and porter services at select Indian airports"
+          },
+          {
+            "title": "Rewarding Shopping Spends",
+            "description": "earn 12 EDGE Reward Points per ₹200 on shopping spends up to ₹1.5 lakh per calendar month and 35 EDGE Reward Points per ₹200 on incremental spends above ₹1.5 lakh"
+          },
+          {
+            "title": "Dining Delights Programme",
+            "description": "lets you save up to 30% on dining, capped at ₹1,000 per bill, at 4,000+ partner restaurants across India"
+          },
+          {
+            "title": "Unlimited Lounge Access",
+            "description": "gives unlimited domestic and international airport lounge visits with complimentary Priority Pass membership, including 4 accompanying guest visits per year"
+          },
+          {
+            "title": "Burgundy-Exclusive Welcome Benefit",
+            "description": "lets you choose a Luxe Gift Card, Postcard Hotels voucher, Yatra voucher, or a one-way domestic flight ticket worth up to ₹5,000, applicable only for new Burgundy cardholders and not for upgrades"
+          },
+          {
+            "title": "Accelerated Reward Earnings",
+            "description": "earn 12 EDGE Reward Points per ₹200 on spends up to ₹1.5 lakh per calendar month and 35 EDGE Reward Points per ₹200 on incremental spends beyond ₹1.5 lakh, capped at the assigned credit limit plus ₹1.5 lakh per month"
+          },
+          {
+            "title": "Higher Annual Miles Transfer Limit",
+            "description": "allow transfer of up to 10 lakh EDGE Reward Points per calendar year across airline and hotel partners"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 12 EDGE Reward Points per ₹200 on spends up to ₹1.5 lakh per month\n• Earn 35 EDGE Reward Points per ₹200 on incremental spends above ₹1.5 lakh\n• Convert rewards at 5 EDGE Points = 4 partner miles\n• Annual reward transfer limit of 10 lakh EDGE Reward Points\n• Earn 5X EDGE Reward Points on Travel EDGE bookings up to ₹2 lakh per month"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Welcome voucher or one-way domestic economy flight ticket worth up to ₹5,000\n• Choice of Luxe Gift Card, Postcard Hotels voucher, or Yatra voucher\n• Applicable only for new card issuance, not upgrades\n• First eligible spend within 30 days of card issuance\n• Benefit to be redeemed within 6 months of issuance"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• • 4 complimentary Airport Meet &amp; Assist services per calendar year (includes check-in, security, immigration, porter)\n• Valid for domestic &amp; international departures/arrivals at select airports\n• Earn 5X EDGE Reward Points on flight &amp; hotel bookings via Travel EDGE"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• Unlimited international lounge access via Priority Pass\n• Includes 4 complimentary guest visits per year\n• Unlimited domestic airport lounge access in India\n• Domestic lounge access requires ₹50,000 spend in previous 3 months\n• Spend condition waived for newly issued cards initially"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Up to 30% discount via Dining Delights programme, Maximum discount of ₹1,000 per bill, Valid at 4,000+ partner restaurants across India"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 18,
+          "max_age": 70,
+          "income_salaried_lpa": 24,
+          "income_self_emp_lpa": 24,
+          "min_income_monthly": 150000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "magnus-burgundy-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Landmark Reward SELECT Credit Card",
+        "nick_name": "SBI Landmark Reward SELECT, Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA,RuPay",
+        "card_network": null,
+        "rating": 4.2,
+        "user_ratings": 449,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": null,
+          "annual": "₹1,769 (₹1,499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.50% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.50₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.50% of the withdrawn amount is charged on cash advances using the credit card minimum ₹500, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹200",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "Above ₹50,000",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "An additional ₹100 applies if the Minimum Amount Due is not paid for two consecutive billing cycles",
+          "tnc_url": "https://www.sbicard.com/en/most-important-terms-and-conditions.page"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Gift Vouchers\n• Merchandise&nbsp;",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI",
+          "exclusion_spends": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 10000,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Earn 15 Reward Points per ₹100 Spent at Online and Retail Landmark Stores",
+            "description": "Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy all earn the accelerated rate, with no monthly or annual earning cap"
+          },
+          {
+            "title": "Earn 10 Reward Points per ₹100 Spent on",
+            "description": "restaurant bills, movie ticket spends and all international transaction"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• earn 15 Reward Points per ₹100 spent at online and retail Landmark Stores Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy\n• 10 Reward Points per ₹100 spent on dining, movies and international spends\n• The milestone benefit gives 12,000 bonus Reward Points on overall annual retail spends of ₹3,00,000\n• Reward Points can also be converted into Landmark Rewards at 2.4 Reward Points = 1 LMR, with 1 LMR = ₹0.60"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get 6,000 bonus Reward Points worth ₹1,500 on payment of the annual fee"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on movies"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on dining"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all petrol pumps across India, on transactions between ₹500 and ₹3,000. Maximum waiver of ₹100 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25001,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "axis-bank-magnus-credit-card"
+      },
+      "raw_response": {
+        "name": "Axis Magnus Credit Card",
+        "nick_name": "Axis Magnus Credit Card",
+        "bank": "Axis",
+        "bank_id": 1,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 222,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121948_BankKaro_20260129_121658926_Axis_Magnus.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹14,750 (₹12,500 + GST)",
+          "joining_note": "A one-time joining fee of ₹12500 is charged at the time of card issuance as per the bank's policy.",
+          "annual": "₹14,750 (₹12,500 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank's spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹25 Lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3%",
+          "apr_annual": "36.00%",
+          "forex_markup": "2%",
+          "forex_markup_note": "2% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (2%):₹100 → ₹2₹1,000 → ₹20₹10,000 → ₹200₹1,00,000 → ₹2,000",
+          "atm_withdrawal_fee": "Not Applicable",
+          "atm_withdrawal_note": "Not Applicable",
+          "railway_surcharge": "As prescribed by IRCTC / Indian Railways",
+          "railway_surcharge_note": "Surcharge on booking or cancelling railway tickets will be levied as prescribed by IRCTC or Indian Railways and may vary based on their applicable charges.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹175",
+          "cheque_payment_fee": "Not Applicable",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "Above ₹10,000",
+              "fee": "₹1200"
+            }
+          ],
+          "late_payment_note": "Late payment charges apply if the Minimum Amount Due (MAD) is not paid by the due date. Charges are based on the total outstanding amount as per the slab structure above.&nbsp;",
+          "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.20",
+          "redemption_options": "• Airmiles &amp; Hotel Loyalty Points\n• Travel EDGE Portal\n• EDGE Rewards Catalog\n• Instant Vouchers &amp; Gift Cards",
+          "redemption_catalogue": "https://edgerewards.axisbank.co.in/lms/",
+          "exclusions": "Fuel Spends, Wallet Loads, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments",
+          "exclusion_spends": "Fuel Spends, Wallet Loads, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 100000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get a Welcome Voucher Worth ₹12,500",
+            "description": "choose from Luxe Gift Card, The Postcard Hotels Gift Voucher, or Yatra Gift Voucher on making first transaction within 30 days"
+          },
+          {
+            "title": "Earn 12 EDGE Reward Points per ₹200",
+            "description": "on spends up to ₹1.50 Lakhs in a calendar month"
+          },
+          {
+            "title": "Enjoy Unlimited Complimentary International Lounge",
+            "description": "Access via Priority Pass Card, with 4 additional guest visits per year"
+          },
+          {
+            "title": "Enjoy Unlimited Domestic Airport Lounge",
+            "description": "Access on spending ₹50,000 in the previous 3 months, at select lounges in India"
+          },
+          {
+            "title": "Earn 12 EDGE Reward Points for Every ₹200 spent",
+            "description": "on cumulative monthly spends up to ₹1.5 lakh, and 35 EDGE Reward Points per ₹200 on spends above ₹1.5 lakh"
+          },
+          {
+            "title": "Earn 60 EDGE Reward Points for every ₹200 spent",
+            "description": "on Travel Edge portal, up to cumulative transactions of ₹2 lakh per month"
+          },
+          {
+            "title": "Earn 2 Partner Miles for Every 5 EDGE Reward Points",
+            "description": "transferable to 20 travel partners, up to 5 lakh EDGE points per calendar year"
+          },
+          {
+            "title": "Enjoy 8 complimentary Airport Meet & Greet services",
+            "description": "per calendar year at 16 airports across India via Extraordinary Weekends"
+          },
+          {
+            "title": "Save 15% on Bed and Breakfast Rates",
+            "description": "at The Leela Palace Hotels & Resorts, valid till 30th September 2026"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Airport Lounge",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Welcome Voucher worth ₹12,500 — choose from Luxe Gift Card, Postcard Hotels, or Yatra Gift Voucher upon first transaction within 30 days\n• Unlimited International Lounge Access via Priority Pass with 4 guest visits per year\n• Earn up to 35 EDGE Reward Points per ₹200 on monthly spends above ₹1.5 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Welcome Voucher worth ₹12,500 upon making your first transaction within 30 days of card issuance\n• Choose from Luxe Gift Card, The Postcard Hotels Gift Voucher, or Yatra Gift Voucher\n• Benefit is available to primary cardholder only and can be availed within 6 months from card creation date"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Travel Benefits",
+            "details": "• Earn 12 EDGE Reward Points for every ₹200 spent on cumulative monthly spends up to ₹1.5 lakh\n• Earn 35 EDGE Reward Points for every ₹200 spent on incremental spends above ₹1.5 lakh in a calendar month\n• Earn 60 EDGE Reward Points for every ₹200 spent on Travel Edge Portal, up to cumulative transactions of ₹2,00,000 per month\n• Transfer 2 partner miles for every 5 EDGE Reward Points across 20 travel partners, up to 5 lakh EDGE points per calendar year\n• Save 15% on bed and breakfast rates at The Leela Palace Hotels &amp; Resorts (valid till 30th September 2026)\n• 8 complimentary Airport Meet &amp; Greet services per calendar year at 16 airports across India via Extraordinary Weekends, valid for both domestic and international departures and arrivals"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• Unlimited complimentary International Lounge Access via Priority Pass Card, 4 additional guest visits per year on Priority Pass\n• Unlimited Domestic Airport Lounge Access at select lounges across India\n• Minimum spend of ₹50,000 in the previous 3 months required to unlock Domestic Lounge Access\n• For newly issued cards, minimum spend criteria is waived for the month of issuance and the following 3 months"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• BookMyShow benefits have been discontinued for all Magnus customers (w.e.f. 20th April 2024)"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Surcharge Waiver Benefits",
+            "details": "• Enjoy a 1% fuel surcharge waiver on fuel transactions between ₹400 and ₹4,000, capped at ₹400 per month"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• Purchase Protection Cover up to ₹2 lakh\n• Credit Shield cover up to ₹5 lakh\n• Loss or delay in baggage and personal documents cover up to $500\n• Price Protection Insurance is not applicable to Magnus cardholders"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 24,
+          "income_self_emp_lpa": 24,
+          "min_income_monthly": 150000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "axis-bank-magnus-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "Axis Bank Magnus Burgundy.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 72602, formula gives 37202)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 9000.18, x12 = 108002, annual rewards 108002)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.name",
+      "problem": "card name differs from the card list for the same alias ('Axis Bank Magnus Burgundy' vs 'Axis Burgundy Magnus Credit Card', alias magnus-burgundy-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 38231, formula gives 36462)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 833.35, x12 = 10000.2, annual rewards 10000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 30000, rewards 10000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "AXIS MAGNUS.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 33251, formula gives 18501)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "AXIS MAGNUS.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 4000.08, x12 = 48001, annual rewards 48001)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.invite_only",
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone_terms",
+      "problem": "milestone_benefits is far above what the card's own terms are worth (recommend_cards says 30000, the card's terms work out to 3000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "Axis Burgundy Magnus Credit Card",
+        "net_savings": "₹72,602",
+        "rewards": "₹1,08,002.157",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹35,400 (incl. GST)",
+        "annual_fee": "₹35,400 (incl. GST)",
+        "fee_waived": false,
+        "invite_only": true
+      },
+      {
+        "card_name": "SBI Landmark Reward SELECT Credit Card",
+        "net_savings": "₹38,231",
+        "rewards": "₹10,000.2",
+        "milestone": "₹30,000",
+        "lounge": "₹0",
+        "joining_fee": "₹1,769 (incl. GST)",
+        "annual_fee": "₹1,769 (incl. GST)",
+        "fee_waived": false,
+        "mostly_milestone": true,
+        "milestone_overvalued": true
+      },
+      {
+        "card_name": "Axis Magnus Credit Card",
+        "net_savings": "₹33,251",
+        "rewards": "₹48,000.961",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹14,750 (incl. GST)",
+        "annual_fee": "₹14,750 (incl. GST)",
+        "fee_waived": false
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "flights_annual",
+          "amount": 300000,
+          "per": "year",
+          "per_year": 300000
+        },
+        {
+          "spending_key": "hotels_annual",
+          "amount": 100000,
+          "per": "year",
+          "per_year": 100000
+        }
+      ],
+      "total_annual_spend": 400000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "Axis Magnus Credit Card looks like the best fit – it gives you about ₹33 k net savings a year on your ₹4 lakh travel spend and isn’t invitation‑only. The top‑ranked Axis Burgundy Magnus saves more but you can’t apply directly, and the SBI Landmark’s value mostly comes from a milestone that may be over‑valued. So Axis Magnus is the practical pick.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Axis Magnus Credit Card looks like the best fit – it gives you about ₹33 k net savings a year on your ₹4 lakh travel spend and isn’t invitation‑only. The top‑ranked Axis Burgundy Magnus saves more but you can’t apply directly, and the SBI Landmark’s value mostly comes from a milestone that may be over‑valued. So Axis Magnus is the practical pick.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "request_id": "08852175fe0b",
+  "session_id": null,
+  "ts": 1792359780.6169064,
+  "user_message": "suggest me a good personal loan",
+  "input_guard": {
+    "blocked": true,
+    "reason": "input_block:off_topic_product",
+    "user_message": "I only help with credit cards. For loans, insurance plans or investments you'll need a different service."
+  },
+  "intent": "refuse",
+  "intent_source": null,
+  "slots": null,
+  "clarify_question": null,
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I only help with credit cards. For loans, insurance plans or investments you'll need a different service.",
+  "notes": []
+}

@@ -1,0 +1,303 @@
+{
+  "request_id": "8b3c0f43ffaf",
+  "session_id": null,
+  "ts": 1792359769.255847,
+  "user_message": "compare axis flipkart and flipkart sbi",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "compare",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [
+      "flipkart_spends"
+    ],
+    "card_names": [
+      "Axis Flipkart Credit Card",
+      "Flipkart SBI Credit Card"
+    ],
+    "card_ids": [
+      "axis-flipkart-credit-card",
+      "flipkart-sbi-credit-card"
+    ],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "compare",
+  "tool_calls": [
+    {
+      "tool": "compare_cards",
+      "arguments": {
+        "card_aliases": [
+          "axis-flipkart-credit-card",
+          "flipkart-sbi-credit-card"
+        ]
+      },
+      "raw_response": {
+        "comparison": [
+          {
+            "name": "Axis Flipkart Credit Card",
+            "bank": "Axis",
+            "card_type": "VISA",
+            "card_network": null,
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "fees": {
+              "joining": "Free",
+              "joining_note": null,
+              "annual": "₹590 (₹500 + GST)",
+              "annual_note": null,
+              "annual_fee_waiver": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+              "gst_note": "All fees include 18% GST."
+            },
+            "fee_schedule": {
+              "apr_monthly": "3.75%",
+              "apr_annual": "45.00%",
+              "forex_markup": "3.5%",
+              "atm_withdrawal_fee": "2.5%",
+              "late_payment_slabs": [
+                {
+                  "outstanding": "₹0 - ₹500",
+                  "fee": "₹0"
+                },
+                {
+                  "outstanding": "₹501 - ₹5,000",
+                  "fee": "₹500"
+                },
+                {
+                  "outstanding": "₹5,001 - ₹10,000",
+                  "fee": "₹750"
+                },
+                {
+                  "outstanding": "₹10,001 and above",
+                  "fee": "₹1,200"
+                }
+              ],
+              "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+            },
+            "rewards": {
+              "point_value": null,
+              "redemption_options": "This is a cashback card; the cashback value is adjusted in your monthly statement.",
+              "exclusions": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances",
+              "exclusion_spends": "Utility & Telecom, Education Spends, Rent, Wallet Loads, Government-related Transactions, Insurance Payments, Jewellery Purchases, Fuel Spends, Financial Institutions, Cash Advances"
+            },
+            "key_benefits": [
+              {
+                "title": "Shopping Get 7.5% Cashback on Myntra",
+                "description": "spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Flipkart",
+                "description": "spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Cleartrip",
+                "description": "bookings capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Wednesday Swiggy Treats with 10% off",
+                "description": "on orders placed via Swiggy every Wednesday"
+              },
+              {
+                "title": "Swiggy New User Deal with 50% Instant Discount ",
+                "description": "up to ₹100 on first transaction within 30 days using code AXISFKNEW on a minimum cart of ₹129"
+              },
+              {
+                "title": "Travel Savings with Instant Savings up to 15%",
+                "description": "on flights and hotels via MakeMyTrip every Wednesday"
+              },
+              {
+                "title": "Shopping Get 7.5% Cashback on Myntra\t",
+                "description": " spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Get 5% Cashback on Flipkart\t",
+                "description": " spends capped at ₹4,000 per statement quarter"
+              },
+              {
+                "title": "Swiggy New User Deal with 50% Instant Discount\t ",
+                "description": "up to ₹100 on first transaction within 30 days using code AXISFKNEW on a minimum cart of ₹129"
+              },
+              {
+                "title": "Tira Discount With 10% off",
+                "description": "up to ₹1,000 on Tira every Wednesday"
+              },
+              {
+                "title": "Enjoy 4% Cashback on Spends",
+                "description": "on Uber, Swiggy, PVR and Cult.fit with unlimited earnings"
+              },
+              {
+                "title": "Flipkart Welcome Voucher Worth ₹250",
+                "description": "after your first transaction within 30 days of card issuance"
+              }
+            ],
+            "eligibility": {
+              "min_age": 18,
+              "max_age": 70,
+              "income_salaried_lpa": 3,
+              "income_self_emp_lpa": 3.5,
+              "crif_salaried": 720,
+              "crif_self_emp": 720
+            },
+            "tags": [
+              "Shopping",
+              "Online Food Ordering",
+              "Travel"
+            ],
+            "card_alias": "axis-flipkart-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_121912_AGB_Mockup-6.webp1736855576881"
+          },
+          {
+            "name": "Flipkart SBI Credit Card",
+            "bank": "SBI",
+            "card_type": "VISA,Mastercard",
+            "card_network": null,
+            "rating": 4,
+            "invite_only": false,
+            "employment_type": "both",
+            "fees": {
+              "joining": "Free",
+              "joining_note": null,
+              "annual": "₹590 (₹500 + GST)",
+              "annual_note": null,
+              "annual_fee_waiver": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+              "gst_note": "All fees include 18% GST."
+            },
+            "fee_schedule": {
+              "apr_monthly": "3.75%",
+              "apr_annual": "45.00%",
+              "forex_markup": "3.50%",
+              "atm_withdrawal_fee": "2.50%",
+              "late_payment_slabs": [
+                {
+                  "outstanding": "₹0 – ₹500",
+                  "fee": "₹0"
+                },
+                {
+                  "outstanding": "₹501 – ₹1,000",
+                  "fee": "₹400"
+                },
+                {
+                  "outstanding": "₹1,001 – ₹10,000",
+                  "fee": "₹750"
+                },
+                {
+                  "outstanding": "₹10,001 – ₹25,000",
+                  "fee": "₹950"
+                },
+                {
+                  "outstanding": "₹25,001 – ₹50,000",
+                  "fee": "₹1,100"
+                },
+                {
+                  "outstanding": "₹50,001 and above",
+                  "fee": "₹1,300"
+                }
+              ],
+              "tnc_url": "https://www.sbicard.com/en/most-important-terms-and-conditions.page"
+            },
+            "rewards": {
+              "point_value": null,
+              "redemption_options": "This is a cashback card cashback is adjusted in your monthly statement",
+              "exclusions": "Fuel Spends, Rent Payment, EMI Spends, Wallet Loads, Insurance Payments",
+              "exclusion_spends": "Fuel Spends, Rent Payment, EMI Spends, Wallet Loads, Insurance Payments"
+            },
+            "key_benefits": [
+              {
+                "title": "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+                "description": "each with up to ₹4,000 cashback per calendar quarter"
+              },
+              {
+                "title": "Earn 4% Cashback on",
+                "description": "Select/Preferred Merchants (up to ₹4,000 per calendar quarter)"
+              },
+              {
+                "title": "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart",
+                "description": "up to ₹4,000 per calendar quarter each"
+              },
+              {
+                "title": "Earn 5% Cashback on Cleartrip",
+                "description": "up to ₹4,000 per calendar quarter"
+              },
+              {
+                "title": "Earn 4% Cashback on",
+                "description": "Netmeds, PVR, Uber, Zomato with cashback of ₹4000 per quarter"
+              },
+              {
+                "title": "Earn 4% Cashback on\t",
+                "description": " Netmeds, PVR, Uber, Zomato with cashback of ₹4000 per quarter"
+              }
+            ],
+            "eligibility": {
+              "min_age": 21,
+              "max_age": 70,
+              "income_salaried_lpa": 3.6,
+              "income_self_emp_lpa": 3.6,
+              "crif_salaried": 720,
+              "crif_self_emp": 720
+            },
+            "tags": [
+              "Shopping",
+              "Travel"
+            ],
+            "card_alias": "flipkart-sbi-credit-card",
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125857_BankKaro_HDFC_Bank_UPI_Rupay_Credit_Card-mockup.png"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": {
+    "kind": "compare",
+    "cards": [
+      {
+        "card_name": "Axis Flipkart Credit Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (₹500 + GST)",
+        "fee_waiver_note": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+        "benefits": [
+          "Shopping Get 7.5% Cashback on Myntra",
+          "Get 5% Cashback on Flipkart",
+          "Get 5% Cashback on Cleartrip",
+          "Wednesday Swiggy Treats with 10% off"
+        ]
+      },
+      {
+        "card_name": "Flipkart SBI Credit Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (₹500 + GST)",
+        "fee_waiver_note": "The annual fee is waived if you spend ₹3.5 lakh or more in a year on your card, as per bank policy.",
+        "benefits": [
+          "Earn 7.5% on Myntra and 5% on Flipkart & Cleartrip",
+          "Earn 4% Cashback on",
+          "Earn 7.5% Cashback on Myntra and 5% Cashback on Flipkart",
+          "Earn 5% Cashback on Cleartrip"
+        ]
+      }
+    ]
+  },
+  "llm_raw_reply": "Both cards have the same free joining fee and ₹590 annual fee (waived after ₹3.5 L spend), and they both give 5% cashback on Flipkart and Cleartrip plus 7.5% on Myntra. The only extra perk on the Axis version is a Wednesday Swiggy Treat with 10% off; otherwise they’re essentially identical.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Both cards have the same free joining fee and ₹590 annual fee (waived after ₹3.5 L spend), and they both give 5% cashback on Flipkart and Cleartrip plus 7.5% on Myntra. The only extra perk on the Axis version is a Wednesday Swiggy Treat with 10% off; otherwise they’re essentially identical.",
+  "notes": [
+    "intent by keyword: compare",
+    "card list from cache (258 cards)",
+    "cards found in message: ['Axis Flipkart Credit Card', 'Flipkart SBI Credit Card']",
+    "card list from cache (258 cards)"
+  ]
+}

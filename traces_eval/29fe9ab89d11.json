@@ -1,0 +1,43 @@
+{
+  "request_id": "29fe9ab89d11",
+  "session_id": null,
+  "ts": 1792360525.588879,
+  "user_message": "I spend 15k a month on fuel, which card?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "fuel",
+        "amount": 15000,
+        "unit": "month",
+        "annual_amount": 180000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I can't reach the card data right now, so I won't guess. Please try again in a moment.",
+  "notes": [
+    "intent by keyword: recommend",
+    "MCP failure: connection refused"
+  ]
+}

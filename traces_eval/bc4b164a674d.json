@@ -1,0 +1,37 @@
+{
+  "request_id": "bc4b164a674d",
+  "session_id": null,
+  "ts": 1792359770.478138,
+  "user_message": "details of xyz123 card",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "I couldn't tell which card you mean. Could you share its full name?",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I couldn't tell which card you mean. Could you share its full name?",
+  "notes": [
+    "intent by keyword: card_details",
+    "card list from cache (258 cards)",
+    "cards found in message: []"
+  ]
+}

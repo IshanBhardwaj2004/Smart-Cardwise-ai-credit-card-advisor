@@ -1,0 +1,904 @@
+{
+  "request_id": "40f43e44a6c7",
+  "session_id": null,
+  "ts": 1792360937.25083,
+  "user_message": "I spend 20000 per month on dining and 1.5 lakh a year on flights, suggest a card",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "dining_or_going_out",
+        "amount": 20000,
+        "unit": "month",
+        "annual_amount": 240000
+      },
+      {
+        "key": "flights_annual",
+        "amount": 150000,
+        "unit": "year",
+        "annual_amount": 150000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "dining_or_going_out": 20000,
+        "flights_annual": 150000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "SBI Landmark Reward SELECT Credit Card",
+            "bank_name": "SBI",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹37,981",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹30,000",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹1,769 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 196,
+                "brands": [],
+                "card_id": 263,
+                "rp_bonus": "6000",
+                "maximum_days": "",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "0.25",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "sbi-landmark-reward-select-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "ixigo AU credot Card",
+            "bank_name": "AU Small Finance Bank",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹29,750",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹20,000",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 225,
+                "brands": [
+                  {
+                    "id": 471,
+                    "name": "Ixigo"
+                  }
+                ],
+                "card_id": 239,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "1000",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 2000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "ixigo-au-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260729_143058744_AU_ALTURA__2.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+            "bank_name": "Yes Bank",
+            "card_type": "Mastercard",
+            "net_annual_savings": "₹23,400",
+            "annual_rewards_value": "₹23,400",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free (waived at ₹1,20,000/yr spend; ₹589 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹1,200"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "yes-bank-paisabazaar-paisasave-credit-card",
+            "rating": 4.1,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260914_153331932_Mockup_95.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Landmark Reward SELECT Credit Card",
+        "nick_name": "SBI Landmark Reward SELECT, Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA,RuPay",
+        "card_network": null,
+        "rating": 4.2,
+        "user_ratings": 449,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": null,
+          "annual": "₹1,769 (₹1,499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.50% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.50₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.50% of the withdrawn amount is charged on cash advances using the credit card minimum ₹500, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹200",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "Above ₹50,000",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "An additional ₹100 applies if the Minimum Amount Due is not paid for two consecutive billing cycles",
+          "tnc_url": "https://www.sbicard.com/en/most-important-terms-and-conditions.page"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Gift Vouchers\n• Merchandise&nbsp;",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI",
+          "exclusion_spends": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 10000,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Earn 15 Reward Points per ₹100 Spent at Online and Retail Landmark Stores",
+            "description": "Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy all earn the accelerated rate, with no monthly or annual earning cap"
+          },
+          {
+            "title": "Earn 10 Reward Points per ₹100 Spent on",
+            "description": "restaurant bills, movie ticket spends and all international transaction"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• earn 15 Reward Points per ₹100 spent at online and retail Landmark Stores Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy\n• 10 Reward Points per ₹100 spent on dining, movies and international spends\n• The milestone benefit gives 12,000 bonus Reward Points on overall annual retail spends of ₹3,00,000\n• Reward Points can also be converted into Landmark Rewards at 2.4 Reward Points = 1 LMR, with 1 LMR = ₹0.60"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get 6,000 bonus Reward Points worth ₹1,500 on payment of the annual fee"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on movies"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on dining"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all petrol pumps across India, on transactions between ₹500 and ₹3,000. Maximum waiver of ₹100 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25001,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "ixigo-au-credit-card"
+      },
+      "raw_response": {
+        "name": "ixigo AU Credit Card",
+        "nick_name": "ixigo AU, Credit Card",
+        "bank": "AU Small Finance Bank",
+        "bank_id": 7,
+        "card_type": "VISA,RuPay",
+        "card_network": null,
+        "rating": 4.2,
+        "user_ratings": 775,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260729_143058744_AU_ALTURA__2.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "Free",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "0%",
+          "forex_markup_note": "0% forex markup no mark-up is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card minimum ₹500, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "0",
+          "cheque_payment_fee": "2%",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹1,001 - ₹5000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹5001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹900"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50,001 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "A late-payment fee of 15% of the Total Amount Due is charged when the minimum amount due is not paid by the payment due date, subject to a minimum of ₹10 and a maximum of ₹1,300",
+          "tnc_url": "https://www.au.bank.in/credit-cards/mitc(with-schedule-of-charges).pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.20",
+          "redemption_options": "• Shopping\n• Movie Ticket\n• Mobile/DTH Recharge\n• E-Vouchers\n• Flight &amp; Hotel Bookings",
+          "redemption_catalogue": "https://rewardz.au.bank.in",
+          "exclusions": "Fuel, Rent, Insurance, Wallet Loads, Education, Government Services, International Transactions",
+          "exclusion_spends": "Fuel, Rent, Insurance, Wallet Loads, Education, Government Services, International Transactions"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 10000,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Enjoy 8 Domestic Airport and 8 Railway Lounge Visits",
+            "description": "visits a year, plus 1 complimentary international airport lounge visit every year via Priority Pass"
+          },
+          {
+            "title": "Earn 2.5% Reward Points on every ₹200 spent on UPI",
+            "description": "redeemable across shopping, movie tickets, travel and more"
+          },
+          {
+            "title": "Get Up to 10% instant discount up to ₹3,000 on flight and hotel bookings and 10%",
+            "description": "off up to ₹300 on bus bookings via ixigo platforms, plus zero payment-gateway charges on train bookings"
+          },
+          {
+            "title": "Get Up to 10% Instant Discount up to ₹3,000 on Flight and Hotel Bookings and 10%",
+            "description": "off up to ₹300 on bus bookings via ixigo platforms, plus zero payment-gateway charges on train bookings"
+          }
+        ],
+        "tags": [
+          "Travel",
+          "UPI"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Lifetime-free co-branded travel credit card\n• Up to 10% off up to ₹3,000 on flights &amp; hotels and 10% off up to ₹300 on bus bookings via ixigo, plus zero payment-gateway charges on train bookings\n• 2.5% Reward Points on every ₹200 spent (online, offline &amp; UPI cap 10,000 RP cycle\n• 8 domestic airport + 8 railway lounge visits a year and 1 international lounge visit via Priority Pass. Zero forex markup on international spends\n• Quarterly milestone 5,000 bonus RP on ₹75,000 spends"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• 1,000 Reward Points and 1,000 ixigo Money vouchers on the first successful transaction within 30 days of card issuance. ixigo Money is added within 15 days of activation and is valid for 90 days new-to-bank customers only Reward Points are posted within 15 days"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• 10% instant discount on flight bookings, up to ₹3,000, via ixigo platforms (once per month; promo code IXIGOCCFLY"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• Zero payment-gateway charges on train bookings up to 4 waivers per month 2 on ixigo Trains + 2 on ConfirmTkt when booking with the ixigo AU Credit Card"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• 10% instant discount on bus bookings, up to ₹300, via ixigo platforms once per month; promo code IXIGOCCBUS"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• 8 complimentary domestic airport lounge visits per year 2 per quarter, on a minimum spend of ₹50,000 in the previous calendar quarter; primary cardholder only\n• 1 complimentary international airport lounge visit per year via Priority Pass"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• 8 complimentary railway lounge visits per year maximum 2 per calendar quarter"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver up to ₹250 per statement month on fuel transactions between ₹400 and ₹5,000 at all fuel stations across the country"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• ₹1.5 Lakh Credit Shield covering the card outstanding balance in case of permanent total disability, critical illness or death. Zero liability on fraudulent transactions, card counterfeit, skimming and online fraud once the loss is reported to the bank"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• 2.5% Reward Points on every ₹200 spent online, offline &amp; UPI cap 10,000 RP cycle\n• Quarterly Milestone: 5,000 bonus Reward Points on ₹75,000+ spends per calendar quarter valid 2 years\n• Zero forex markup on international spends\n• Convert transactions above ₹2,000 into EMIs tap for PIN-less payments up to ₹5,000 up to 3 lifetime-free add-on cards and up to 50 days interest-free credit period"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "ixigo-au-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "yes-bank-paisabazaar-paisasave-credit-card"
+      },
+      "raw_response": {
+        "name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+        "nick_name": "Yes Bank Paisabazaar PaisaSave, Credit Card",
+        "bank": "Yes Bank",
+        "bank_id": 16,
+        "card_type": "Mastercard",
+        "card_network": null,
+        "rating": 4.1,
+        "user_ratings": 589,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260914_153331932_Mockup_95.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "₹589 (₹499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1.20 lakh or more in a year on your card, as per bank policy",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.99%",
+          "apr_annual": "47.88%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.50% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.50% of the withdrawn amount is charged on cash advances using the credit card minimum ₹650, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹500",
+          "cheque_payment_fee": "₹450",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "Above ₹50,000",
+              "fee": "₹1350"
+            }
+          ],
+          "late_payment_note": "Late payment charges of 10% of the statement balance or ₹1,350 whichever is lower",
+          "tnc_url": "https://www.yes.bank.in/pdf?name=ybl_mitc_pdf.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹1",
+          "redemption_options": "• Flight &amp; Hotel Bookings\n• Merchandise &amp; Vouchers",
+          "redemption_catalogue": "https://creditrewardz.yes.bank.in/",
+          "exclusions": "Fuel, Rent, Insurance, Wallet Load, EMI, Government Services, Education, Jewellery, Cash Advance, Utility Bills, telecom, Hospitals, Automotive Dealers, Service Shop, Advertising, Consulting",
+          "exclusion_spends": "Fuel, Rent, Insurance, Wallet Load, EMI, Government Services, Education, Jewellery, Cash Advance, Utility Bills, telecom, Hospitals, Automotive Dealers, Service Shop, Advertising, Consulting"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 10000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Earn 6% Cashback on Your Dining Spends",
+            "description": "Restaurants, bars and fast-food outlets earn you 12 reward points for every ₹200 spent, capped at 3,000 points a statement cycle"
+          },
+          {
+            "title": "Earn 6% Cashback on Flights, Hotels and Travel",
+            "description": "Airline tickets, hotel stays, airport spends and travel-agency bookings earn you 12 reward points for every ₹200 spent"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 6% cashback on dining and travel spends, credited as 12 reward points per ₹200 spent and capped at 3,000 points per statement cycle\n• 1% cashback on all other eligible spends, credited as 2 reward points per ₹200 spent"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• 6% cashback on airline tickets, airport spends, hotel stays and travel-agency bookings, earned as 12 reward points per ₹200 spent"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "DiningBenefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• 6% cashback at restaurants, bars and fast-food outlets, earned as 12 reward points per ₹200 spent"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver on fuel transactions between ₹500 and ₹3,000, capped at ₹250 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• Instant EMI to pay for transactions from ₹1,500 in parts\n• EMI on Call to convert payments into EMI over the phone\n• YES PayNow for on-time monthly bill payments\n• e-Mandate for standing instructions on bills, subscriptions and insurance premiums\n• up to 50 days of interest-free credit\n• up to 3 add-on cards at no fee"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 7.5,
+          "min_income_monthly": 25000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "yes-bank-paisabazaar-paisasave-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 37981, formula gives 36212)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 30000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.name",
+      "problem": "card name differs from the card list for the same alias ('ixigo AU credot Card' vs 'ixigo AU Credit Card', alias ixigo-au-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 20000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Yes Bank Paisabazaar PaisaSave Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 1950, x12 = 23400, annual rewards 23400)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone_terms",
+      "problem": "milestone_benefits is far above what the card's own terms are worth (recommend_cards says 30000, the card's terms work out to 3000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "ixigo AU credot Card.milestone_terms",
+      "problem": "milestone_benefits is far above what the card's own terms are worth (recommend_cards says 20000, the card's terms work out to 1000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "SBI Landmark Reward SELECT Credit Card",
+        "net_savings": "₹37,981",
+        "rewards": "₹9,750",
+        "milestone": "₹30,000",
+        "lounge": "₹0",
+        "joining_fee": "₹1,769 (incl. GST)",
+        "annual_fee": "₹1,769 (incl. GST)",
+        "fee_waived": false,
+        "mostly_milestone": true,
+        "milestone_overvalued": true
+      },
+      {
+        "card_name": "ixigo AU Credit Card",
+        "net_savings": "₹29,750",
+        "rewards": "₹9,750",
+        "milestone": "₹20,000",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "fee_waived": false,
+        "mostly_milestone": true,
+        "milestone_overvalued": true
+      },
+      {
+        "card_name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+        "net_savings": "₹23,400",
+        "rewards": "₹23,400",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free (waived at ₹1,20,000/yr spend; ₹589 otherwise)",
+        "fee_waived": true
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "dining_or_going_out",
+          "amount": 20000,
+          "per": "month",
+          "per_year": 240000
+        },
+        {
+          "spending_key": "flights_annual",
+          "amount": 150000,
+          "per": "year",
+          "per_year": 150000
+        }
+      ],
+      "total_annual_spend": 390000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "SBI Landmark Reward SELECT looks like the biggest saver at about ₹38 k a year, but most of that comes from a milestone benefit that’s probably over‑valued, so the real cash back could be lower. The ixigo AU Credit Card is a close second with about ₹30 k saved and no joining or annual fee, though it also leans heavily on a milestone that may not be as valuable as shown. Either could work, but the ixigo AU gives you the same vibe without any fee.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "SBI Landmark Reward SELECT looks like the biggest saver at about ₹38 k a year, but most of that comes from a milestone benefit that’s probably over‑valued, so the real cash back could be lower. The ixigo AU Credit Card is a close second with about ₹30 k saved and no joining or annual fee, though it also leans heavily on a milestone that may not be as valuable as shown. Either could work, but the ixigo AU gives you the same vibe without any fee.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

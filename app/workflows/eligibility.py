@@ -5,7 +5,9 @@ Eligibility workflow, two ways:
     in CODE. check_eligibility returns only part of its list, so the card details
     are the reliable way to check one specific card.
   - No card named ("which cards can I get?"):
-    check_eligibility (pincode + annual income + job type).
+    check_eligibility (pincode + annual income + job type). Its list can include cards whose
+    own minimum income is far above the user's (a 6 LPA user gets HDFC Regalia Gold, 18 LPA),
+    so each card about to be shown is checked against its own terms first.
 The verdict is always "may be eligible", never certain; the bank decides.
 """
 from __future__ import annotations
@@ -46,6 +48,7 @@ def verdict(details: dict, monthly_income: int, employment: str | None) -> dict:
         "your_monthly_income": monthly_income,
         "required_monthly_income": required_monthly,
         "required_lpa": lpa,
+        "required_annual_income": round(lpa * schema.LPA_UNIT) if lpa else None,
         "meets_income": None if required_monthly is None else monthly_income >= required_monthly,
         "min_age": schema.field(details, "min_age"),
         "max_age": schema.field(details, "max_age"),
@@ -78,4 +81,30 @@ def run(slots, mcp: MCPClient, trace):
             A["employment_status"]: slots.employment}
     raw = mcp.call(schema.TOOL_CHECK_ELIGIBILITY, args)
     trace.add_tool_call(ToolCallRecord(tool=schema.TOOL_CHECK_ELIGIBILITY, arguments=args, raw_response=raw, ok=True))
-    return raw
+    return _drop_over_income(raw, slots, mcp, trace)
+
+
+def _drop_over_income(raw, slots, mcp: MCPClient, trace):
+    """Check the cards about to be shown against their own minimum income; leave out the ones
+    the user clearly doesn't meet, and say which (the server's list doesn't filter by income)."""
+    if not isinstance(raw, dict) or schema.error_of(raw):
+        return raw
+    list_key = next((k for k in schema._RESP["card_lists"] if isinstance(raw.get(k), list)), None)
+    if not list_key:
+        return raw
+    wanted, kept, removed = schema.OPTIONS["eligible_cards_shown"], [], []
+    for card in raw[list_key][:_CFG["verify_list_max_details"]]:
+        if len(kept) >= wanted:
+            break
+        alias = schema.card_id(card)
+        details = fetch(alias, mcp, trace) if alias else None
+        if not details or schema.error_of(details):
+            kept.append(card)          # can't check it: keep the server's answer
+            continue
+        v = verdict(details, slots.monthly_income, slots.employment)
+        if v["meets_income"] is False:
+            removed.append({"card_name": schema.card_label(card), "required_monthly_income": v["required_monthly_income"]})
+        else:
+            kept.append(card)
+    trace.note(f"eligibility list: kept {len(kept)}, left out {len(removed)} over the user's income")
+    return {**raw, list_key: kept, "_removed_over_income": removed}

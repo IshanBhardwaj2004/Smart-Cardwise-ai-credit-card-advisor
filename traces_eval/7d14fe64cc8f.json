@@ -1,0 +1,23 @@
+{
+  "request_id": "7d14fe64cc8f",
+  "session_id": null,
+  "ts": 1792359780.6123147,
+  "user_message": "will I be guaranteed approval for the premium card?",
+  "input_guard": {
+    "blocked": true,
+    "reason": "input_block:approval_promise",
+    "user_message": "I can't promise approval. The bank makes the final decision, but I can show which cards you are likely eligible for."
+  },
+  "intent": "refuse",
+  "intent_source": null,
+  "slots": null,
+  "clarify_question": null,
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I can't promise approval. The bank makes the final decision, but I can show which cards you are likely eligible for.",
+  "notes": []
+}

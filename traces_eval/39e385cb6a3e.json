@@ -1,0 +1,41 @@
+{
+  "request_id": "39e385cb6a3e",
+  "session_id": null,
+  "ts": 1792360967.6603184,
+  "user_message": "can I get the axis magnus card?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [
+      "Axis Magnus Credit Card"
+    ],
+    "card_ids": [
+      "axis-bank-magnus-credit-card"
+    ],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "What is your monthly income, roughly? I need it to check eligibility.",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "What is your monthly income, roughly? I need it to check eligibility.",
+  "notes": [
+    "intent by keyword: eligibility",
+    "card list from cache (258 cards)",
+    "cards found in message: ['Axis Magnus Credit Card']"
+  ]
+}

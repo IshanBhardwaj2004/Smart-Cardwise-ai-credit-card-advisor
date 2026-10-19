@@ -196,6 +196,10 @@
     ],
     "banned_output": [
       {
+        "name": "eligibility_certainty",
+        "pattern": "\\byou (?:should|will|would) be able to apply\\b|\\byou can apply for\\b|\\b(?:they|these|all of them) (?:all )?(?:fit|match|meet) your\\b|\\byou(?: are|'re|’re) eligible\\b|\\byou qualify\\b"
+      },
+      {
         "name": "approval_promise",
         "pattern": "\\b(guaranteed|assured|definite|100%?)\\b.{0,20}\\bapprov"
       },
@@ -213,6 +217,7 @@
       }
     ],
     "min_checked_amount": 2,
+    "rounded_tolerance": 0.02,
     "redact_patterns": [
       "(?<!\\d)(?:\\d[ -]?){12,18}\\d(?!\\d)",
       "(?<!\\d)\\d{4}[ -]?\\d{4}[ -]?\\d{4}(?!\\d)",
@@ -458,6 +463,9 @@
           "annum",
           "saal"
         ],
+        "quarter": [
+          "quarter"
+        ],
         "month": [
           "month",
           "mahina",
@@ -474,6 +482,18 @@
         "each time",
         "har baar"
       ]
+    },
+    "period_months": {"month": 1, "quarter": 3, "year": 12},
+    "visit_keys": {
+      "international_lounge_usage_quarterly": ["\\binternational\\s+(?:airport\\s+)?lounges?\\b", "\\blounges?\\s+abroad\\b"],
+      "domestic_lounge_usage_quarterly": ["\\b(?:domestic\\s+)?(?:airport\\s+)?lounges?\\b"]
+    },
+    "visit_window": 40,
+    "infer_visits": {
+      "_about": "The server's own guidance: 'fly 4x/year = 1/quarter' (one lounge visit per trip).",
+      "from_keys": ["flights_annual"],
+      "to_key": "domestic_lounge_usage_quarterly",
+      "visits_per_trip": 1
     },
     "key_conflicts": [
       {
@@ -506,6 +526,9 @@
     "min_word_len": 2,
     "max_word_gap": 1,
     "tie_margin": 0.2,
+    "max_alternatives": 4,
+    "distinct_word_max_cards": 6,
+    "fallback_min_words": 2,
     "short_forms": {
       "amex": "american express",
       "sc": "standard chartered",
@@ -568,6 +591,11 @@
       "warn_user": false,
       "problem": "minimum income in LPA and minimum monthly income do not agree"
     },
+    "eligibility_list_over_income": {
+      "fault": "mcp_tool",
+      "warn_user": false,
+      "problem": "check_eligibility listed cards whose own minimum income is above the user's income"
+    },
     "monthly_looks_yearly": {
       "fault": "data",
       "warn_user": false,
@@ -577,6 +605,23 @@
       "fault": "data",
       "warn_user": false,
       "problem": "card name differs from the card list for the same alias"
+    },
+    "invite_only": {
+      "field": "invite_only",
+      "fault": "mcp_tool",
+      "warn_user": true,
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)"
+    },
+    "milestone_terms": {
+      "_about": "Values a card's milestone from its own terms (get_card_details) to catch an overvalued milestone_benefits in recommend_cards.",
+      "sentence_words": ["milestone"],
+      "rupee_pattern": "(?:worth|value of|vouchers? (?:of|worth))\\s*(?:rs\\.?|inr|₹)\\s?([\\d,]+)",
+      "points_pattern": "([\\d,]+)\\s*(?:bonus\\s+)?(?:reward\\s+)?points?",
+      "point_value_pattern": "=\\s*(?:rs\\.?|inr|₹)\\s?([\\d.]+)",
+      "tolerance": 1.5,
+      "fault": "mcp_tool",
+      "warn_user": true,
+      "problem": "milestone_benefits is far above what the card's own terms are worth"
     },
     "milestone_heavy": {
       "share": 0.5,
@@ -591,7 +636,8 @@
       "self_employed": "self_emp_lpa"
     },
     "default_employment": "salaried",
-    "monthly_looks_yearly_share": 0.8
+    "monthly_looks_yearly_share": 0.8,
+    "verify_list_max_details": 8
   },
   "llm": {
     "card_fields": [
@@ -670,6 +716,8 @@
     "recommend": "{card} comes out on top for your spending. It should save you around {net} a year after fees.",
     "runner_up": " {card} is next at {net}.",
     "joining_fee": " It has a {fee} joining fee, so the first year works out a little lower.",
+    "invite_only": " Note: {card} is invite-only, so you can't apply for it directly.",
+    "milestone_overvalued": " One caution: the card's own terms put its milestone benefit at much less than the {milestone} the ranking counts, so the real saving is likely lower.",
     "milestone_heavy": " Most of that is its milestone benefit ({milestone}), usually vouchers you earn by hitting yearly spend targets, so make sure that's something you'd actually use.",
     "tied": "{cards} come out level here, each saving around {net} a year. The real difference is the joining fee ({fees}).",
     "tied_pick": " If you'd rather not pay to join, {card} is the simpler pick.",
@@ -677,7 +725,8 @@
     "card_details": "Here's what {card} offers. It costs {joining} to join and {annual} a year.",
     "card_details_waiver": " {waiver}",
     "compare": "Here's how {cards} stack up. The fees are the quickest way to tell them apart: {fees}.",
-    "eligibility_list": "From what you've told me, you may be eligible for {count} cards. Here are a few to start with.",
+    "eligibility_list": "From what you've told me, these are cards you may be eligible for. I checked each one against its own minimum income.",
+    "eligibility_removed": " I left out {n} card(s) from the server's list because their own terms ask for more income than you mentioned ({cards}).",
     "eligibility_meets": "Your income clears {card}'s minimum of about {need}, so you may be eligible. The bank will still look at things like your credit score.",
     "eligibility_short": "{card} usually asks for about {need}, which is more than you mentioned, so you may not qualify for it yet.",
     "eligibility_unknown": "I couldn't find the income requirement for {card}, so I can't say either way.",
@@ -722,6 +771,7 @@
       "joining_fee": "Joining",
       "annual_fee": "Annual fee",
       "free_join": "Free to join",
+      "invite_only": "Invite only",
       "show_breakdown": "Show breakdown",
       "hide_breakdown": "Hide breakdown"
     },

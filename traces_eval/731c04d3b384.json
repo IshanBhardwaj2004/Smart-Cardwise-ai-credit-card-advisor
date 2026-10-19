@@ -1,0 +1,23 @@
+{
+  "request_id": "731c04d3b384",
+  "session_id": null,
+  "ts": 1792360525.08289,
+  "user_message": "how to claim GST on card spends",
+  "input_guard": {
+    "blocked": true,
+    "reason": "input_block:tax_advice",
+    "user_message": "I can't give tax advice. Please talk to a qualified tax professional for that. I can help you choose or compare credit cards."
+  },
+  "intent": "refuse",
+  "intent_source": null,
+  "slots": null,
+  "clarify_question": null,
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I can't give tax advice. Please talk to a qualified tax professional for that. I can help you choose or compare credit cards.",
+  "notes": []
+}

@@ -2,6 +2,8 @@
 Step 12: Output guard. Before the LLM reply reaches the user:
   1. Every money figure in the reply must exist in the data:
      "₹8,500", "8,500 rupees", "₹1.8 lakh" and large numbers without ₹.
+     A rounded figure ("about ₹37k", "₹8.4k") passes only if a data figure rounds to it.
+     Amounts in the data are read with their units too ("₹4 lakh" = 4,00,000).
   2. No banned phrase (approval promise, tax advice, asking for an OTP...).
 Rules: rules.json -> guards.banned_output, slots.units
 """
@@ -13,6 +15,8 @@ from app.config import rules
 
 _BANNED = [(b["name"], re.compile(b["pattern"], re.IGNORECASE)) for b in rules["guards"]["banned_output"]]
 _MIN_CHECKED = rules["guards"]["min_checked_amount"]
+_ROUND_TOL = rules["guards"]["rounded_tolerance"]
+_SPACES_RE = re.compile(r"\s+")
 _UNITS = {k.lower(): v for k, v in rules["slots"]["units"].items()}
 
 _UNIT = "|".join(sorted((re.escape(u) for u in _UNITS), key=len, reverse=True))
@@ -36,6 +40,8 @@ def _to_int(num: str, unit: str | None) -> int | None:
 
 
 def _numbers_in_reply(text: str) -> set[int]:
+    # LLMs often write "₹1\u202f lakh" (narrow space + space); one space keeps the unit attached
+    text = _SPACES_RE.sub(" ", text)
     found: set[int] = set()
     covered: list[tuple[int, int]] = []
     for m in _MONEY_RE.finditer(text):
@@ -67,6 +73,8 @@ def _numbers_in_data(data) -> set[int]:
                 value = _to_int(m.group(), None)
                 if value is not None:
                     allowed.add(value)
+            # amounts written with a unit in the data itself ("waived if you spend ₹4 lakh")
+            allowed.update(_numbers_in_reply(obj))
         elif isinstance(obj, dict):
             for v in obj.values():
                 walk(v)
@@ -78,13 +86,21 @@ def _numbers_in_data(data) -> set[int]:
     return allowed
 
 
+def _rounded_from(n: int, allowed: set[int]) -> bool:
+    """A rounded figure ("about ₹37k", "₹8.4k") is fine if a real data figure rounds to it (₹37,231, ₹8,421)."""
+    if n < 1000 or n % 100:
+        return False
+    return any(a and abs(a - n) / a <= _ROUND_TOL for a in allowed)
+
+
 def check_output(reply: str, data) -> dict:
     """Return: {"ok": bool, "problems": [...], "unverified_numbers": [...]}"""
     text = reply or ""
     problems = [f"banned_phrase:{name}" for name, pat in _BANNED if pat.search(text)]
 
     allowed = _numbers_in_data(data)
-    unverified = sorted(n for n in _numbers_in_reply(text) if n >= _MIN_CHECKED and n not in allowed)
+    unverified = sorted(n for n in _numbers_in_reply(text)
+                        if n >= _MIN_CHECKED and n not in allowed and not _rounded_from(n, allowed))
     if unverified:
         problems.append(f"unverified_numbers:{unverified}")
 

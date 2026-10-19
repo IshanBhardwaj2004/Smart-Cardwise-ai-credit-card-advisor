@@ -1,0 +1,777 @@
+{
+  "request_id": "b83dc77eac48",
+  "session_id": null,
+  "ts": 1792360525.5603182,
+  "user_message": "I spend 20000 a month on dining, 5000 on fuel and 1.5 lakh a year on flights",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "dining_or_going_out",
+        "amount": 20000,
+        "unit": "month",
+        "annual_amount": 240000
+      },
+      {
+        "key": "fuel",
+        "amount": 5000,
+        "unit": "month",
+        "annual_amount": 60000
+      },
+      {
+        "key": "flights_annual",
+        "amount": 150000,
+        "unit": "year",
+        "annual_amount": 150000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "dining_or_going_out": 20000,
+        "fuel": 5000,
+        "flights_annual": 150000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "SBI Landmark Reward SELECT Credit Card",
+            "bank_name": "SBI",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹37,981",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹30,000",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹1,769 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 196,
+                "brands": [],
+                "card_id": 263,
+                "rp_bonus": "6000",
+                "maximum_days": "",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "0.25",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "sbi-landmark-reward-select-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "ixigo AU credot Card",
+            "bank_name": "AU Small Finance Bank",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹29,750",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹20,000",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 225,
+                "brands": [
+                  {
+                    "id": 471,
+                    "name": "Ixigo"
+                  }
+                ],
+                "card_id": 239,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "1000",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 2000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "ixigo-au-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260729_143058744_AU_ALTURA__2.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "HDFC Diners Club Black Metal Edition",
+            "bank_name": "HDFC",
+            "card_type": "DinersClub",
+            "net_annual_savings": "₹25,200",
+            "annual_rewards_value": "₹37,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹11,800 (incl. GST)",
+            "annual_fee": "₹11,800 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 49,
+                "brands": [
+                  {
+                    "id": 31,
+                    "name": "Club Marriott"
+                  },
+                  {
+                    "id": 17,
+                    "name": "Amazon Prime"
+                  },
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 103,
+                "rp_bonus": "",
+                "maximum_days": "90",
+                "minimum_spend": "150000",
+                "voucher_bonus": "25000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹2,083.333"
+              },
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹1,000"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-diners-club-black-metal-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125405_BankKaro_HDFC_Dineer_Bc.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Landmark Reward SELECT Credit Card",
+        "card_alias": "sbi-landmark-reward-select-credit-card",
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": null,
+          "annual": "₹1,769 (₹1,499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "key_benefits": [
+          {
+            "title": "Earn 15 Reward Points per ₹100 Spent at Online and Retail Landmark Stores",
+            "description": "Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy all earn the accelerated rate, with no monthly or annual earning cap"
+          },
+          {
+            "title": "Earn 10 Reward Points per ₹100 Spent on",
+            "description": "restaurant bills, movie ticket spends and all international transaction"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25001,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Gift Vouchers\n• Merchandise&nbsp;",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI",
+          "exclusion_spends": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI"
+        },
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• earn 15 Reward Points per ₹100 spent at online and retail Landmark Stores Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy\n• 10 Reward Points per ₹100 spent on dining, movies and international spends\n• The milestone benefit gives 12,000 bonus Reward Points on overall annual retail spends of ₹3,00,000\n• Reward Points can also be converted into Landmark Rewards at 2.4 Reward Points = 1 LMR, with 1 LMR = ₹0.60"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get 6,000 bonus Reward Points worth ₹1,500 on payment of the annual fee"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on movies"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on dining"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all petrol pumps across India, on transactions between ₹500 and ₹3,000. Maximum waiver of ₹100 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "invite_only": true
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "ixigo-au-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Landmark Reward SELECT Credit Card",
+        "card_alias": "sbi-landmark-reward-select-credit-card",
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": null,
+          "annual": "₹1,769 (₹1,499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "key_benefits": [
+          {
+            "title": "Earn 15 Reward Points per ₹100 Spent at Online and Retail Landmark Stores",
+            "description": "Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy all earn the accelerated rate, with no monthly or annual earning cap"
+          },
+          {
+            "title": "Earn 10 Reward Points per ₹100 Spent on",
+            "description": "restaurant bills, movie ticket spends and all international transaction"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25001,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Gift Vouchers\n• Merchandise&nbsp;",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI",
+          "exclusion_spends": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI"
+        },
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• earn 15 Reward Points per ₹100 spent at online and retail Landmark Stores Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy\n• 10 Reward Points per ₹100 spent on dining, movies and international spends\n• The milestone benefit gives 12,000 bonus Reward Points on overall annual retail spends of ₹3,00,000\n• Reward Points can also be converted into Landmark Rewards at 2.4 Reward Points = 1 LMR, with 1 LMR = ₹0.60"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get 6,000 bonus Reward Points worth ₹1,500 on payment of the annual fee"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on movies"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on dining"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all petrol pumps across India, on transactions between ₹500 and ₹3,000. Maximum waiver of ₹100 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "invite_only": true
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-diners-club-black-metal-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Landmark Reward SELECT Credit Card",
+        "card_alias": "sbi-landmark-reward-select-credit-card",
+        "fees": {
+          "joining": "₹1,769 (₹1,499 + GST)",
+          "joining_note": null,
+          "annual": "₹1,769 (₹1,499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "key_benefits": [
+          {
+            "title": "Earn 15 Reward Points per ₹100 Spent at Online and Retail Landmark Stores",
+            "description": "Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy all earn the accelerated rate, with no monthly or annual earning cap"
+          },
+          {
+            "title": "Earn 10 Reward Points per ₹100 Spent on",
+            "description": "restaurant bills, movie ticket spends and all international transaction"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 25001,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.25",
+          "redemption_options": "• Gift Vouchers\n• Merchandise&nbsp;",
+          "redemption_catalogue": "https://www.sbicard.com/en/personal/rewards.page",
+          "exclusions": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI",
+          "exclusion_spends": "Fuel, Rent, Government Spends, Gaming, Wallet, EMI"
+        },
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• earn 15 Reward Points per ₹100 spent at online and retail Landmark Stores Lifestyle, Home Centre, Max, Spar, Babyshop and EasyBuy\n• 10 Reward Points per ₹100 spent on dining, movies and international spends\n• The milestone benefit gives 12,000 bonus Reward Points on overall annual retail spends of ₹3,00,000\n• Reward Points can also be converted into Landmark Rewards at 2.4 Reward Points = 1 LMR, with 1 LMR = ₹0.60"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Get 6,000 bonus Reward Points worth ₹1,500 on payment of the annual fee"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on movies"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Enjoy 10 Reward Points per ₹100 spent on dining"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all petrol pumps across India, on transactions between ₹500 and ₹3,000. Maximum waiver of ₹100 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "invite_only": true
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 37981, formula gives 36212)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 30000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.name",
+      "problem": "card name differs from the card list for the same alias ('ixigo AU credot Card' vs 'ixigo AU Credit Card', alias ixigo-au-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 20000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 25200, formula gives 13400)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 3083.33, x12 = 37000, annual rewards 37000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.name",
+      "problem": "card name differs from the card list for the same alias ('HDFC Diners Club Black Metal Edition' vs 'HDFC Diners Club Black Metal Credit Card', alias hdfc-diners-club-black-metal-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.invite_only",
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone_terms",
+      "problem": "milestone_benefits is far above what the card's own terms are worth (recommend_cards says 30000, the card's terms work out to 3000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "ixigo AU credot Card.invite_only",
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "ixigo AU credot Card.milestone_terms",
+      "problem": "milestone_benefits is far above what the card's own terms are worth (recommend_cards says 20000, the card's terms work out to 3000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.invite_only",
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "SBI Landmark Reward SELECT Credit Card",
+        "net_savings": "₹37,981",
+        "rewards": "₹9,750",
+        "milestone": "₹30,000",
+        "lounge": "₹0",
+        "joining_fee": "₹1,769 (incl. GST)",
+        "annual_fee": "₹1,769 (incl. GST)",
+        "fee_waived": false,
+        "mostly_milestone": true,
+        "milestone_overvalued": true,
+        "invite_only": true
+      },
+      {
+        "card_name": "ixigo AU Credit Card",
+        "net_savings": "₹29,750",
+        "rewards": "₹9,750",
+        "milestone": "₹20,000",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "fee_waived": false,
+        "mostly_milestone": true,
+        "milestone_overvalued": true,
+        "invite_only": true
+      },
+      {
+        "card_name": "HDFC Diners Club Black Metal Credit Card",
+        "net_savings": "₹25,200",
+        "rewards": "₹37,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹11,800 (incl. GST)",
+        "annual_fee": "₹11,800 (incl. GST)",
+        "fee_waived": false,
+        "invite_only": true
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "dining_or_going_out",
+          "amount": 20000,
+          "per": "month",
+          "per_year": 240000
+        },
+        {
+          "spending_key": "fuel",
+          "amount": 5000,
+          "per": "month",
+          "per_year": 60000
+        },
+        {
+          "spending_key": "flights_annual",
+          "amount": 150000,
+          "per": "year",
+          "per_year": 150000
+        }
+      ],
+      "total_annual_spend": 450000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "On about ₹4,50,000 a year of spending, SBI Landmark Reward SELECT comes out on top. It should save you around ₹37,981 a year after fees. Note: SBI Landmark Reward SELECT is invite-only, so you can't apply for it directly. One caution: the card's own terms put its milestone benefit at much less than the ₹30,000 the ranking counts, so the real saving is likely lower.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "On about ₹4,50,000 a year of spending, SBI Landmark Reward SELECT comes out on top. It should save you around ₹37,981 a year after fees. Note: SBI Landmark Reward SELECT is invite-only, so you can't apply for it directly. One caution: the card's own terms put its milestone benefit at much less than the ₹30,000 the ranking counts, so the real saving is likely lower.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

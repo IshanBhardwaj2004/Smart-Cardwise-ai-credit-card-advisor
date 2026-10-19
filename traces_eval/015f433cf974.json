@@ -1,0 +1,276 @@
+{
+  "request_id": "015f433cf974",
+  "session_id": null,
+  "ts": 1792360961.939006,
+  "user_message": "what are the fees on hdfc regaliaa",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [
+      "HDFC Regalia Gold Credit Card"
+    ],
+    "card_ids": [
+      "hdfc-regalia-gold"
+    ],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "card_details",
+  "tool_calls": [
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-regalia-gold"
+      },
+      "raw_response": {
+        "name": "HDFC Regalia Gold Credit Card",
+        "nick_name": "HDFC Regalia Gold",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "VISA,Mastercard",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 450,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125153_BankKaro_Mockup-12.webp",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹2,950 (₹2,500 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹2,950 (₹2,500 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹4 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "2%",
+          "forex_markup_note": "2% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (2%):₹100 → ₹2₹1,000 → ₹20₹10,000 → ₹200₹1,00,000 → ₹2,000",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "1% of the transaction amount + GST will be charged on railway ticket purchase",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "Not Applicable",
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹1001 - ₹5000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹5001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹900"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50,001 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": null,
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        },
+        "rewards": {
+          "point_value": "1 RP = ₹ 0.20",
+          "redemption_options": "• &nbsp;SmartBuy&nbsp;",
+          "redemption_catalogue": "https://offers.reward360.in/v1/regaliagold",
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Government and Statutory Payments, Education Payments, Railway Ticket Bookings, Gift Card or Voucher Purchases, Gambling or Lottery Transactions, Cryptocurrency or Digital Asset Transactions",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Government and Statutory Payments, Education Payments, Railway Ticket Bookings, Gift Card or Voucher Purchases, Gambling or Lottery Transactions, Cryptocurrency or Digital Asset Transactions"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 25000,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy",
+            "description": "transactions through SmartBuy, within the Regalia SmartBuy cap of 4,000 reward points per month and 2,000 per day"
+          },
+          {
+            "title": "Earn SmartBuy Travel Rewards on Flights, Hotels, RedBus",
+            "description": "instant vouchers, Apple Imagine, Zoomcar and MMT Holiday Packages with 5X or 10X reward points through SmartBuy for Regalia cards, redeemable at 1 Reward Point = Rs. 0.50 for up to 70% of flight and hotel booking value"
+          },
+          {
+            "title": "Enjoy 3 Domestic Lounge Visits per Calendar Quarter",
+            "description": "on ₹60,000 previous-quarter spends plus 6 international lounge visits a year via Priority Pass, along with a MakeMyTrip BLACK Gold membership"
+          },
+          {
+            "title": "Earn 5X Rewards on Myntra, Nykaa, Reliance Digital",
+            "description": "spends above ₹150 with 5,000 bonus points capped per month, plus Nykaa and Myntra SmartBuy spends within 4,000 points per month and 2,000 per day"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 4 Reward Points per ₹200 on retail spends\n• 5X Reward Points on Myntra, Nykaa, Reliance Digital &amp; select merchants (capped at 5,000 RP per month)\n• Reward Points capped at 50,000 per statement cycle\n• Reward Points redemption value: Flights/Hotels ₹0.5 per RP, Catalogue ₹0.65 per RP, Cashback ₹0.20 per RP\n• Quarterly milestone: ₹1,500 voucher on spends of ₹1.5 lakh per quarter"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Complimentary Swiggy One membership on spends of ₹1 lakh within first 90 days\n• Complimentary MMT Black Gold membership on spends of ₹1 lakh within first 90 days"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• ₹5,000 flight voucher on annual spends of ₹7.5 lakh\n• ₹5,000 flight vouchers also on milestone spends of ₹5 lakh and ₹7.5 lakh\n• Redeem Reward Points for flights and hotels up to 70% of booking value\n• Redemption capped at 50,000 Reward Points per calendar month for travel bookings"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge  Benefits",
+            "details": "• 3 complimentary lounge visits within India per calendar quarter on spends of ₹60,000 or more in the preceding calendar quarter\n• 6 complimentary international lounge visits per calendar year outside India via Priority Pass"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge  Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 18,
+          "income_self_emp_lpa": 18,
+          "min_income_monthly": 150000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "hdfc-regalia-gold"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": {
+    "kind": "card_details",
+    "cards": [
+      {
+        "card_name": "HDFC Regalia Gold Credit Card",
+        "joining_fee": "₹2,950 (₹2,500 + GST)",
+        "annual_fee": "₹2,950 (₹2,500 + GST)",
+        "fee_waiver_note": "The annual fee is waived if you spend ₹4 lakh or more in a year on your card, as per bank policy.",
+        "benefits": [
+          "Earn 10X SmartBuy Points on IGP.com, Jockey and Pharmeasy",
+          "Earn SmartBuy Travel Rewards on Flights, Hotels, RedBus",
+          "Enjoy 3 Domestic Lounge Visits per Calendar Quarter",
+          "Earn 5X Rewards on Myntra, Nykaa, Reliance Digital"
+        ]
+      }
+    ]
+  },
+  "llm_raw_reply": "The HDFC Regalia Gold Credit Card has a joining fee of ₹2,950 (₹2,500 + GST) and an annual fee of the same amount, ₹2,950 (₹2,500 + GST). The annual fee can be waived if you spend ₹4 lakh or more in a year.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "The HDFC Regalia Gold Credit Card has a joining fee of ₹2,950 (₹2,500 + GST) and an annual fee of the same amount, ₹2,950 (₹2,500 + GST). The annual fee can be waived if you spend ₹4 lakh or more in a year.",
+  "notes": [
+    "intent by keyword: card_details",
+    "card list from cache (258 cards)",
+    "cards found in message: ['HDFC Regalia Gold Credit Card']",
+    "card list from cache (258 cards)"
+  ]
+}

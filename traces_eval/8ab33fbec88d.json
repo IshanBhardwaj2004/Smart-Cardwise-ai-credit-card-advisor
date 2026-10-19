@@ -1,0 +1,37 @@
+{
+  "request_id": "8ab33fbec88d",
+  "session_id": "s-income",
+  "ts": 1792360525.1967406,
+  "user_message": "50000",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "session",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": 50000,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "Are you salaried or self-employed?",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "Are you salaried or self-employed?",
+  "notes": [
+    "continuing eligibility, answer for 'income'",
+    "card list from cache (258 cards)",
+    "cards found in message: []"
+  ]
+}

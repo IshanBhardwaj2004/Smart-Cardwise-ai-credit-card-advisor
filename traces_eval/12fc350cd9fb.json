@@ -1,0 +1,49 @@
+{
+  "request_id": "12fc350cd9fb",
+  "session_id": "bcc39822-3b74-4025-a38f-cae1ceaffcb4",
+  "ts": 1792360783.0342236,
+  "user_message": "tell me about tata neu",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "I couldn't tell which card you mean. Could you share its full name?",
+  "workflow": null,
+  "tool_calls": [
+    {
+      "tool": "list_cards",
+      "arguments": {
+        "limit": 300,
+        "response_format": "brief"
+      },
+      "raw_response": {
+        "cards_returned": 4
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "I couldn't tell which card you mean. Could you share its full name?",
+  "notes": [
+    "intent by keyword: card_details",
+    "cards found in message: []"
+  ]
+}

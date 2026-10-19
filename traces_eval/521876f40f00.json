@@ -1,0 +1,97 @@
+{
+  "request_id": "521876f40f00",
+  "session_id": null,
+  "ts": 1792360525.0345552,
+  "user_message": "great cashbak card details",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "card_details",
+  "intent_source": "card_name",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [
+      "Great Cashback Card"
+    ],
+    "card_ids": [
+      "great-cashback-card"
+    ],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "card_details",
+  "tool_calls": [
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-cashback-card"
+      },
+      "raw_response": {
+        "name": "Great Cashback Card",
+        "card_alias": "great-cashback-card",
+        "bank": "Great Bank",
+        "fees": {
+          "joining": "Free",
+          "annual": "₹590 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1,00,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% cashback on online spends",
+            "description": ""
+          },
+          {
+            "title": "1% cashback on offline spends",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3.5,
+          "min_income_monthly": 25000
+        }
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": {
+    "kind": "card_details",
+    "cards": [
+      {
+        "card_name": "Great Cashback Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (incl. GST)",
+        "fee_waiver_note": "The annual fee is waived if you spend ₹1,00,000 or more in a year.",
+        "benefits": [
+          "5% cashback on online spends",
+          "1% cashback on offline spends"
+        ]
+      }
+    ]
+  },
+  "llm_raw_reply": "Here's what Great Cashback offers. It costs Free to join and ₹590 a year. The annual fee is waived if you spend ₹1,00,000 or more in a year.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Here's what Great Cashback offers. It costs Free to join and ₹590 a year. The annual fee is waived if you spend ₹1,00,000 or more in a year.",
+  "notes": [
+    "card list from cache (4 cards)",
+    "cards found in message: ['Great Cashback Card']",
+    "card list from cache (4 cards)",
+    "cards found in message: ['Great Cashback Card']",
+    "card list from cache (4 cards)"
+  ]
+}

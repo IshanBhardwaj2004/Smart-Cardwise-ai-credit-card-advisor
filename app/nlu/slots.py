@@ -7,6 +7,8 @@ Rules (words, units, category patterns): rules.json -> slots.
 Period: what the user said ("a month", "yearly"); if not said, the key's own unit
 (server convention: *_annual is yearly, the rest monthly).
 "4 times a year, 15k each trip" -> 60k yearly.
+Lounge visits ("lounges 6 times a quarter") become visits per quarter; if only the number of
+trips is known, visits are inferred the way the server's own guidance says (one per trip).
 Amounts with no category found here go to loose_amounts; the pipeline asks the
 server's resolver about them (brands: Myntra, DMart...).
 """
@@ -52,6 +54,9 @@ _FREQ_RE = re.compile(
     re.IGNORECASE,
 )
 _EACH = words_pattern(_FREQ["each_words"])
+_PERIOD_MONTHS = _CFG["period_months"]
+_VISIT_KEYS = {key: compile_patterns(pats) for key, pats in _CFG["visit_keys"].items()}
+_INFER = _CFG["infer_visits"]
 
 
 @dataclass
@@ -204,20 +209,41 @@ def _income_index(text: str, amounts: list[_Amount], expecting: str | None) -> i
     return best[1] if best else None
 
 
+def _convert(amount: float, period: str, unit: str) -> int:
+    """Amount per `period` -> amount per `unit` (month / quarter / year)."""
+    return int(round(amount * _PERIOD_MONTHS[unit] / _PERIOD_MONTHS[period]))
+
+
 def to_spend(key: str, amount: int, period: str | None) -> Spend:
     """User's amount -> the server key's unit. If no period was stated, use the key's own unit."""
     unit = schema.key_unit(key)
-    period = period or unit
-    if period == unit:
-        value = amount
-    elif period == "month" and unit == "year":
-        value = amount * 12
-    elif period == "year" and unit == "month":
-        value = round(amount / 12)
-    else:
-        value = amount
-    annual = value * 12 if unit == "month" else value
-    return Spend(key=key, amount=value, unit=unit, annual_amount=annual)
+    value = _convert(amount, period or unit, unit)
+    return Spend(key=key, amount=value, unit=unit, annual_amount=_convert(value, unit, "year"))
+
+
+def _visits(text: str, spend_keys: set[str]) -> dict[str, int]:
+    """Lounge visits per quarter. Stated ("lounges 6 times a quarter") or inferred from trips."""
+    freqs = [(m.start(), m.end(), int(m.group(1)), _FREQ_PERIOD_WORDS[m.group(2).lower()])
+             for m in _FREQ_RE.finditer(text)]
+    window = _CFG["visit_window"]
+    visits, taken = {}, []
+    for key, patterns in _VISIT_KEYS.items():          # international first, then domestic (rules order)
+        for p in patterns:
+            for m in p.finditer(text):
+                if any(s <= m.start() < e for s, e in taken):
+                    continue
+                near = [f for f in freqs if abs(f[0] - m.end()) <= window or abs(m.start() - f[1]) <= window]
+                if near:
+                    f = min(near, key=lambda f: min(abs(f[0] - m.end()), abs(m.start() - f[1])))
+                    visits[key] = max(1, _convert(f[2], f[3], "quarter"))
+                    taken.append(m.span())
+                    freqs.remove(f)
+                    break
+    # only trips known: one lounge visit per trip (server guidance: "fly 4x/year = 1/quarter")
+    if not visits and freqs and spend_keys & set(_INFER["from_keys"]):
+        _, _, count, period = freqs[0]
+        visits[_INFER["to_key"]] = max(1, _convert(count * _INFER["visits_per_trip"], period, "quarter"))
+    return visits
 
 
 # ---------- main ----------
@@ -252,7 +278,10 @@ def extract_slots(message: str, expecting: str | None = None, bare_pincode_ok: b
             snippet = text[prev_end:next_start].strip(" ,.;")
             loose.append(LooseAmount(amount=a.value, period=period, snippet=snippet))
 
+    visits = _visits(text, {s.key for s in spends})
+
     return Slots(
+        visits=visits,
         spends=spends,
         loose_amounts=loose,
         mentioned_keys=[k for k, _ in keys if k not in {s.key for s in spends}],

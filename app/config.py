@@ -43,6 +43,9 @@ class Config:
     LLM_NO_THINK = os.getenv("LLM_NO_THINK", "auto")
     # for reasoning models (e.g. gpt-oss on Groq): low / medium / high; empty = not sent
     LLM_REASONING_EFFORT = os.getenv("LLM_REASONING_EFFORT", "")
+    # on HTTP 429 (rate limit) wait as the provider asks, then retry; longer waits give up
+    LLM_RATE_LIMIT_RETRIES = int(os.getenv("LLM_RATE_LIMIT_RETRIES", "3"))
+    LLM_RATE_LIMIT_MAX_WAIT = float(os.getenv("LLM_RATE_LIMIT_MAX_WAIT", "20"))
 
     # live = real server/model, mock = sample data for testing without network
     MCP_MODE = os.getenv("MCP_MODE", "live")

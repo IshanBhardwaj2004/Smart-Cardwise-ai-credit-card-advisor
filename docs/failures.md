@@ -38,8 +38,17 @@ How to tell them apart, in one trace (`traces/<id>.json`):
 | M7 | Natural ways of describing spending not understood | Model (understanding rules) | Medium | Fixed |
 | M8 | Follow-up question loses the card being discussed | Model (session memory) | Low | **Open** |
 | M9 | Output guard blocked a correct yearly total | Model (data given to the LLM) | Low | Fixed |
-| **T1** | **Net savings ignore the joining fee, which the tool says it subtracts** | **MCP tool** | **High** | **Ticket: [engineer_report.md](engineer_report.md)** |
-| T2 | Milestone vouchers counted as cash decide the ranking | MCP tool (ranking design) | High | Ticket below; bot warns the user |
+| M10 | Lounge visits never sent, so every card's lounge value was ₹0 | Model (our request) | High | Fixed |
+| M11 | Card names: partial names found nothing or the wrong card; accents and joined words broke matching | Model (our matching) | Medium | Fixed |
+| M12 | A pending "which card?" question swallowed the user's next, unrelated question | Model (session memory) | Medium | Fixed |
+| M13 | Live run 2: the guard blocked 4 correct LLM replies (₹8.4k, "₹4 lakh" in the data, 18 LPA) | Model (guardrail) | Medium | Fixed |
+| M14 | Live run 2: Groq's rate limit (8,000 tokens a minute) made 5 replies fall back to the template | Model (LLM integration) | Medium | Fixed |
+| M15 | Live run 3: the LLM stated eligibility as a certainty ("you can apply for… they all fit your income") | Model (LLM) | High | Fixed after the run |
+| **T2** | **Milestone benefit overvalued ~10× against the card's own terms (SBI Landmark: ₹30,000 vs ₹3,000)** | **MCP tool (calculation)** | **High** | **Ticket A in [engineer_report.md](engineer_report.md)**; bot checks and warns |
+| **T1** | **Net savings ignore the joining fee, which the tool says it subtracts** | **MCP tool** | **High** | **Ticket B in [engineer_report.md](engineer_report.md)** |
+| T7 | `check_eligibility` lists cards whose own minimum income is far above the user's | MCP tool | High | Ticket below; bot filters and says so |
+| T8 | An invite-only card is recommended as #1 (Axis Burgundy Magnus) | MCP tool | High | Bot checks each card's details, warns, no badge |
+| T9 | Rupee values sent with stray decimals (`₹54,001.079`) | MCP tool | Low | Bot shows whole rupees |
 | T3 | `annual_value` in the category breakdown is a monthly value | MCP tool | Medium | Bot never shows it |
 | T4 | Empty spending still returns a ranked "top 3" | MCP tool | Medium | Bot never calls it empty |
 | T5 | `life_insurance` is yearly but lacks the `_annual` suffix | MCP tool | Low | Bot handles it |
@@ -50,11 +59,13 @@ How to tell them apart, in one trace (`traces/<id>.json`):
 | D4 | 84 of 191 cards marked "existing customers only" | Data | Medium | Flagged for confirmation |
 | D5 | Misspelled names, cut-off benefit titles, empty network field | Data | Low | Flagged; bot uses clean names |
 | D6 | Card counts don't match: 258 listed, 215 ranked, 191 exported | Data / MCP tool | Low | Flagged |
+| D7 | The same card listed twice (SBI ELITE Card / SBI Elite Credit Card) | Data | Low | Flagged; bot asks which one |
 
 **Priority for the teams:**
-1. T1 (changes which card users are told to get).
-2. D1 (wrong eligibility answers for any bot that trusts the field).
-3. T2 (vouchers treated as cash).
+1. **T2.** The milestone is overvalued about 10×, which flips the ranking (₹27,000 overstated on one card).
+2. **T7.** "Eligible" lists include cards needing 3–6× the user's income.
+3. **T1.** The joining fee is ignored, which flips the order between tied cards (₹1,180 on one card).
+4. **D1.** Yearly figures sit in the monthly-income field, so any bot trusting it gives wrong eligibility answers.
 
 ---
 
@@ -79,7 +90,7 @@ How to tell them apart, in one trace (`traces/<id>.json`):
              It should save you around ₹37,231 a year after fees. Most of that is its milestone
              benefit (₹30,000)... (template)
   ```
-- **After** (same reply replayed, `test_output_guard_live_replies`):
+- **After** (the exact live reply, stored in `tests/fixtures/real_responses.json` → `live_llm_replies.dining_rounded`, replayed by `test_output_guard_live_replies`):
   ```
   Guard on "about ₹37k" with data ₹37,231:  {"ok": true}   → the LLM's own answer is shown
   Guard on "about ₹40k" with data ₹37,231:  {"ok": false, "unverified_numbers": [40000]}  → still blocked
@@ -94,7 +105,7 @@ How to tell them apart, in one trace (`traces/<id>.json`):
 - **Evidence:** the trace's `repr(llm_raw_reply)` shows `₹1.5  lakh`, and `output_guard` is `{"ok": false, "problems": ["unverified_numbers:[2]"]}`. A second run of the same question, written without that spacing, passed.
 - **Fix:** the guard collapses any run of whitespace to one space before reading amounts.
 - **Before:** the guard returned `{"ok": false, "unverified_numbers": [2]}`, and the user saw the template.
-- **After:** the identical reply passes, and the user sees the LLM's answer. This is replayed in `test_output_guard_live_replies`.
+- **After:** the identical reply passes, and the user sees the LLM's answer. The reply is stored in `live_llm_replies.amazon_tie_narrow_space` in the fixtures and replayed by `test_output_guard_live_replies`.
 
 ### M3. An eligible user was told they need 12× the income (fixed)
 - **Question:** "am I eligible for AU Altura Plus, my salary is 35000 per month"
@@ -175,16 +186,89 @@ How to tell them apart, in one trace (`traces/<id>.json`):
 - **Cause: Model** (the LLM's data was missing a value it legitimately needs).
 - **Fix:** the yearly total is now part of `user_profile` in the LLM's data, so it passes the guard and still can't be made up.
 
+### M10. Lounge visits were never sent, so every card's lounge value was ₹0 (fixed)
+- **Question:** "I fly 4 times a year, about 15k each trip, which card?" (also "…and I use lounges 6 times a quarter")
+- **Answer (before):** the request sent `{"flights_annual": 60000}` only, so every card came back with `lounge_value: ₹0`. HDFC Diners Club Black Metal offers "unlimited airport lounge access to 1300+ lounges worldwide" (its own `detailed_benefits`), and it got ₹0 for lounges.
+- **What's wrong:** `recommend_cards` values lounges only from `domestic_lounge_usage_quarterly` and `international_lounge_usage_quarterly`, and our bot never filled them, even when the user stated a number of lounge visits. Travel cards were undervalued for exactly the users they suit.
+- **Cause: Model (our request).** The server's own description says how to fill these fields ("fly 4x/year = 1/quarter"; "travel card → ask about flights, hotels, lounges"), so this is our bug, not the server's.
+- **Fix** (rules in `slots.visit_keys` and `slots.infer_visits`):
+  - Stated visits are read and converted to visits per quarter: "lounges 6 times a quarter" → 6; "8 times a year" → 2; "2 times a month" → 6. International and domestic are kept apart.
+  - When only the number of trips is known, visits are inferred the way the server describes: one per trip, so 4 trips a year → 1 per quarter.
+  - No visits are invented when neither lounges nor trips are mentioned.
+- **After:** the same question sends `{"flights_annual": 60000, "domestic_lounge_usage_quarterly": 1}`. This is covered by five tests.
+
+### M11. Card-name matching: partial names found nothing or the wrong card (fixed)
+Found by running the matcher against the full 258-card list:
+
+| Message | Before | After |
+|---|---|---|
+| "tell me about tata neu" | no card found ("I couldn't tell which card you mean") | asks which one: the 4 Tata Neu cards |
+| "swiggy hdfc card fees" | silently picked Swiggy **BLCK** | asks BLCK or Ornge |
+| "sbi simplyclick fees" | no card found | SBI Simply Click |
+| "yes bank marquee" | asked "MARQUÉE, ACE or SELECT?" (the accent broke the word) | YES BANK MARQUÉE, no question |
+| "axis magnus" (a full name) | Axis Magnus | unchanged: a full name is never made ambiguous |
+- **Cause: Model (our matching).** A card matched only when 60% of its distinctive words appeared, so long names lost to short ones. Accents split words. Joined words weren't compared with the card's word pairs.
+- **Fix** (`workflows/name_resolver.py`; limits in `rules.json` → `matching`):
+  - Accents are removed before matching.
+  - A message word is also compared with each pair of adjacent card words joined together.
+  - A partial name that fits several cards returns them as alternatives, so the bot asks instead of guessing. That covers rare words that identify a card family ("tata neu"), and names that fit more cards than the one picked ("swiggy hdfc").
+
+### M12. A pending "which card?" question swallowed the user's next question (fixed; found in a live UI test)
+- **Conversation:**
+  ```
+  User: tell me about tata neu
+  Bot:  Which one do you mean: Tata Neu Plus SBI Card or HDFC Tata Neu Plus Credit Card or ...?
+  User: I fly 4 times a year, about 15k each trip
+  Bot:  I couldn't tell which card you mean. Could you share its full name?
+  ```
+- **What's wrong:** the user moved on to a new question, but the bot treated the message as the answer to "which one?". It found no card name, so it asked again.
+- **Cause: Model (our session memory).** A message without an intent keyword always continued the pending question.
+- **Fix:** if the bot is waiting on something other than spending, and the new message clearly describes spending (an amount with a category), it starts a new recommendation instead. A bare reply like "50000" still answers a pending income question.
+- **After:** the second message gets a recommendation for ₹60,000 a year on flights, with 1 lounge visit per quarter. Both cases are covered by tests.
+
+### M13. Live run 2: the output guard blocked four correct LLM replies (fixed)
+Found in the second live run of the 20 questions (gpt-oss-120b on Groq, 19 Oct 2026). Every reply below was correct, and the guard sent the user the template instead.
+
+| Q | What the LLM wrote | Data | Guard said | Why it was wrong |
+|---|---|---|---|---|
+| 3 | "about ₹8.4k" | net ₹8,421 | `unverified_numbers:[8400]` | rounding was only allowed to whole thousands |
+| 5 | "₹10.6k", "₹18.6k" | ₹10,616, ₹18,601 | `[10600, 18600]` | same |
+| 8 | "₹4 lakh" (Regalia Gold's fee waiver) | "waived if you spend ₹4 lakh…" | `[400000]` | numbers *in the data* were read without their unit, so the data said "4" |
+| 12 | "18 LPA" as ₹18 lakh a year | `required_lpa: 18` | `[1800000]` | the yearly minimum wasn't in the data as a rupee figure |
+- **Cause: Model (our guardrail).** These are false positives of the same kind as M2.
+- **Fix:**
+  - Rounded figures pass at the nearest hundred or thousand, still only within 2% of a real data figure. "₹9.5k" for ₹8,421 is still blocked.
+  - Amounts in the data are read with their units, the same way as the reply.
+  - The eligibility verdict carries `required_annual_income`.
+  - The prompt allows "about ₹8.4k".
+- **Evidence:** each trace's `notes`, for example `output guard failed on attempt 1: ['unverified_numbers:[8400]']`. All four are replayed in `test_output_guard_live_run_2`.
+
+### M14. Live run 2: Groq's rate limit made five replies fall back to the template (fixed)
+- **Questions:** 9, 10, 12 (second attempt), 14 and 16 of the live run.
+- **What happened:** `HTTP 429 … Rate limit reached for model openai/gpt-oss-120b … tokens per minute (TPM): Limit 8000, Used 7045, Requested 1010. Please try again in 412.5ms`. The bot gave up on the first 429, so users got the plain template even though waiting under a second would have worked.
+- **Cause: Model (LLM integration).**
+- **Fix:** on a 429, the client waits as long as the provider asks (the `Retry-After` header, else the "try again in …" text) and retries, up to 3 times. It gives up only if the wait is over 20 seconds (`LLM_RATE_LIMIT_RETRIES`, `LLM_RATE_LIMIT_MAX_WAIT`). Each retry is logged.
+
+### M15. Live run 3: the LLM stated eligibility as a certainty (fixed after the run)
+- **Questions and answers** (third live run, 20/20 passed the automatic checks):
+  - Q14 "I earn 12 LPA, salaried, pincode 110001, which cards can I get?" → "With a ₹12 LPA salary you **should be able to apply** for all the cards listed…"
+  - Q16 "45000 a month, self employed, pincode 560001" → "**You can apply for** the SBI Cashback, Axis Flipkart, … cards – **they all fit your** ₹45 k monthly income."
+- **What's wrong:** both break the guardrail "never call anyone eligible as a certainty". Income is only one of the bank's checks; credit score and existing-customer rules (see D4) also apply.
+- **Cause: Model (LLM).** The data said "may be eligible" (`eligibility_list`), and the LLM wrote it as a certainty. The automatic check passed it, because the banned phrases covered only approval promises. This is why an automatic PASS isn't proof, and each answer still needs a human verdict.
+- **Fix (guardrail plus prompt):** a new `eligibility_certainty` reply rule blocks "you can apply for", "you should be able to apply", "you qualify", "you're eligible" and "they all fit your…". The prompt now names those phrases. "You may be eligible" and "you can't apply" still pass.
+- **Before / after:** the exact Q14 and Q16 replies from the run are now blocked; on retry the LLM rephrases, or the template's "you may be eligible" wording is used. Replayed in `test_output_guard_live_run_2`.
+- **Note:** `docs/question_log.md` keeps the run as it happened, with these two answers marked misleading. The fix came after the run.
+
 ---
 
 ## 2. MCP tool failures
 
-### T1. Net savings ignore the joining fee, which the tool's own description says it subtracts (top issue)
+### T1. Net savings ignore the joining fee, which the tool's own description says it subtracts
 - **Question:** "I spend 15k a month on Amazon. Which card should I get?" (`recommend_cards`, `{"amazon_spends": 15000}`)
 - **Answer (server):** #1 HDFC Millennia, net ₹9,000 (joining fee ₹1,180). #2 ICICI Amazon Pay, net ₹9,000 (free). #3 Swiggy HDFC, net ₹9,000 (joining fee ₹590).
 - **What's wrong:** the description says net savings = rewards + lounge + milestone − **joining fee** − annual fee. The numbers leave the joining fee out. The card that costs ₹1,180 to get is ranked above the free card for the same rewards. With the fee subtracted, Millennia's figure is ₹7,820 and it drops from #1 to #3.
 - **Cause: MCP tool.** The description and the response's own `_format_hint` disagree, and the numbers follow the hint.
-- **Evidence and the full ticket** (worked examples, expected values, reproduction steps, acceptance tests): **[engineer_report.md](engineer_report.md)**.
+- **Evidence and the full ticket** (worked examples, expected values, reproduction steps, acceptance tests): **[engineer_report.md](engineer_report.md), Ticket B**.
 - **What the bot does now:**
   - It never re-ranks the server, and it shows the joining fee on every card.
   - When top cards tie, nobody gets "Best for you", and the reply names the joining fee as the real difference.
@@ -198,23 +282,26 @@ How to tell them apart, in one trace (`traces/<id>.json`):
           If you'd rather not pay to join, Amazon Pay ICICI Bank is the simpler pick.   (no "Best for you" badge)
   ```
 
-### T2. Milestone vouchers counted as cash decide the ranking
-- **Question:** "I spend 20000 a month on dining, 5000 on fuel and 1.5 lakh a year on flights" (also seen live with 30,000 a month on dining)
-- **Answer (server):** #1 SBI Landmark Reward SELECT, net ₹37,981. #3 HDFC Diners Club Black Metal, net ₹25,200.
+### T2. The milestone benefit is overvalued about 10× against the card's own terms (top issue)
+- **Question:** "I spend 20000 a month on dining, 5000 on fuel and 1.5 lakh a year on flights" (also seen live with ₹30,000 a month on dining)
+- **Answer (server):** #1 SBI Landmark Reward SELECT, net ₹37,981, of which `milestone_benefits` is **₹30,000**. #3 HDFC Diners Club Black Metal, net ₹25,200.
+- **What's wrong:** the card's own terms (`get_card_details`) say: "The milestone benefit gives **12,000 bonus Reward Points** on overall annual retail spends of ₹3,00,000", and its `point_value` is "**1 Reward Point = ₹0.25**". So the milestone is worth 12,000 × ₹0.25 = **₹3,000**. The LMR route in the same terms gives the same answer: 12,000 / 2.4 = 5,000 LMR × ₹0.60 = ₹3,000. `recommend_cards` counts ₹30,000, ten times that.
 
-  | Card | Rewards | Milestone | Annual fee | Net (server) | Net without milestone |
-  |---|---|---|---|---|---|
-  | SBI Landmark Reward SELECT | ₹9,750 | ₹30,000 | ₹1,769 | ₹37,981 | ₹7,981 |
-  | ixigo AU | ₹9,750 | ₹20,000 | Free | ₹29,750 | ₹9,750 |
-  | HDFC Diners Club Black Metal | ₹37,000 | ₹0 | ₹11,800 | ₹25,200 | ₹25,200 |
+  | Card | Rewards | Milestone (server) | Milestone (card's terms) | Annual fee | Net (server) | Net with the terms' milestone |
+  |---|---|---|---|---|---|---|
+  | SBI Landmark Reward SELECT | ₹9,750 | ₹30,000 | **₹3,000** | ₹1,769 | ₹37,981 | **₹10,981** |
+  | ixigo AU | ₹9,750 | ₹20,000 | not checked yet (card missing from our export) | Free | ₹29,750 | — |
+  | HDFC Diners Club Black Metal | ₹37,000 | ₹0 | ₹0 | ₹11,800 | ₹25,200 | ₹25,200 |
 
-- **What's wrong:** on the actual spending, Diners earns ₹37,000 and Landmark ₹9,750. Landmark ranks first only because ₹30,000 of milestone benefits, usually store vouchers, counts at full cash value.
-- **Cause: MCP tool (ranking design).** The tool does what its description says, so this is a product decision as much as a bug.
-- **Ticket:**
-  - *Expected:* return a rewards-only saving next to net savings (or count vouchers at a discount), and let callers rank by either.
-  - *Worked example:* without milestones, the order above becomes Diners (₹25,200), ixigo AU (₹9,750), SBI Landmark (₹7,981).
-  - *How to test:* `net − milestone` is returned for every card, and a card whose milestone is more than half its value is never ranked above a card with higher rewards-only savings without that being flagged.
-- **What the bot does:** the validator marks cards whose milestone is more than half their value (`milestone_heavy`). The reply then says so; the live model does this too (M1).
+  With the terms' value, Landmark drops from #1 (₹37,981) to below Diners (₹25,200). The server overstates that one card by ₹27,000 a year.
+- **Cause: MCP tool (calculation).**
+- **Evidence:** `calls.recommend_mixed` (the server's ₹30,000). For the terms, `export_samples.sbi-landmark-reward-select-credit-card` (`detailed_benefits[0]`, `rewards.point_value`), both in `tests/fixtures/real_responses.json`.
+- **Ticket:** [engineer_report.md](engineer_report.md), Ticket A.
+- **What the bot does now:**
+  - For each recommended card whose value is mostly milestone, the bot fetches that card's details and values the milestone from its own terms (an explicit "worth ₹X", or bonus points × `point_value`). Patterns are in `validation.milestone_terms`.
+  - If the server's figure is more than 1.5× the terms' figure, the card loses "Best for you", and the reply warns: "the card's own terms put its milestone benefit at much less than the ₹30,000 the ranking counts, so the real saving is likely lower."
+  - No new rupee figure is shown, per the guardrail. The ₹3,000 stays in the trace as evidence.
+  - Three tests replay this with the real data.
 
 ### T3. `annual_value` in the category breakdown is a monthly value
 - **Answer (server):** for HDFC Millennia, `top_spend_categories: [{"category": "amazon_spends", "annual_value": "₹750"}]`, while `annual_rewards_value` is ₹9,000.
@@ -236,6 +323,35 @@ How to tell them apart, in one trace (`traces/<id>.json`):
 - **Answer (server):** for "hdfc regaliaa", `whatsapp_resolve_card_or_category` returns "I could not confidently resolve that phrase".
 - **Cause: MCP tool (limitation).**
 - **What the bot does:** it matches card names itself against the full card list, with typo tolerance.
+
+### T7. `check_eligibility` lists cards whose own minimum income is far above the user's
+- **Question:** "I earn 6 LPA, salaried, pincode 110001, which cards can I get?" (`check_eligibility`, `{"annual_income": "600000", "employment_status": "salaried", "pincode": "110001"}`)
+- **Answer (server):** "232 eligible cards", with a list that includes HDFC Regalia Gold, Swiggy BLCK HDFC and Tata Neu Infinity HDFC.
+- **What's wrong:** by each card's own `eligibility` block, these need far more than ₹50,000 a month:
+
+  | Card in the "eligible" list | Its own minimum | vs. the user's 6 LPA |
+  |---|---|---|
+  | HDFC Regalia Gold | 18 LPA (₹1,50,000/month) | 3× |
+  | Swiggy BLCK HDFC | 12 LPA (₹1,00,000/month) | 2× |
+  | Tata Neu Infinity HDFC | 9.6 LPA (₹80,000/month) | 1.6× |
+- **Cause: MCP tool.** The list doesn't apply the income it was given, so "232 eligible" overstates what the user can get.
+- **Evidence:** `calls.eligibility` (the server list) against `export_samples.<alias>.eligibility` (each card's own terms).
+- **Ticket:** filter by `annual_income` against each card's `income_salaried_lpa` / `income_self_emp_lpa` (by `employment_status`) before counting and listing. *How to test:* for every card returned, `annual_income ≥ card minimum × 1,00,000`, and `eligible_cards_count` equals the length of the filtered list.
+- **What the bot does now:** before showing a card from this list, the bot checks it against its own minimum income (up to 8 cards, `eligibility.verify_list_max_details`). It no longer repeats the server's "232 eligible" count. It leaves out the cards the user clearly doesn't meet, and names them: "I left out 1 card(s) from the server's list because their own terms ask for more income than you mentioned (SBI Cashback)." This is covered by replay tests with real card data.
+
+### T8. An invite-only card is recommended as the user's #1
+- **Questions:** "monthly 10k fuel and 2 lakh yearly on hotels", "I travel a lot, around 3 lakh a year on flights…" and "frequent flyers spending 50k monthly on travel" (live run 2).
+- **Answer (server):** #1 Axis Burgundy Magnus, for example net ₹72,602 on ₹4 lakh of travel.
+- **What's wrong:** the card's own details say `invite_only: true`, so users can't apply for it. `recommend_cards` ranks it first anyway. Four other invite-only cards are in the data too: ICICI Emeralde Private Metal, IndusInd Indulge, SBI AURUM and IDFC FIRST Private.
+- **Cause: MCP tool.** **Evidence:** the live run's `recommend_cards` responses, and `invite_only` in the card export.
+- **Ticket:** leave invite-only cards out of `recommend_cards` by default, or return `invite_only` in each recommendation so callers can decide. *Test:* no recommendation has `invite_only: true` unless the caller asks for it.
+- **What the bot does now:** it checks each recommended card's details. An invite-only card gets an "Invite only" tag and no "Best for you" badge. The reply says "Note: … is invite-only, so you can't apply for it directly." This is covered by tests.
+
+### T9. Rupee values are sent with stray decimals
+- **Answer (server):** `"annual_rewards_value": "₹54,001.079"`, `"₹1,08,002.157"`, `"₹12,000.24"` (live run 2).
+- **What's wrong:** three decimal places on a rupee figure aren't paise; they look like unrounded calculations leaking into display text.
+- **Cause: MCP tool** (formatting). **Ticket:** round to whole rupees before formatting.
+- **What the bot does now:** cards show whole rupees ("₹54,001"). The reply check still uses the server's figure.
 
 ---
 
@@ -273,6 +389,9 @@ Found by checking all 191 exported cards with the validator's rules. Each card a
 - Credit score is listed as 0 on 4 cards. 3 cards list no minimum income at all.
 - **What the bot does:** the validator flags name mismatches, and the UI shows the clean name from the card list.
 
+### D7. The same card listed twice
+- `sbi-elite-card` ("SBI ELITE Card") and `sbi-elite-credit-card` ("SBI Elite Credit Card") are two aliases for what looks like one product. A user asking for "sbi elite" can't tell them apart, so the bot asks which one.
+
 ### D6. Card counts don't match
 - `list_cards`: 258. `recommend_cards`: 215 analysed. Its description: "100+". `get_card_details` export: 191 returned without error.
 - 43 listed cards can never be recommended. Flagged so the data team can confirm which cards are excluded and why.
@@ -281,7 +400,6 @@ Found by checking all 191 exported cards with the validator's rules. Each card a
 
 ## 4. Checked in the live run and not a failure
 
-These were tried on purpose to catch the LLM inventing things. They are listed so a reviewer can see what was tested.
 
 | Question | Result |
 |---|---|
@@ -296,8 +414,6 @@ These were tried on purpose to catch the LLM inventing things. They are listed s
 
 ```
 $env:MCP_MODE="live"; $env:LLM_MODE="live"; python -m evals.run_evals core
-```
-Every answer goes to `eval_results.json` and to `docs/question_log.md`: the answer, what was sent to the server, the data checks, and a line for the reviewer's verdict. For any wrong answer, open its trace and read the four fields in the table at the top. The fixtures and tests reproduce every entry above offline:
 ```
 python -m tests.test_pipeline
 ```

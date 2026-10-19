@@ -12,6 +12,7 @@ from app.mcp.client import MCPClient
 def run(slots, mcp: MCPClient, trace):
     trace.workflow = "recommend"
     args = {s.key: s.amount for s in slots.spends}
+    args.update(slots.visits)   # lounge visits per quarter (lounge value is 0 without them)
     args[schema.ARGS["top_n"]] = schema.OPTIONS["recommend_top_n"]
     args[schema.ARGS["response_format"]] = schema.OPTIONS["recommend_format"]
 

@@ -1,0 +1,55 @@
+{
+  "request_id": "f26d644206d0",
+  "session_id": "x1",
+  "ts": 1792360525.0392973,
+  "user_message": "I spend 1 lakh a month on everything",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [
+      {
+        "amount": 100000,
+        "period": "month",
+        "snippet": "I spend 1 lakh a month on everything"
+      }
+    ],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "Where does most of that money go? For example Amazon, fuel, dining, groceries or flights.",
+  "workflow": null,
+  "tool_calls": [
+    {
+      "tool": "whatsapp_resolve_card_or_category",
+      "arguments": {
+        "phrase": "I spend 1 lakh a month on everything"
+      },
+      "raw_response": {
+        "reply_type": "resolution",
+        "matches": [],
+        "best_match": null
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "Where does most of that money go? For example Amazon, fuel, dining, groceries or flights.",
+  "notes": [
+    "intent by keyword: recommend"
+  ]
+}

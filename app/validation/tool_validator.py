@@ -13,6 +13,8 @@ Checks:
   - "monthly" minimum that is really a yearly amount    -> data
   - card name differs from the card list (same alias)   -> data
   - most of the value is a milestone benefit            -> mcp_tool (evidence only)
+  - milestone worth far less by the card's own terms    -> mcp_tool (user warned; needs card details)
+  - recommended card is invite-only by its own details  -> mcp_tool (user warned; needs card details)
 """
 from __future__ import annotations
 
@@ -119,6 +121,57 @@ def _milestone_flag(card: dict, name: str) -> list[ValidationFlag]:
     cfg = _CFG["milestone_heavy"]
     return [_flag(f"{name}.milestone", cfg,
                   f"{cfg['problem']} (milestone {schema.number(card, 'milestone')}, rewards {schema.number(card, 'rewards')})")]
+
+
+_MT = _CFG["milestone_terms"]
+_MT_RUPEE = re.compile(_MT["rupee_pattern"], re.IGNORECASE)
+_MT_POINTS = re.compile(_MT["points_pattern"], re.IGNORECASE)
+_MT_POINT_VALUE = re.compile(_MT["point_value_pattern"], re.IGNORECASE)
+_MT_WORDS = [w.lower() for w in _MT["sentence_words"]]
+
+
+def _num(text: str) -> float:
+    return float(text.replace(",", ""))
+
+
+def milestone_from_terms(details: dict) -> float | None:
+    """The milestone's rupee value from the card's own text: an explicit "worth ₹X",
+    else bonus points x the card's point value. None if the terms don't say."""
+    texts = [b.get("details") or "" for b in details.get("detailed_benefits") or [] if isinstance(b, dict)]
+    texts += [m.get("description") or "" for m in details.get("milestone_benefits") or [] if isinstance(m, dict)]
+    sentences = [s for t in texts for s in re.split(r"[\n•]+", t) if any(w in s.lower() for w in _MT_WORDS)]
+    if not sentences:
+        return None
+    point_text = str((details.get("rewards") or {}).get("point_value") or "")
+    pv = _MT_POINT_VALUE.search(point_text)
+    total = 0.0
+    for s in sentences:
+        rupees = _MT_RUPEE.search(s)
+        if rupees:
+            total += _num(rupees.group(1))
+            continue
+        points = _MT_POINTS.search(s)
+        if points and pv:
+            total += _num(points.group(1)) * float(pv.group(1))
+    return total or None
+
+
+def milestone_overvalued_flag(card: dict, details: dict) -> ValidationFlag | None:
+    """recommend_cards' milestone vs. the same card's own terms (both from the server)."""
+    claimed = schema.number(card, "milestone") or 0
+    expected = milestone_from_terms(details) if claimed else None
+    if not expected or claimed <= _MT["tolerance"] * expected:
+        return None
+    return _flag(f"{schema.card_label(card)}.milestone_terms", _MT,
+                 f"{_MT['problem']} (recommend_cards says {claimed:g}, the card's terms work out to {expected:g})")
+
+
+def invite_only_flag(card: dict, details: dict) -> ValidationFlag | None:
+    """A recommended card that its own details mark as invite-only."""
+    cfg = _CFG["invite_only"]
+    if details.get(cfg["field"]) is True:
+        return _flag(f"{schema.card_label(card)}.invite_only", cfg)
+    return None
 
 
 def validate_tool_output(raw: Any, known_names: dict[str, str] | None = None) -> list[ValidationFlag]:

@@ -1,0 +1,37 @@
+{
+  "request_id": "6c8f618a4f60",
+  "session_id": "eval-e1",
+  "ts": 1792359775.8250642,
+  "user_message": "Which cards can I get?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "What is your monthly income, roughly?",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "What is your monthly income, roughly?",
+  "notes": [
+    "intent by keyword: eligibility",
+    "card list from cache (258 cards)",
+    "cards found in message: []"
+  ]
+}

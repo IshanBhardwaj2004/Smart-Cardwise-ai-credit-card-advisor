@@ -10,10 +10,10 @@ The user describes their spending in plain language and gets a card recommendati
 > | File | What it is | Who it's for |
 > |---|---|---|
 > | **[`docs/failures.md`](docs/failures.md)** | Every failure found, as question → answer → what's wrong → cause → evidence. Includes the model-side fixes with before/after transcripts. | Reviewers, engineers |
-> | **[`docs/engineer_report.md`](docs/engineer_report.md)** | The top MCP issue (net savings ignore the joining fee) written as a ticket: worked examples with real numbers, expected values, reproduction steps and tests. | MCP / backend engineers |
+> | **[`docs/engineer_report.md`](docs/engineer_report.md)** | The top MCP issues written as tickets: (A) the milestone overvalued about 10× against the card's own terms, and (B) the joining fee ignored in net savings. Each has worked examples with real numbers, expected values, reproduction steps and tests. | MCP / backend engineers |
 > | **[`docs/product_owner_note.md`](docs/product_owner_note.md)** | One page in plain language, with no code: what users can trust, what's broken, what to fix first. | Product owner |
 >
-> `docs/question_log.md` appears after a live evaluation run (see [Evaluate](#evaluate)).
+> `docs/question_log.md` holds the recorded answers to the 20 questions from the live run (see [Evaluate](#evaluate)). `docs/ai_transcript_english.md` is an English summary of the AI chat, labelled as such. The unedited transcripts are linked in the submission email.
 
 > **Status:** a prototype for evaluation. It is not a bank or an approval service. Figures shown are what the Great.cards tools return, and the tools themselves have known issues (see `docs/failures.md`).
 
@@ -38,8 +38,9 @@ The user describes their spending in plain language and gets a card recommendati
 ## What it does
 
 - **Recommend:** "I spend 15k a month on Amazon and 2 lakh a year on flights". The amounts become the server's spending fields, each with its own month or year period, and the server ranks the cards.
-- **Card details and compare:** loosely typed names work ("hdfc regaliaa", "sbi cashbak"). If two cards match equally, the bot asks which one you mean.
-- **Eligibility:** for a named card, it compares the card's own minimum income with yours. Without a card name, it uses the server's eligibility check (pincode, income, job type). It always says "you may be eligible", never "you will get it".
+- **Card details and compare:** loosely typed names work ("hdfc regaliaa", "sbi cashbak", "sbi simplyclick", "yes bank marquee"). If a name fits several cards ("tata neu", "swiggy hdfc"), the bot asks which one you mean.
+- **Eligibility:** for a named card, it compares the card's own minimum income with yours. Without a card name, it uses the server's eligibility check (pincode, income, job type), then checks each card it shows against that card's own minimum, because the server's list doesn't. It always says "you may be eligible", never "you will get it".
+- **Travellers:** lounge visits ("lounges 6 times a quarter", or inferred from "I fly 4 times a year") are sent to the server, so lounge value counts.
 - **Asks instead of guessing:** when spending, income, job type, pincode or a card name is missing, it asks one short question and remembers the answer.
 - **Checks the server's data before using it:** contradicting fields, impossible values and formula mismatches are flagged. The flags the user needs to see are shown, and the rest are kept as evidence in the trace.
 - **Traces everything:** each request's tool calls, raw responses, data flags, the LLM's reply and the final answer are saved to `traces/<id>.json`.
@@ -78,7 +79,7 @@ User ─▶ Chat UI (static/index.html) ─▶ FastAPI (app/main.py)
 | Clarify | `app/nlu/clarify.py` | One question at a time |
 | Workflows | `app/workflows/*.py` | recommend, card_details, compare, eligibility |
 | MCP client | `app/mcp/client.py` | Streamable HTTP, retries, an honest message if the server is down |
-| Validator | `app/validation/tool_validator.py` | Formula checks, zero rankings, monthly-labelled-annual, income rules, name mismatches, milestone-heavy cards |
+| Validator | `app/validation/tool_validator.py` | Formula checks, zero rankings, monthly-labelled-annual, income rules, name mismatches, milestone-heavy cards, and milestones checked against the card's own terms |
 | Composer | `app/llm/composer.py` | LLM reply, with a template fallback |
 | Output guard | `app/guards/output_guard.py` | ₹, lakh and bare numbers checked. A rounded "about ₹37k" passes only if a data figure rounds to it |
 
@@ -157,6 +158,7 @@ The bot talks to any OpenAI-compatible chat API. The LLM only phrases answers fr
 | `LLM_TIMEOUT` | LLM timeout (s) | `180` |
 | `LLM_REASONING_EFFORT` | For reasoning models (gpt-oss): `low`/`medium`/`high` | not sent |
 | `LLM_NO_THINK` | `auto` adds `/no_think` for Qwen3 only | `auto` |
+| `LLM_RATE_LIMIT_RETRIES`, `LLM_RATE_LIMIT_MAX_WAIT` | On HTTP 429, wait as the provider asks and retry; give up if the wait is longer | `3`, `20` s |
 | `TRACE_DIR` | Where traces are written | `traces` |
 | `RULES_PATH` | An alternative rules file | `app/rules.json` |
 
@@ -168,12 +170,12 @@ A value set in the terminal (`$env:LLM_MODEL=...`) overrides `.env`. Restart the
 
 Runs offline, with no server or LLM calls:
 ```powershell
-$env:MCP_MODE="mock"; $env:LLM_MODE="mock"; python -m tests.test_pipeline     # 86 checks
+$env:MCP_MODE="mock"; $env:LLM_MODE="mock"; python -m tests.test_pipeline     # 121 checks
 ```
 (Mac/Linux: `MCP_MODE=mock LLM_MODE=mock python -m tests.test_pipeline`.) Open a new terminal afterwards, because these variables stay set in that one.
 
 - It covers intent, spending extraction, card-name matching, the guards, the validator, multi-turn flows, server-down and LLM-down handling, and the UI data.
-- **`tests/fixtures/real_responses.json`** holds real responses from the live server, plus real LLM replies. The tests replay them, so every finding in `docs/failures.md` can be reproduced at any time.
+- **`tests/fixtures/real_responses.json`** holds real responses from the live server (`calls`), real card details from the export (`export_samples`), and the exact live LLM replies behind M1 and M2 (`live_llm_replies`). The tests replay them, so the findings in `docs/failures.md` can be reproduced at any time.
 - Passing tests confirm the code paths against those fixtures. They don't prove a live recommendation is right; that's what the evaluation and the server checks are for.
 
 ## Evaluate
@@ -182,9 +184,11 @@ The assignment's 20 sceptical-user questions are in `evals/questions.py` (`core`
 
 ```powershell
 $env:MCP_MODE="mock"; $env:LLM_MODE="mock"; python -m evals.run_evals         # all 62, offline
-$env:MCP_MODE="live"; $env:LLM_MODE="live"; python -m evals.run_evals core    # the 20, live
+$env:MCP_MODE="live"; $env:LLM_MODE="live"; $env:TRACE_DIR="traces_eval"; python -m evals.run_evals core    # the 20, live
 ```
 In live mode, card-name questions switch to real card names. Every answer is written to `eval_results.json` and to **`docs/question_log.md`**. Each entry has the answer, the cards shown, exactly what was sent to the server, any data warnings, and a line for your verdict (right / wrong / made up / missing / misleading).
+
+**Commit the run log:** `eval_results.json`, `docs/question_log.md` and `traces_eval/` are not git-ignored, so the recorded answers and their evidence ship with the repo.
 
 **An automatic PASS is not proof that a financial claim is correct.** Check rewards, fees, savings and eligibility against the raw server response. The live run calls a production server, so run it once rather than in a loop.
 
@@ -261,11 +265,11 @@ card-advisor/
 │   ├── run_evals.py         evaluation runner → eval_results.json, docs/question_log.md
 │   └── explore_mcp.py       server lookups, snapshot and full card export
 ├── tests/
-│   ├── test_pipeline.py     86 checks
+│   ├── test_pipeline.py     121 checks
 │   └── fixtures/            real server responses and LLM replies
 ├── docs/                    ◀ the written deliverables
 │   ├── failures.md          every failure: cause, evidence, fixes with before/after
-│   ├── engineer_report.md   the top MCP issue as an engineering ticket
+│   ├── engineer_report.md   the top MCP issues as engineering tickets (A: milestone, B: joining fee)
 │   ├── product_owner_note.md  one page, plain language, for the product owner
 │   └── question_log.md      generated by a live evaluation run
 ├── traces/                  per-request evidence (generated)
@@ -279,7 +283,8 @@ Files such as `eval_results.json`, `mcp_snapshot.json`, `all_cards.json` and `al
 
 - **Session memory** lives in the server process and covers only the bot's own follow-up question. A later "is its fee really ₹0?" doesn't know which card "its" means (M8 in `failures.md`, open). Restarting the server or pressing New chat starts fresh.
 - **Validation catches only what it checks.** The output guard checks rupee figures and banned phrases. It doesn't check tone, or percentages the LLM might take from memory.
-- **The answers can be no better than the tools.** The server's own issues (joining fee left out of net savings, vouchers counted as cash, contradicting income rules) are flagged and explained to the user, but not overridden.
+- **The answers can be no better than the tools.** The server's own issues (milestones overvalued, joining fee left out, an eligible list that ignores income, contradicting income rules) are flagged and explained to the user, but the server's ranking is never overridden.
+- **Extra calls:** checking milestones and eligibility lists costs a few extra `get_card_details` calls per question (up to 3 for a recommendation, 8 for an eligibility list).
 - Devanagari script isn't understood. Common Hinglish words are.
 
 ## Security and submission hygiene

@@ -1,0 +1,167 @@
+{
+  "request_id": "d62660b68d5b",
+  "session_id": "test-session",
+  "ts": 1792360524.994004,
+  "user_message": "110001",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "eligibility",
+  "intent_source": "session",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": 50000,
+    "employment": "salaried",
+    "pincode": "110001",
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "eligibility_list",
+  "tool_calls": [
+    {
+      "tool": "check_eligibility",
+      "arguments": {
+        "pincode": "110001",
+        "annual_income": "600000",
+        "employment_status": "salaried"
+      },
+      "raw_response": {
+        "eligible_cards_count": 2,
+        "profile": {
+          "pincode": "110001",
+          "annual_income": "₹6,00,000",
+          "employment": "salaried"
+        },
+        "eligible_cards": [
+          {
+            "name": "Great Cashback Card",
+            "bank": "",
+            "joining_fee": "Free",
+            "annual_fee": "₹590 (incl. GST)",
+            "card_alias": "great-cashback-card"
+          },
+          {
+            "name": "Great Fuel Saver",
+            "bank": "",
+            "joining_fee": "₹499 (incl. GST)",
+            "annual_fee": "₹499 (incl. GST)",
+            "card_alias": "great-fuel-saver"
+          }
+        ]
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-cashback-card"
+      },
+      "raw_response": {
+        "name": "Great Cashback Card",
+        "card_alias": "great-cashback-card",
+        "bank": "Great Bank",
+        "fees": {
+          "joining": "Free",
+          "annual": "₹590 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1,00,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% cashback on online spends",
+            "description": ""
+          },
+          {
+            "title": "1% cashback on offline spends",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3.5,
+          "min_income_monthly": 25000
+        }
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "great-fuel-saver"
+      },
+      "raw_response": {
+        "name": "Great Fuel Saver",
+        "card_alias": "great-fuel-saver",
+        "bank": "Fuel Bank",
+        "fees": {
+          "joining": "₹499 (incl. GST)",
+          "annual": "₹499 (incl. GST)",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹50,000 or more in a year."
+        },
+        "key_benefits": [
+          {
+            "title": "5% value back on fuel",
+            "description": ""
+          },
+          {
+            "title": "1% fuel surcharge waiver",
+            "description": ""
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 2.5,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000
+        }
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [],
+  "validated_data": {
+    "kind": "eligibility_list",
+    "cards": [
+      {
+        "card_name": "Great Cashback Card",
+        "joining_fee": "Free",
+        "annual_fee": "₹590 (incl. GST)"
+      },
+      {
+        "card_name": "Great Fuel Saver",
+        "joining_fee": "₹499 (incl. GST)",
+        "annual_fee": "₹499 (incl. GST)"
+      }
+    ],
+    "user_profile": {
+      "monthly_income": 50000,
+      "annual_income": 600000,
+      "employment": "salaried"
+    }
+  },
+  "llm_raw_reply": "From what you've told me, these are cards you may be eligible for. I checked each one against its own minimum income.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "From what you've told me, these are cards you may be eligible for. I checked each one against its own minimum income.",
+  "notes": [
+    "continuing eligibility, answer for 'pincode'",
+    "card list from cache (4 cards)",
+    "cards found in message: []",
+    "eligibility list: kept 2, left out 0 over the user's income",
+    "card list from cache (4 cards)"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "request_id": "2a916ecc9d61",
+  "session_id": null,
+  "ts": 1792359733.9271815,
+  "user_message": "best card for me",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": "Sure. Roughly how much do you spend each month, and where does most of it go? For example Amazon, fuel, dining or flights.",
+  "workflow": null,
+  "tool_calls": [],
+  "validation_flags": [],
+  "validated_data": null,
+  "llm_raw_reply": null,
+  "output_guard": {},
+  "final_reply": "Sure. Roughly how much do you spend each month, and where does most of it go? For example Amazon, fuel, dining or flights.",
+  "notes": [
+    "intent by keyword: recommend"
+  ]
+}

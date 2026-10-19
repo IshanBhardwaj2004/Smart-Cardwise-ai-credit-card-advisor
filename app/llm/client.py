@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import logging
 import re
+import time
 
 from app.config import compile_patterns, config, rules
 from app.core.models import Intent
@@ -26,6 +27,23 @@ def _wants_no_think(model: str) -> bool:
         return config.LLM_NO_THINK == "true"
     return "qwen3" in model.lower()
 _THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)
+# "Please try again in 412.5ms" / "in 7.47s" (Groq's rate-limit message)
+_RETRY_IN_RE = re.compile(r"try again in ([\d.]+)\s*(ms|s)\b", re.IGNORECASE)
+
+
+def _retry_wait(resp) -> float:
+    """Seconds the provider asks us to wait: Retry-After header, else the message text."""
+    header = resp.headers.get("retry-after")
+    if header:
+        try:
+            return float(header)
+        except ValueError:
+            pass
+    m = _RETRY_IN_RE.search(resp.text or "")
+    if m:
+        value = float(m.group(1))
+        return value / 1000 if m.group(2).lower() == "ms" else value
+    return 2.0
 
 
 class LLMClient:
@@ -53,6 +71,15 @@ class LLMClient:
         with httpx.Client(timeout=config.LLM_TIMEOUT) as client:
             headers = {"Authorization": f"Bearer {config.LLM_API_KEY}"} if config.LLM_API_KEY else {}
             resp = client.post(self.url, json=body, headers=headers)
+            for _ in range(config.LLM_RATE_LIMIT_RETRIES):
+                if resp.status_code != 429:
+                    break
+                wait = _retry_wait(resp)
+                if wait > config.LLM_RATE_LIMIT_MAX_WAIT:
+                    break
+                log.info("LLM rate limit reached, retrying in %.1fs", wait + 0.5)
+                time.sleep(wait + 0.5)
+                resp = client.post(self.url, json=body, headers=headers)
             if resp.status_code >= 400:
                 # show the provider's own reason (e.g. "model not found"), not just the status code
                 raise RuntimeError(f"HTTP {resp.status_code} from {self.url}: {resp.text[:300]}")

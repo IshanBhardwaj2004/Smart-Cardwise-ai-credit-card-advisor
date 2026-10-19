@@ -1,0 +1,938 @@
+{
+  "request_id": "4bc7af4a2fce",
+  "session_id": null,
+  "ts": 1792359746.6729746,
+  "user_message": "monthly 10k fuel and 2 lakh yearly on hotels, which credit card?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "fuel",
+        "amount": 10000,
+        "unit": "month",
+        "annual_amount": 120000
+      },
+      {
+        "key": "hotels_annual",
+        "amount": 200000,
+        "unit": "year",
+        "annual_amount": 200000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "fuel": 10000,
+        "hotels_annual": 200000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "Axis Bank Magnus Burgundy",
+            "bank_name": "Axis",
+            "card_type": "VISA",
+            "net_annual_savings": "₹18,601",
+            "annual_rewards_value": "₹54,001.079",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹35,400 (incl. GST)",
+            "annual_fee": "₹35,400 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 131,
+                "brands": [
+                  {
+                    "id": 85,
+                    "name": "Postcard Hotels"
+                  },
+                  {
+                    "id": 102,
+                    "name": "Yatra"
+                  },
+                  {
+                    "id": 64,
+                    "name": "Luxe Gift Card"
+                  }
+                ],
+                "card_id": 173,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "",
+                "voucher_bonus": "5000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 5000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹4,500.09"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "magnus-burgundy-credit-card",
+            "rating": 4,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130226_BankKaro_20260202_181828409_Axis_Magnus.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+            "bank_name": "Yes Bank",
+            "card_type": "Mastercard",
+            "net_annual_savings": "₹12,000",
+            "annual_rewards_value": "₹12,000.24",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free (waived at ₹1,20,000/yr spend; ₹589 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹1,000.02"
+              },
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "yes-bank-paisabazaar-paisasave-credit-card",
+            "rating": 4.1,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260914_153331932_Mockup_95.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "Axis SpiceJet Bank Voyage Credit Card",
+            "bank_name": "Axis",
+            "card_type": "VISA",
+            "net_annual_savings": "₹10,616",
+            "annual_rewards_value": "₹9,000.18",
+            "milestone_benefits": "₹2,501",
+            "lounge_value": "₹0",
+            "joining_fee": "₹885 (incl. GST)",
+            "annual_fee": "₹885 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 127,
+                "brands": [
+                  {
+                    "id": 125,
+                    "name": "SpiceJet"
+                  }
+                ],
+                "card_id": 145,
+                "rp_bonus": "",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "1500",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "hotels_annual",
+                "annual_value": "₹750.015"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "ott_channels",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "spicejet-axis-bank-voyage-credit-card",
+            "rating": 3.5,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130114_BankKaro_Axis_Spicejet_Voyage.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "magnus-burgundy-credit-card"
+      },
+      "raw_response": {
+        "name": "Axis Burgundy Magnus Credit Card",
+        "nick_name": "Magnus Burgundy, Credit Card",
+        "bank": "Axis",
+        "bank_id": 1,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 200,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130226_BankKaro_20260202_181828409_Axis_Magnus.png",
+        "priority_tag": null,
+        "invite_only": true,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "₹35,400 (₹30,000 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹35,400 (₹30,000 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹25 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3%",
+          "apr_annual": "36.00%",
+          "forex_markup": "2%",
+          "forex_markup_note": "2% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (2%):₹100 → ₹2₹1,000 → ₹20₹10,000 → ₹200₹1,00,000 → ₹2,000",
+          "atm_withdrawal_fee": null,
+          "atm_withdrawal_note": "N/A",
+          "railway_surcharge": "As prescribed by IRCTC / Indian Railways",
+          "railway_surcharge_note": "Surcharge on booking or cancelling railway tickets will be levied as prescribed by IRCTC or Indian Railways and may vary based on their applicable charges.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹175",
+          "cheque_payment_fee": null,
+          "reward_redemption_fee": "₹99",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "Above ₹10,000",
+              "fee": "₹1200"
+            }
+          ],
+          "late_payment_note": "Late Payment Fee is based on the total amount due: Nil (&lt;₹500), ₹500 (₹501–₹5,000), ₹750 (₹5,001–₹10,000), ₹1,200 (&gt;₹10,000).&nbsp;Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared.",
+          "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹0.20",
+          "redemption_options": "• Airline &amp; Hotel Transfers\n• Travel EDGE Portal\n• Rewards Store &amp; Vouchers\n• Statement Credits",
+          "redemption_catalogue": "https://edgerewards.axisbank.co.in/lms/",
+          "exclusions": "Fuel Spends, Wallet Loads, Rent Payment, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments",
+          "exclusion_spends": "Fuel Spends, Wallet Loads, Rent Payment, Utility Bill Payments, Government-related Transactions, Insurance Payments, Jewellery Purchases, Rewards Redemption, Cash Advances, Outstanding Payments"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 100000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Superior Miles Conversion for Burgundy",
+            "description": "earn 4 partner miles for every 5 EDGE Reward Points, delivering higher value compared to regular Magnus"
+          },
+          {
+            "title": "Priority Pass with Guest Access",
+            "description": "enjoy unlimited international lounge visits with 4 complimentary guest visits per year"
+          },
+          {
+            "title": "Travel EDGE Rewards",
+            "description": "earn 5X EDGE Reward Points on spends via the Travel EDGE portal on cumulative spends up to ₹2 lakh per calendar month"
+          },
+          {
+            "title": "Airport Meet & Assist Services",
+            "description": "provide 4 complimentary services per calendar year, including assistance with check-in, security, immigration, and porter services at select Indian airports"
+          },
+          {
+            "title": "Rewarding Shopping Spends",
+            "description": "earn 12 EDGE Reward Points per ₹200 on shopping spends up to ₹1.5 lakh per calendar month and 35 EDGE Reward Points per ₹200 on incremental spends above ₹1.5 lakh"
+          },
+          {
+            "title": "Dining Delights Programme",
+            "description": "lets you save up to 30% on dining, capped at ₹1,000 per bill, at 4,000+ partner restaurants across India"
+          },
+          {
+            "title": "Unlimited Lounge Access",
+            "description": "gives unlimited domestic and international airport lounge visits with complimentary Priority Pass membership, including 4 accompanying guest visits per year"
+          },
+          {
+            "title": "Burgundy-Exclusive Welcome Benefit",
+            "description": "lets you choose a Luxe Gift Card, Postcard Hotels voucher, Yatra voucher, or a one-way domestic flight ticket worth up to ₹5,000, applicable only for new Burgundy cardholders and not for upgrades"
+          },
+          {
+            "title": "Accelerated Reward Earnings",
+            "description": "earn 12 EDGE Reward Points per ₹200 on spends up to ₹1.5 lakh per calendar month and 35 EDGE Reward Points per ₹200 on incremental spends beyond ₹1.5 lakh, capped at the assigned credit limit plus ₹1.5 lakh per month"
+          },
+          {
+            "title": "Higher Annual Miles Transfer Limit",
+            "description": "allow transfer of up to 10 lakh EDGE Reward Points per calendar year across airline and hotel partners"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• Earn 12 EDGE Reward Points per ₹200 on spends up to ₹1.5 lakh per month\n• Earn 35 EDGE Reward Points per ₹200 on incremental spends above ₹1.5 lakh\n• Convert rewards at 5 EDGE Points = 4 partner miles\n• Annual reward transfer limit of 10 lakh EDGE Reward Points\n• Earn 5X EDGE Reward Points on Travel EDGE bookings up to ₹2 lakh per month"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Welcome voucher or one-way domestic economy flight ticket worth up to ₹5,000\n• Choice of Luxe Gift Card, Postcard Hotels voucher, or Yatra voucher\n• Applicable only for new card issuance, not upgrades\n• First eligible spend within 30 days of card issuance\n• Benefit to be redeemed within 6 months of issuance"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• • 4 complimentary Airport Meet &amp; Assist services per calendar year (includes check-in, security, immigration, porter)\n• Valid for domestic &amp; international departures/arrivals at select airports\n• Earn 5X EDGE Reward Points on flight &amp; hotel bookings via Travel EDGE"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• Unlimited international lounge access via Priority Pass\n• Includes 4 complimentary guest visits per year\n• Unlimited domestic airport lounge access in India\n• Domestic lounge access requires ₹50,000 spend in previous 3 months\n• Spend condition waived for newly issued cards initially"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Up to 30% discount via Dining Delights programme, Maximum discount of ₹1,000 per bill, Valid at 4,000+ partner restaurants across India"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 18,
+          "max_age": 70,
+          "income_salaried_lpa": 24,
+          "income_self_emp_lpa": 24,
+          "min_income_monthly": 150000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "magnus-burgundy-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "yes-bank-paisabazaar-paisasave-credit-card"
+      },
+      "raw_response": {
+        "name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+        "nick_name": "Yes Bank Paisabazaar PaisaSave, Credit Card",
+        "bank": "Yes Bank",
+        "bank_id": 16,
+        "card_type": "Mastercard",
+        "card_network": null,
+        "rating": 4.1,
+        "user_ratings": 589,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260914_153331932_Mockup_95.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": false,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "₹589 (₹499 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1.20 lakh or more in a year on your card, as per bank policy",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.99%",
+          "apr_annual": "47.88%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.50% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.5%",
+          "atm_withdrawal_note": "2.50% of the withdrawn amount is charged on cash advances using the credit card minimum ₹650, if applicable",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹500",
+          "cheque_payment_fee": "₹450",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1,000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1,001 - ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001 - ₹25,000",
+              "fee": "₹950"
+            },
+            {
+              "outstanding": "₹25,001 - ₹50,000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "Above ₹50,000",
+              "fee": "₹1350"
+            }
+          ],
+          "late_payment_note": "Late payment charges of 10% of the statement balance or ₹1,350 whichever is lower",
+          "tnc_url": "https://www.yes.bank.in/pdf?name=ybl_mitc_pdf.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹1",
+          "redemption_options": "• Flight &amp; Hotel Bookings\n• Merchandise &amp; Vouchers",
+          "redemption_catalogue": "https://creditrewardz.yes.bank.in/",
+          "exclusions": "Fuel, Rent, Insurance, Wallet Load, EMI, Government Services, Education, Jewellery, Cash Advance, Utility Bills, telecom, Hospitals, Automotive Dealers, Service Shop, Advertising, Consulting",
+          "exclusion_spends": "Fuel, Rent, Insurance, Wallet Load, EMI, Government Services, Education, Jewellery, Cash Advance, Utility Bills, telecom, Hospitals, Automotive Dealers, Service Shop, Advertising, Consulting"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 10000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Earn 6% Cashback on Your Dining Spends",
+            "description": "Restaurants, bars and fast-food outlets earn you 12 reward points for every ₹200 spent, capped at 3,000 points a statement cycle"
+          },
+          {
+            "title": "Earn 6% Cashback on Flights, Hotels and Travel",
+            "description": "Airline tickets, hotel stays, airport spends and travel-agency bookings earn you 12 reward points for every ₹200 spent"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 6% cashback on dining and travel spends, credited as 12 reward points per ₹200 spent and capped at 3,000 points per statement cycle\n• 1% cashback on all other eligible spends, credited as 2 reward points per ₹200 spent"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• 6% cashback on airline tickets, airport spends, hotel stays and travel-agency bookings, earned as 12 reward points per ₹200 spent"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "DiningBenefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• 6% cashback at restaurants, bars and fast-food outlets, earned as 12 reward points per ₹200 spent"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver on fuel transactions between ₹500 and ₹3,000, capped at ₹250 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• Instant EMI to pay for transactions from ₹1,500 in parts\n• EMI on Call to convert payments into EMI over the phone\n• YES PayNow for on-time monthly bill payments\n• e-Mandate for standing instructions on bills, subscriptions and insurance premiums\n• up to 50 days of interest-free credit\n• up to 3 add-on cards at no fee"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 7.5,
+          "min_income_monthly": 25000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "yes-bank-paisabazaar-paisasave-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "spicejet-axis-bank-voyage-credit-card"
+      },
+      "raw_response": {
+        "name": "Axis SpiceJet Voyage Credit Card",
+        "nick_name": "Axis SpiceJet Bank Voyage, Credit Card",
+        "bank": "Axis",
+        "bank_id": 1,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 3.5,
+        "user_ratings": 1000,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130114_BankKaro_Axis_Spicejet_Voyage.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹885 (₹750 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹885 (₹750 + GST)",
+          "annual_note": "The annual fee is not waived under any spending conditions.",
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currencyExamples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.50% of the withdrawn amount is charged on cash advances using the credit card, subject to a minimum of ₹500",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹175",
+          "cheque_payment_fee": "2%",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 – ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 – ₹5,000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5,001 – ₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "Above ₹10,000",
+              "fee": "₹1,200"
+            }
+          ],
+          "late_payment_note": "Late payment charges apply if the Minimum Amount Due (MAD) is not paid by the due date. Charges are based on the total outstanding amount as per the slab structure. Additional ₹100 on missing payment of MAD for two consecutive cycles",
+          "tnc_url": "https://www.axis.bank.in/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+        },
+        "rewards": {
+          "point_value": "1 SC Point = ₹0.50",
+          "redemption_options": "• SpiceJet flights\n• SpiceJet website or mobile app\n• Vouchers",
+          "redemption_catalogue": "https://spiceclub.spicejet.com/",
+          "exclusions": "Fuel Transactions,Wallet Loads,EMI Transactions,Insurance Premiums,Government Payments,Educational Fees,Gift Cards and Vouchers",
+          "exclusion_spends": "Fuel Transactions,Wallet Loads,EMI Transactions,Insurance Premiums,Government Payments,Educational Fees,Gift Cards and Vouchers"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 6325,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          },
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Get Complimentary SpiceClub Silver",
+            "description": "Tier Membership with SpiceJet add-on vouchers on card issuance"
+          },
+          {
+            "title": "Earn 6 SpiceClub Points",
+            "description": "per ₹200 on online food orders"
+          },
+          {
+            "title": "Earn Up To 18 SpiceClub Points",
+            "description": "Per ₹200 on SpiceJet mobile app and website, combining 6 points as card benefit and 12 points as Silver membership"
+          },
+          {
+            "title": "Enjoy 4 Complimentary Domestic Airport Lounge",
+            "description": "visits per year subject to minimum spends of ₹50,000 in the previous quarter"
+          },
+          {
+            "title": "Earn 3 SpiceClub Points",
+            "description": "Per ₹200 on other domestic retail and international transactions, excluding fuel, wallet and EMI transactions"
+          },
+          {
+            "title": "Save Up To 15%",
+            "description": "on flights and hotels booked via MakeMyTrip every Wednesday"
+          },
+          {
+            "title": "Get 10% Off",
+            "description": "on Swiggy orders every Wednesday"
+          },
+          {
+            "title": "Get ₹1,500 SpiceJet E-Voucher",
+            "description": "on completing 2 transactions within 30 days of card issuance"
+          },
+          {
+            "title": "Get 10% Off Up To ₹1,000",
+            "description": "on Tira every Wednesday"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Travel",
+          "Utility Bills"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 6 SC Points per ₹200 on SpiceJet; 6 SC Points on utility/food/entertainment; 3 SC Points on other retail\n• 12 SC Points per ₹200 on SpiceJet as SpiceClub Silver membership benefit\n• 4 domestic airport lounge visits per year.\n• Up to 15% off on MakeMyTrip every Wednesday."
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• SpiceJet voucher worth ₹1,500 on completing 2 transactions within 30 days of card issuance.\n• SpiceClub Silver membership on card issuance."
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• Earn up to 18 SpiceClub Points per ₹200 on SpiceJet mobile app and website.\n• 2,000 bonus SpiceClub Points on ₹1 lakh annual spends.\n• 3,000 bonus SpiceClub Points on ₹2 lakh annual spends.\n• 1,000 SpiceClub Points on every successful card renewal."
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• 4 domestic airport lounge visits per year, subject to minimum spends of ₹50,000 in the previous quarter."
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver on transactions between ₹400 and ₹4,000 at all fuel stations across India, capped at ₹400 per month."
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• Up to 15% off on flights and hotels via MakeMyTrip every Wednesday.\n• 10% off on Swiggy orders every Wednesday.\n• 10% off up to ₹1,000 on Tira every Wednesday.\n• Convert transactions of ₹1,500 or more into EMI."
+          }
+        ],
+        "eligibility": {
+          "min_age": 18,
+          "max_age": 70,
+          "income_salaried_lpa": 2.5,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 250000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "spicejet-axis-bank-voyage-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "Axis Bank Magnus Burgundy.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 18601, formula gives -16799)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 4500.09, x12 = 54001.1, annual rewards 54001)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.name",
+      "problem": "card name differs from the card list for the same alias ('Axis Bank Magnus Burgundy' vs 'Axis Burgundy Magnus Credit Card', alias magnus-burgundy-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "Yes Bank Paisabazaar PaisaSave Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 1000.02, x12 = 12000.2, annual rewards 12000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis SpiceJet Bank Voyage Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 10616, formula gives 9731)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis SpiceJet Bank Voyage Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 750.015, x12 = 9000.18, annual rewards 9000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Axis SpiceJet Bank Voyage Credit Card.name",
+      "problem": "card name differs from the card list for the same alias ('Axis SpiceJet Bank Voyage Credit Card' vs 'Axis SpiceJet Voyage Credit Card', alias spicejet-axis-bank-voyage-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "Axis Bank Magnus Burgundy.invite_only",
+      "problem": "recommend_cards ranks a card that its own details mark as invite-only (users can't apply for it)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": true
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "Axis Burgundy Magnus Credit Card",
+        "net_savings": "₹18,601",
+        "rewards": "₹54,001.079",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹35,400 (incl. GST)",
+        "annual_fee": "₹35,400 (incl. GST)",
+        "fee_waived": false,
+        "invite_only": true
+      },
+      {
+        "card_name": "Yes Bank Paisabazaar PaisaSave Credit Card",
+        "net_savings": "₹12,000",
+        "rewards": "₹12,000.24",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free (waived at ₹1,20,000/yr spend; ₹589 otherwise)",
+        "fee_waived": true
+      },
+      {
+        "card_name": "Axis SpiceJet Voyage Credit Card",
+        "net_savings": "₹10,616",
+        "rewards": "₹9,000.18",
+        "milestone": "₹2,501",
+        "lounge": "₹0",
+        "joining_fee": "₹885 (incl. GST)",
+        "annual_fee": "₹885 (incl. GST)",
+        "fee_waived": false
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "fuel",
+          "amount": 10000,
+          "per": "month",
+          "per_year": 120000
+        },
+        {
+          "spending_key": "hotels_annual",
+          "amount": 200000,
+          "per": "year",
+          "per_year": 200000
+        }
+      ],
+      "total_annual_spend": 320000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "Yes Bank Paisabazaar PaisaSave looks like the best pick you can actually apply for – it saves about ₹12,000 a year and has no joining fee. The top‑ranked Axis Burgundy Magnus saves a bit more (₹18,600) but it’s invitation‑only, so you can’t get it directly. The Axis SpiceJet Voyage is another option with roughly ₹10.6 k savings, but the PaisaSave’s free fee makes it the easier choice.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Yes Bank Paisabazaar PaisaSave looks like the best pick you can actually apply for – it saves about ₹12,000 a year and has no joining fee. The top‑ranked Axis Burgundy Magnus saves a bit more (₹18,600) but it’s invitation‑only, so you can’t get it directly. The Axis SpiceJet Voyage is another option with roughly ₹10.6 k savings, but the PaisaSave’s free fee makes it the easier choice.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

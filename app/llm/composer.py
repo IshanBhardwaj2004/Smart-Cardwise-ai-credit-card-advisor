@@ -55,6 +55,10 @@ def _recommend(data: dict, cards: list[dict]) -> str:
     total = (data.get("user_profile") or {}).get("total_annual_spend")
     text = (_R["recommend_with_total"].format(total=format_inr(total), card=_name(top), net=top.get("net_savings"))
             if total else _R["recommend"].format(card=_name(top), net=top.get("net_savings")))
+    if top.get("invite_only"):
+        text += _R["invite_only"].format(card=_name(top))
+    if top.get("milestone_overvalued") and top.get("milestone"):
+        return text + _R["milestone_overvalued"].format(milestone=top["milestone"])
     if top.get("mostly_milestone") and top.get("milestone"):
         # the milestone caveat matters more than the runner-up, so keep the reply short
         return text + _R["milestone_heavy"].format(milestone=top["milestone"])
@@ -89,7 +93,11 @@ def template_reply(data: dict) -> str:
     if not cards:
         return _MSG["no_data"]
     if kind == "eligibility_list":
-        return _R["eligibility_list"].format(count=data.get("eligible_count", len(cards)))
+        text = _R["eligibility_list"]
+        left_out = data.get("left_out_over_income")
+        if left_out:
+            text += _R["eligibility_removed"].format(n=len(left_out), cards=_join([_short(c) for c in left_out]))
+        return text
     if kind == "card_details":
         c = cards[0]
         text = _R["card_details"].format(card=_name(c), joining=_short(c.get("joining_fee", "?")),

@@ -1,0 +1,973 @@
+{
+  "request_id": "4ad166a77627",
+  "session_id": null,
+  "ts": 1792360525.5102496,
+  "user_message": "I spend 20000 a month on dining, 5000 on fuel and 1.5 lakh a year on flights",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "dining_or_going_out",
+        "amount": 20000,
+        "unit": "month",
+        "annual_amount": 240000
+      },
+      {
+        "key": "fuel",
+        "amount": 5000,
+        "unit": "month",
+        "annual_amount": 60000
+      },
+      {
+        "key": "flights_annual",
+        "amount": 150000,
+        "unit": "year",
+        "annual_amount": 150000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "dining_or_going_out": 20000,
+        "fuel": 5000,
+        "flights_annual": 150000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "SBI Landmark Reward SELECT Credit Card",
+            "bank_name": "SBI",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹37,981",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹30,000",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,769 (incl. GST)",
+            "annual_fee": "₹1,769 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 196,
+                "brands": [],
+                "card_id": 263,
+                "rp_bonus": "6000",
+                "maximum_days": "",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "0.25",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 1500
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "other_online_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "sbi-landmark-reward-select-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260818_105810829_Mockup_64.png"
+          },
+          {
+            "rank": 2,
+            "card_name": "ixigo AU credot Card",
+            "bank_name": "AU Small Finance Bank",
+            "card_type": "VISA,RuPay",
+            "net_annual_savings": "₹29,750",
+            "annual_rewards_value": "₹9,750",
+            "milestone_benefits": "₹20,000",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 225,
+                "brands": [
+                  {
+                    "id": 471,
+                    "name": "Ixigo"
+                  }
+                ],
+                "card_id": 239,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "1000",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 2000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹500"
+              },
+              {
+                "category": "flights_annual",
+                "annual_value": "₹312.5"
+              },
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "ixigo-au-credit-card",
+            "rating": 4.2,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260729_143058744_AU_ALTURA__2.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "HDFC Diners Club Black Metal Edition",
+            "bank_name": "HDFC",
+            "card_type": "DinersClub",
+            "net_annual_savings": "₹25,200",
+            "annual_rewards_value": "₹37,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹11,800 (incl. GST)",
+            "annual_fee": "₹11,800 (incl. GST)",
+            "annual_fee_waived": false,
+            "welcome_benefits": [
+              {
+                "id": 49,
+                "brands": [
+                  {
+                    "id": 31,
+                    "name": "Club Marriott"
+                  },
+                  {
+                    "id": 17,
+                    "name": "Amazon Prime"
+                  },
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 103,
+                "rp_bonus": "",
+                "maximum_days": "90",
+                "minimum_spend": "150000",
+                "voucher_bonus": "25000",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "flights_annual",
+                "annual_value": "₹2,083.333"
+              },
+              {
+                "category": "dining_or_going_out",
+                "annual_value": "₹1,000"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-diners-club-black-metal-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125405_BankKaro_HDFC_Dineer_Bc.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "sbi-landmark-reward-select-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Cashback Credit Card",
+        "nick_name": "SBI Cashback,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 413,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹250",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1001 - ₹10000",
+              "fee": "₹ 750"
+            },
+            {
+              "outstanding": "₹10000 - ₹25000",
+              "fee": "₹ 950"
+            },
+            {
+              "outstanding": "₹25001- ₹ 50000",
+              "fee": "₹ 1100"
+            },
+            {
+              "outstanding": "₹50000 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Dining",
+            "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+          },
+          {
+            "title": "Earn 5% Cashback on Online Spends",
+            "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on",
+            "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Food Orders",
+            "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback",
+            "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 1% Cashback",
+            "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get Flat 1% Cashback",
+            "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on online spends\n• Maximum online cashback of ₹2,000 per statement cycle\n• 1% cashback on offline spends\n• Maximum offline cashback of ₹2,000 per statement cycle; total cashback capped at ₹4,000 per statement cycle\n• Annual fee reversal on annual spends of ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get 5% Cashback on Dining restaurant payments processed through online platform using the SBI Cashback Credit Card"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• Get a 1% fuel surcharge waiver for transactions between ₹500 and ₹3,000, with a maximum waiver of ₹100 per billing cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "ixigo-au-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Cashback Credit Card",
+        "nick_name": "SBI Cashback,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 413,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹250",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1001 - ₹10000",
+              "fee": "₹ 750"
+            },
+            {
+              "outstanding": "₹10000 - ₹25000",
+              "fee": "₹ 950"
+            },
+            {
+              "outstanding": "₹25001- ₹ 50000",
+              "fee": "₹ 1100"
+            },
+            {
+              "outstanding": "₹50000 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Dining",
+            "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+          },
+          {
+            "title": "Earn 5% Cashback on Online Spends",
+            "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on",
+            "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Food Orders",
+            "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback",
+            "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 1% Cashback",
+            "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get Flat 1% Cashback",
+            "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on online spends\n• Maximum online cashback of ₹2,000 per statement cycle\n• 1% cashback on offline spends\n• Maximum offline cashback of ₹2,000 per statement cycle; total cashback capped at ₹4,000 per statement cycle\n• Annual fee reversal on annual spends of ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get 5% Cashback on Dining restaurant payments processed through online platform using the SBI Cashback Credit Card"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• Get a 1% fuel surcharge waiver for transactions between ₹500 and ₹3,000, with a maximum waiver of ₹100 per billing cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-diners-club-black-metal-credit-card"
+      },
+      "raw_response": {
+        "name": "SBI Cashback Credit Card",
+        "nick_name": "SBI Cashback,Credit Card",
+        "bank": "SBI",
+        "bank_id": 3,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 4,
+        "user_ratings": 413,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122010_AGB_Mockup-24.webp1736921642945",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": false,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,179 (₹999 + GST)",
+          "joining_note": "A one-time joining fee is charged at the time of card issuance as per the bank’s policy.",
+          "annual": "₹1,179 (₹999 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank’s spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹2 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable)",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge of 1% is applied to transactions made for booking railway tickets",
+          "rent_payment_fee": "₹199",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹250",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹500",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹501 - ₹1000",
+              "fee": "₹400"
+            },
+            {
+              "outstanding": "₹1001 - ₹10000",
+              "fee": "₹ 750"
+            },
+            {
+              "outstanding": "₹10000 - ₹25000",
+              "fee": "₹ 950"
+            },
+            {
+              "outstanding": "₹25001- ₹ 50000",
+              "fee": "₹ 1100"
+            },
+            {
+              "outstanding": "₹50000 and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/cashback-tnc-ekit.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls",
+          "exclusion_spends": "Fuel Transactions, Rent Payments, Wallet Loads, Cash Withdrawals, EMI Transactions, Fees & Charges, Government Payments, Education Payments, Insurance Premium Payments, Utility Bills Payments, Gift Card or Voucher Purchases, Reversed or Refunded Transactions, Gaming Platforms, Tolls"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Dining",
+            "description": "Restaurant Payments processed through online platforms using the SBI Cashback Credit Card"
+          },
+          {
+            "title": "Earn 5% Cashback on Online Spends",
+            "description": "capped at ₹2,000 and 1% on offline spends capped at ₹2,000 every statement cycle, with a total cashback of up to ₹4,000 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on",
+            "description": "Blinkit, Zepto, BigBasket, Instamart with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Food Orders",
+            "description": "on all online food orders, making every meal more rewarding with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 5% Cashback",
+            "description": "on all online shopping spends including Amazon, Flipkart, Myntra, Ajio, and many more with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get 1% Cashback",
+            "description": "on grocery shopping at departmental stores (offline merchants) using the SBI Cashback Credit Card with a capping of ₹2,000 per statement cycle"
+          },
+          {
+            "title": "Get Flat 1% Cashback",
+            "description": "on all offline spends with a capping of ₹2,000 per statement cycle (including the online spends)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Grocery Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on online spends\n• Maximum online cashback of ₹2,000 per statement cycle\n• 1% cashback on offline spends\n• Maximum offline cashback of ₹2,000 per statement cycle; total cashback capped at ₹4,000 per statement cycle\n• Annual fee reversal on annual spends of ₹2 lakh"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• Get 5% Cashback on Dining restaurant payments processed through online platform using the SBI Cashback Credit Card"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• Get a 1% fuel surcharge waiver for transactions between ₹500 and ₹3,000, with a maximum waiver of ₹100 per billing cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 3,
+          "income_self_emp_lpa": 3,
+          "min_income_monthly": 30000,
+          "crif_salaried": 750,
+          "crif_self_emp": 750
+        },
+        "card_alias": "sbi-cashback-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 37981, formula gives 36212)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "SBI Landmark Reward SELECT Credit Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 30000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 812.5, x12 = 9750, annual rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.name",
+      "problem": "card name differs from the card list for the same alias ('ixigo AU credot Card' vs 'ixigo AU Credit Card', alias ixigo-au-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "ixigo AU credot Card.milestone",
+      "problem": "more than half of this card's value is a milestone benefit counted at full value, which can outrank cards that pay more on the actual spending (milestone 20000, rewards 9750)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 25200, formula gives 13400)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 3083.33, x12 = 37000, annual rewards 37000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC Diners Club Black Metal Edition.name",
+      "problem": "card name differs from the card list for the same alias ('HDFC Diners Club Black Metal Edition' vs 'HDFC Diners Club Black Metal Credit Card', alias hdfc-diners-club-black-metal-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "SBI Landmark Reward SELECT Credit Card",
+        "net_savings": "₹37,981",
+        "rewards": "₹9,750",
+        "milestone": "₹30,000",
+        "lounge": "₹0",
+        "joining_fee": "₹1,769 (incl. GST)",
+        "annual_fee": "₹1,769 (incl. GST)",
+        "fee_waived": false,
+        "mostly_milestone": true
+      },
+      {
+        "card_name": "ixigo AU Credit Card",
+        "net_savings": "₹29,750",
+        "rewards": "₹9,750",
+        "milestone": "₹20,000",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "fee_waived": false,
+        "mostly_milestone": true
+      },
+      {
+        "card_name": "HDFC Diners Club Black Metal Credit Card",
+        "net_savings": "₹25,200",
+        "rewards": "₹37,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹11,800 (incl. GST)",
+        "annual_fee": "₹11,800 (incl. GST)",
+        "fee_waived": false
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "dining_or_going_out",
+          "amount": 20000,
+          "per": "month",
+          "per_year": 240000
+        },
+        {
+          "spending_key": "fuel",
+          "amount": 5000,
+          "per": "month",
+          "per_year": 60000
+        },
+        {
+          "spending_key": "flights_annual",
+          "amount": 150000,
+          "per": "year",
+          "per_year": 150000
+        }
+      ],
+      "total_annual_spend": 450000
+    },
+    "cards_analyzed": 215
+  },
+  "llm_raw_reply": "On about ₹4,50,000 a year of spending, SBI Landmark Reward SELECT comes out on top. It should save you around ₹37,981 a year after fees. Most of that is its milestone benefit (₹30,000), usually vouchers you earn by hitting yearly spend targets, so make sure that's something you'd actually use.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "On about ₹4,50,000 a year of spending, SBI Landmark Reward SELECT comes out on top. It should save you around ₹37,981 a year after fees. Most of that is its milestone benefit (₹30,000), usually vouchers you earn by hitting yearly spend targets, so make sure that's something you'd actually use.",
+  "notes": [
+    "intent by keyword: recommend",
+    "card list from cache (258 cards)"
+  ]
+}

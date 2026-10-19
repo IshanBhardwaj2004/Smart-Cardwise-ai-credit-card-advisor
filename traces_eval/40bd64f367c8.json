@@ -1,0 +1,902 @@
+{
+  "request_id": "40bd64f367c8",
+  "session_id": null,
+  "ts": 1792359725.2960498,
+  "user_message": "I spend 15k on Amazon, which card?",
+  "input_guard": {
+    "blocked": false,
+    "reason": null,
+    "user_message": null
+  },
+  "intent": "recommend",
+  "intent_source": "keyword",
+  "slots": {
+    "spends": [
+      {
+        "key": "amazon_spends",
+        "amount": 15000,
+        "unit": "month",
+        "annual_amount": 180000
+      }
+    ],
+    "loose_amounts": [],
+    "mentioned_keys": [],
+    "card_names": [],
+    "card_ids": [],
+    "monthly_income": null,
+    "employment": null,
+    "pincode": null,
+    "visits": {}
+  },
+  "clarify_question": null,
+  "workflow": "recommend",
+  "tool_calls": [
+    {
+      "tool": "recommend_cards",
+      "arguments": {
+        "amazon_spends": 15000,
+        "top_n": 3,
+        "response_format": "full"
+      },
+      "raw_response": {
+        "total_cards_analyzed": 215,
+        "recommendations": [
+          {
+            "rank": 1,
+            "card_name": "HDFC MILLENIA",
+            "bank_name": "HDFC",
+            "card_type": "VISA",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹1,180 (incl. GST)",
+            "annual_fee": "Free (waived at ₹1,00,000/yr spend; ₹1,180 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [
+              {
+                "id": 34,
+                "brands": [],
+                "card_id": 18,
+                "rp_bonus": "1000",
+                "maximum_days": "30",
+                "minimum_spend": "100",
+                "voucher_bonus": "",
+                "cash_conversion": "1",
+                "welcome_benefit_tooltip": null,
+                "cash_value": 1000
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "other_offline_spends",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "hdfc-millenia-credit-card",
+            "rating": 3,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680"
+          },
+          {
+            "rank": 2,
+            "card_name": "ICICI Amazon Pay Credit Card",
+            "bank_name": "ICICI Bank",
+            "card_type": "VISA",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "Free",
+            "annual_fee": "Free",
+            "annual_fee_waived": false,
+            "welcome_benefits": [],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "online_food_ordering",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "icici-amazon-pay-credit-card",
+            "rating": 5,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125139_BankKaro_Mobile.png"
+          },
+          {
+            "rank": 3,
+            "card_name": "Swiggy Ornge HDFC Bank Credit card ",
+            "bank_name": "HDFC",
+            "card_type": "Mastercard",
+            "net_annual_savings": "₹9,000",
+            "annual_rewards_value": "₹9,000",
+            "milestone_benefits": "₹0",
+            "lounge_value": "₹0",
+            "joining_fee": "₹590 (incl. GST)",
+            "annual_fee": "Free (waived at ₹1,50,000/yr spend; ₹590 otherwise)",
+            "annual_fee_waived": true,
+            "welcome_benefits": [
+              {
+                "id": 140,
+                "brands": [
+                  {
+                    "id": null,
+                    "name": null
+                  }
+                ],
+                "card_id": 179,
+                "rp_bonus": "",
+                "maximum_days": "37",
+                "minimum_spend": "",
+                "voucher_bonus": "",
+                "cash_conversion": "",
+                "welcome_benefit_tooltip": "",
+                "cash_value": 0
+              }
+            ],
+            "voucher": null,
+            "lounge_access": {
+              "domestic_per_quarter": 0,
+              "international_per_quarter": 0,
+              "domestic_value_used": "₹0",
+              "international_value_used": "₹0"
+            },
+            "top_spend_categories": [
+              {
+                "category": "amazon_spends",
+                "annual_value": "₹750"
+              },
+              {
+                "category": "flipkart_spends",
+                "annual_value": "₹0"
+              },
+              {
+                "category": "new_monthly_cat_1",
+                "annual_value": "₹0"
+              }
+            ],
+            "card_alias": "swiggy-ornge-hdfc-credit-card",
+            "rating": 3.1,
+            "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130238_BankKaro_20260316_140731331_RBL_4.png"
+          }
+        ],
+        "_format_hint": "net_annual_savings = annual_rewards + milestone_benefits + lounge_value - annual_fee. Lead with this. top_spend_categories shows where savings come from."
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "list_cards",
+      "arguments": {
+        "limit": 300,
+        "response_format": "brief"
+      },
+      "raw_response": {
+        "cards_returned": 258
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "hdfc-millenia-credit-card"
+      },
+      "raw_response": {
+        "name": "HDFC Millennia Credit Card",
+        "nick_name": "HDFC Millennia,Credit Card",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 3,
+        "user_ratings": 325,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_122000_AGB_Mockup-14.webp1737033976680",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹1,180 (₹1,000 + GST)",
+          "joining_note": "A one-time joining fee of ₹1000 is charged at the time of card issuance as per the bank's policy.",
+          "annual": "₹1,180 (₹1,000 + GST)",
+          "annual_note": "The annual fee is charged every year and may be waived if you meet the bank's spending conditions.",
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.50%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card, subject to a minimum of ₹500.",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "Railway ticket bookings made using this card attract a surcharge of 1% of the transaction amount plus applicable GST, as charged by Indian Railways / payment gateway",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹50",
+          "reward_redemption_fee": "₹50",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹10001 - ₹25000",
+              "fee": "₹800"
+            },
+            {
+              "outstanding": "₹25001 - and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Late payment charges apply if the Minimum Amount Due (MAD) is not paid by the due date. Charges are based on the total outstanding amount as per the slab structure above.",
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        },
+        "rewards": {
+          "point_value": "1 Reward Point = ₹1",
+          "redemption_options": "• Flights &amp; Hotels\n• Products &amp; Vouchers\n• Statement Credit (CashBack)",
+          "redemption_catalogue": "https://offers.smartbuy.hdfc.bank.in/v2/foryou",
+          "exclusions": "Fuel Spends, Rent Payment, Government Transactions, Cash Advances, Outstanding Payment, Bank Charges & Fees, EMI Spends, Wallet Loads, Prepaid Card Loads, Voucher Purchases, Education Spends, Cancelled Transactions",
+          "exclusion_spends": "Fuel Spends, Rent Payment, Wallet Loads, Prepaid Card Loads, Gift Card Loads, Voucher Purchases, Cash Advances, EMI Spends, Interest Charges, Bank Charges & Fees"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 14115,
+        "milestone_benefits": [
+          {
+            "spend_target": null,
+            "reward": null,
+            "description": null
+          }
+        ],
+        "key_benefits": [
+          {
+            "title": "Get 10% Additional Discount on Swiggy Dineout",
+            "description": "using coupon code HDFCCARDS"
+          },
+          {
+            "title": "Earn 1% Cashback on all Other Spends",
+            "description": "redeemable as statement credit, capped at 3,000 reward points per calendar month"
+          },
+          {
+            "title": "Earn 5% Cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit",
+            "description": "cashback is in reward points redeemable against statement balance (1 point = ₹1)"
+          },
+          {
+            "title": "Get up to 10% Additional Cashback Across 200+ Brands",
+            "description": "via SmartBuy/PayZapp Shop"
+          },
+          {
+            "title": "Earn 5% cashback on Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV and Cult.fit",
+            "description": "cashback is in reward points redeemable against statement balance (1 point = ₹1)"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Dining"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Card Benefits",
+            "details": "• 5% cashback on leading brands Amazon, Flipkart, Myntra, Tata CLiQ, Swiggy, Zomato, Uber, BookMyShow, Sony LIV, and Cult.fit\n• Cashback is earned as reward points 1 reward point = ₹1 as statement credit\n• 1% cashback on all other spends\n• Cashback redemption capped at 3,000 reward points per calendar month minimum 500 points required for redemption\n• Up to 10% additional cashback across 200+ brands via SmartBuy/PayZapp Shop\n• ₹1,000 gift voucher on spending ₹1,00,000 or more in each calendar quarter alternatively, choose 1 domestic lounge access"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• 1 domestic lounge access per calendar quarter on spending ₹1,00,000 or more in that quarter (part of milestone program choose either lounge access voucher or ₹1,000 gift voucher)\n• Lounge access is integrated into the quarterly spends milestone program"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining",
+            "details": "• 10% additional discount on Swiggy Dineout using coupon code HDFCCARDS"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• 1% fuel surcharge waiver at all fuel stations across India, Applicable on minimum transaction of ₹400 and maximum transaction of ₹5,000, Maximum waiver of ₹250 per statement cycle"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 4,
+          "income_self_emp_lpa": 6,
+          "min_income_monthly": 35000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "hdfc-millenia-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "icici-amazon-pay-credit-card"
+      },
+      "raw_response": {
+        "name": "Amazon Pay ICICI Bank Credit Card",
+        "nick_name": "Amazon Pay ICICI, Credit Card",
+        "bank": "ICICI Bank",
+        "bank_id": 14,
+        "card_type": "VISA",
+        "card_network": null,
+        "rating": 5,
+        "user_ratings": 400,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_125139_BankKaro_Mobile.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "Free",
+          "joining_note": null,
+          "annual": "Free",
+          "annual_note": null,
+          "annual_fee_waiver": "Not Applicable",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "1.99%",
+          "forex_markup_note": "1.99% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (1.99%):₹100 → ₹1.99₹1,000 → ₹19.9₹10,000 → ₹199₹1,00,000 → ₹1990",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "As prescribed by IRCTC / Indian Railways",
+          "railway_surcharge_note": "Surcharge on booking or cancelling railway tickets will be levied as prescribed by IRCTC or Indian Railways and may vary based on their applicable charges.",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹100",
+          "cheque_payment_fee": "2%",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "≤ ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101–₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501–₹1,000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹1,001–₹5,000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹5,001–₹10,000",
+              "fee": "₹750"
+            },
+            {
+              "outstanding": "₹10,001–₹25,000",
+              "fee": "₹900"
+            },
+            {
+              "outstanding": "₹25,001–₹50,000",
+              "fee": "₹1,100"
+            },
+            {
+              "outstanding": "> ₹50,000",
+              "fee": "₹1,300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared&nbsp;",
+          "tnc_url": "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc-cc-gk-t.pdf?ITM=nli_amazon_pay_cc_rte_fee&charges_t&c_NLI"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Physical and Digital Gold, EMI Transactions, EMI , Rent Payments, Tax Payments, Amazon.com, Fuel Spends, International Spends, International Transactions",
+          "exclusion_spends": "Physical and Digital Gold, EMI Transactions, EMI , Rent Payments, Tax Payments, Amazon.com, Fuel Spends, International Spends, International Transactions"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 60000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get Up To 5% Rewards on Amazon purchases",
+            "description": "with unlimited reward points and no capping across spends"
+          },
+          {
+            "title": "Get 1% Rewards on all Other Spends with Unlimited",
+            "description": "reward points and no capping across spends"
+          }
+        ],
+        "tags": [
+          "Shopping"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% unlimited cashback on Amazon purchases for Prime members with no capping\n• 3% unlimited cashback on Amazon purchases for non-Prime members with no capping\n• 2% cashback on spends at 100+ partner merchants with no capping\n• 1% unlimited cashback on all other spends with no capping\n• Reward points earned on every ₹100 spent and credited as Amazon Pay balance for easy redemption"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Wavier Benefits",
+            "details": "• 1% fuel surcharge waiver on fuel transactions"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offer",
+            "details": "• This card does not offer any benefits in this category"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 65,
+          "income_salaried_lpa": 2.4,
+          "income_self_emp_lpa": 3.6,
+          "min_income_monthly": 20000,
+          "crif_salaried": 725,
+          "crif_self_emp": 725
+        },
+        "card_alias": "icici-amazon-pay-credit-card"
+      },
+      "ok": true,
+      "error": null
+    },
+    {
+      "tool": "get_card_details",
+      "arguments": {
+        "card_alias": "swiggy-ornge-hdfc-credit-card"
+      },
+      "raw_response": {
+        "name": "Swiggy Ornge HDFC Bank Credit Card ",
+        "nick_name": "HDFC Swiggy Ornge, Credit card",
+        "bank": "HDFC",
+        "bank_id": 6,
+        "card_type": "Mastercard",
+        "card_network": null,
+        "rating": 3.1,
+        "user_ratings": 198,
+        "image": "https://d2sriifpjiqv0p.cloudfront.net/admin/BankKaro_20260622_130238_BankKaro_20260316_140731331_RBL_4.png",
+        "priority_tag": null,
+        "invite_only": false,
+        "employment_type": "both",
+        "new_to_credit": true,
+        "existing_customer_only": true,
+        "fees": {
+          "joining": "₹590 (₹500 + GST)",
+          "joining_note": null,
+          "annual": "₹590 (₹500 + GST)",
+          "annual_note": null,
+          "annual_fee_waiver": "The annual fee is waived if you spend ₹1.5 lakh or more in a year on your card, as per bank policy.",
+          "gst_note": "All fees include 18% GST."
+        },
+        "fee_schedule": {
+          "apr_monthly": "3.75%",
+          "apr_annual": "45.00%",
+          "forex_markup": "3.5%",
+          "forex_markup_note": "3.5% forex markup is charged on transactions made in currencies other than INR. Applies to international POS payments and online purchases charged in foreign currency.Examples (3.5%):₹100 → ₹3.5₹1,000 → ₹35₹10,000 → ₹350₹1,00,000 → ₹3,500",
+          "atm_withdrawal_fee": "2.50%",
+          "atm_withdrawal_note": "2.5% of the withdrawn amount is charged on cash advances using the credit card (minimum ₹500, if applicable).",
+          "railway_surcharge": "1%",
+          "railway_surcharge_note": "A surcharge fee of 1% applies on rental transactions made using the credit card",
+          "rent_payment_fee": "1%",
+          "cash_payment_fee": "₹250",
+          "cheque_payment_fee": "₹100",
+          "reward_redemption_fee": "Not Applicable",
+          "late_payment_slabs": [
+            {
+              "outstanding": "₹0 - ₹100",
+              "fee": "₹0"
+            },
+            {
+              "outstanding": "₹101 - ₹500",
+              "fee": "₹100"
+            },
+            {
+              "outstanding": "₹501 - ₹5000",
+              "fee": "₹500"
+            },
+            {
+              "outstanding": "₹5001 - ₹10000",
+              "fee": "₹600"
+            },
+            {
+              "outstanding": "₹10001 - ₹25000",
+              "fee": "₹800"
+            },
+            {
+              "outstanding": "₹25001 - ₹50000",
+              "fee": "₹1100"
+            },
+            {
+              "outstanding": "₹50001 - and above",
+              "fee": "₹1300"
+            }
+          ],
+          "late_payment_note": "Additional ₹100 is charged if Minimum Amount Due remains unpaid for two consecutive cycles, continuing until cleared",
+          "tnc_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-ornge-hdfc-bank-credit-card/pdf/mitc-in-english-4th-march-2026.pdf"
+        },
+        "rewards": {
+          "point_value": null,
+          "redemption_options": "This is a cashback card, and the earned cashback is adjusted directly in your monthly statement.",
+          "redemption_catalogue": null,
+          "exclusions": "Fuel, Rent, Jewellery, Government payments, Gaming, Education, Wallets, Gift Cards, EMI transactions, SmartPay, SmartBuy portal and cash advances",
+          "exclusion_spends": "Cash Advances, Balance Transfer, ATM Cash Withdrawals"
+        },
+        "welcome_benefits": null,
+        "lounge_summary": null,
+        "annual_saving_claimed": 9000,
+        "milestone_benefits": null,
+        "key_benefits": [
+          {
+            "title": "Get 5% Cashback on Swiggy",
+            "description": "spends across Food Delivery, Instamart and Dineout up to ₹1500 per billing cycle"
+          },
+          {
+            "title": "Get 5% Cashback on Amazon, Flipkart, Nykaa, Ajio",
+            "description": "capped at ₹1,500 per billing cycle"
+          },
+          {
+            "title": "Get 19% Instant Discount on Hotel Bookings",
+            "description": "via Cleartrip along with 5% cashback"
+          },
+          {
+            "title": "Get 10% Discount on Swiggy Dineout",
+            "description": "during your birthday week up to Rs.500 on a minimum order value of Rs.3000, once per cardholder and after 30 days of card activation"
+          },
+          {
+            "title": "Get 6% Instant Discount on Cleartrip",
+            "description": "along with 5% cashback"
+          },
+          {
+            "title": "Enjoy Swiggy One Membership for 12 Months",
+            "description": "as a welcome benefit on card activation, claimable on the Swiggy app within 2 to 3 days"
+          },
+          {
+            "title": "Get 5% Cashback on  Dineout",
+            "description": "up to ₹1500 per billing cycle"
+          }
+        ],
+        "tags": [
+          "Shopping",
+          "Online Food Ordering",
+          "Dining",
+          "Travel"
+        ],
+        "detailed_benefits": [
+          {
+            "type": "all",
+            "sub_type": "All Benefits",
+            "details": "• 5% cashback on Swiggy app spends (Food Delivery, Instamart, Dineout)\n• Cashback capped at ₹1,500 per billing cycle for Swiggy spends\n• 5% cashback on select online merchants and categories like apparel, electronics, travel, pharmacies, entertainment and discount stores\n• 1% cashback on other eligible spends\n• 1% cashback capped at ₹1,000 per billing cycle"
+          },
+          {
+            "type": "welcome",
+            "sub_type": "Welcome Benefits",
+            "details": "• Complimentary Swiggy One membership for 12 months on card activation"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Flight Benefits",
+            "details": "• Cleartrip offer 5% cashback on eligible online spends\n• Additional 6% instant discount on flight bookings via Cleartrip\n• Up to 19% instant discount on hotel bookings via Cleartrip"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Railway Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Cab Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "travel",
+            "sub_type": "Bus Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Airport Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "lounge",
+            "sub_type": "Railway Lounge Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "movie_ticket",
+            "sub_type": "Movie Ticket Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "dining",
+            "sub_type": "Dining Benefits",
+            "details": "• 5% cashback on Swiggy app transactions including Food Delivery, Instamart and Dineout\n• Birthday week offer: additional 10% discount on Swiggy Dineout up to ₹500 on minimum order value of ₹3,000\n• Birthday offer valid for 7 days (3 days before and 3 days after birthday)\n• Offer valid once per cardholder"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "fuel",
+            "sub_type": "Fuel Surcharge Waiver Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "insurance",
+            "sub_type": "Insurance Benefits",
+            "details": "• This card does not offer any benefits in this category"
+          },
+          {
+            "type": "bank_offers",
+            "sub_type": "Bank Offers",
+            "details": "• 5% cashback on online spends across select merchants and categories like Amazon, Flipkart, Nykaa, Ajio, Meesho, Netflix, Hotstar and other eligible MCCs\n• Nykaa: 5% cashback + additional 5% instant discount\n• Cleartrip: 5% cashback + 6% instant discount on travel bookings and 19% instant discount on hotel bookings"
+          }
+        ],
+        "eligibility": {
+          "min_age": 21,
+          "max_age": 60,
+          "income_salaried_lpa": 2.4,
+          "income_self_emp_lpa": 6,
+          "min_income_monthly": 20000,
+          "crif_salaried": 720,
+          "crif_self_emp": 720
+        },
+        "card_alias": "swiggy-ornge-hdfc-credit-card"
+      },
+      "ok": true,
+      "error": null
+    }
+  ],
+  "validation_flags": [
+    {
+      "field": "HDFC MILLENIA.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 9000, formula gives 7820)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC MILLENIA.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 750, x12 = 9000, annual rewards 9000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "HDFC MILLENIA.name",
+      "problem": "card name differs from the card list for the same alias ('HDFC MILLENIA' vs 'HDFC Millennia Credit Card', alias hdfc-millenia-credit-card)",
+      "suspected_fault": "data",
+      "warn_user": false
+    },
+    {
+      "field": "ICICI Amazon Pay Credit Card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 750, x12 = 9000, annual rewards 9000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Swiggy Ornge HDFC Bank Credit card.description_says_joining_fee_is_subtracted",
+      "problem": "recommend_cards description says net savings subtracts the joining fee, but the numbers do not (server says 9000, formula gives 8410)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    },
+    {
+      "field": "Swiggy Ornge HDFC Bank Credit card.category_breakdown",
+      "problem": "category breakdown is labelled annual but x12 equals the annual rewards, so it looks monthly (breakdown 750, x12 = 9000, annual rewards 9000)",
+      "suspected_fault": "mcp_tool",
+      "warn_user": false
+    }
+  ],
+  "validated_data": {
+    "kind": "recommend",
+    "cards": [
+      {
+        "card_name": "HDFC Millennia Credit Card",
+        "net_savings": "₹9,000",
+        "rewards": "₹9,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹1,180 (incl. GST)",
+        "annual_fee": "Free (waived at ₹1,00,000/yr spend; ₹1,180 otherwise)",
+        "fee_waived": true
+      },
+      {
+        "card_name": "Amazon Pay ICICI Bank Credit Card",
+        "net_savings": "₹9,000",
+        "rewards": "₹9,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "Free",
+        "annual_fee": "Free",
+        "fee_waived": false
+      },
+      {
+        "card_name": "Swiggy Ornge HDFC Bank Credit Card",
+        "net_savings": "₹9,000",
+        "rewards": "₹9,000",
+        "milestone": "₹0",
+        "lounge": "₹0",
+        "joining_fee": "₹590 (incl. GST)",
+        "annual_fee": "Free (waived at ₹1,50,000/yr spend; ₹590 otherwise)",
+        "fee_waived": true
+      }
+    ],
+    "user_profile": {
+      "spends": [
+        {
+          "spending_key": "amazon_spends",
+          "amount": 15000,
+          "per": "month",
+          "per_year": 180000
+        }
+      ],
+      "total_annual_spend": 180000
+    },
+    "cards_analyzed": 215,
+    "top_cards_tied": [
+      "HDFC Millennia Credit Card",
+      "Amazon Pay ICICI Bank Credit Card",
+      "Swiggy Ornge HDFC Bank Credit Card"
+    ]
+  },
+  "llm_raw_reply": "Amazon Pay ICICI gives you about ₹9,000 a year on your ₹15,000‑a‑month Amazon spend and has no joining or annual fee, so it’s the simplest pick. The HDFC Millennia and Swiggy Ornge cards also save roughly ₹9,000 but each charge a fee to join.",
+  "output_guard": {
+    "ok": true,
+    "problems": [],
+    "unverified_numbers": []
+  },
+  "final_reply": "Amazon Pay ICICI gives you about ₹9,000 a year on your ₹15,000‑a‑month Amazon spend and has no joining or annual fee, so it’s the simplest pick. The HDFC Millennia and Swiggy Ornge cards also save roughly ₹9,000 but each charge a fee to join.",
+  "notes": [
+    "intent by keyword: recommend"
+  ]
+}
